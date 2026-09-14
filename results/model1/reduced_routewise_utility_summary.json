@@ -1,0 +1,480 @@
+{
+  "artifacts": {
+    "intervals_sha256": "6daeeb59b7a74a86cbea0e162c136bf6daddc434ede87e23210500a7f79a3f44",
+    "results_sha256": "b272a8e1321d970d192f5e5cd6e955f1e752b8a0281f85cf3228da5d52cf9d77"
+  },
+  "best_observed_route_by_benchmark": {
+    "bigcodebench": {
+      "ci95": [
+        -0.20666666666666667,
+        -0.08
+      ],
+      "delta": -0.14,
+      "improved_count": 3,
+      "regressed_count": 24,
+      "route_cwe_id": "CWE-89",
+      "score": 0.8333333333333334,
+      "success_count": 125,
+      "task_count": 150
+    },
+    "humaneval": {
+      "ci95": [
+        -0.1402439024390244,
+        -0.024390243902439025
+      ],
+      "delta": -0.07926829268292683,
+      "improved_count": 6,
+      "regressed_count": 19,
+      "route_cwe_id": "CWE-125",
+      "score": 0.036585365853658534,
+      "success_count": 6,
+      "task_count": 164
+    },
+    "mmlu": {
+      "ci95": [
+        -0.05825242718446602,
+        0.038834951456310676
+      ],
+      "delta": -0.009708737864077669,
+      "improved_count": 50,
+      "regressed_count": 54,
+      "route_cwe_id": "CWE-327",
+      "score": 0.5752427184466019,
+      "success_count": 237,
+      "task_count": 412
+    }
+  },
+  "bootstrap": {
+    "interval": "equal-tailed Type-7 percentile 95%",
+    "replicates": 10000,
+    "seed": 42,
+    "unit": "paired task"
+  },
+  "humaneval_return_manifest_sha256": "4d07430b1c091029a7f1db15823c33e272fa7ad4e1143d6a57d68531132852c9",
+  "interpretation_boundary": "Per-route active-coordinate sensitivity on general utility tasks without target-CWE labels. The nine conditions are not pooled into a deployable B* estimate.",
+  "paired_b0_sha256": "889b20226cbf74badf30d30ec221ac4a028aeebc58756ecf3bce3a5e28dcf001",
+  "protocol_sha256": "c83eb24b51cc9842e6bcb2177c1ec899550d0deff601f483248028f441e30dd6",
+  "routes": {
+    "CWE-120": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9933333333333333,
+            -0.9466666666666667
+          ],
+          "delta": -0.9733333333333334,
+          "improved_count": 0,
+          "regressed_count": 146,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06707317073170732
+          ],
+          "delta": -0.11585365853658537,
+          "improved_count": 0,
+          "regressed_count": 19,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.633495145631068,
+            -0.5364077669902912
+          ],
+          "delta": -0.5849514563106796,
+          "improved_count": 0,
+          "regressed_count": 241,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 412
+        }
+      },
+      "feature": 14193,
+      "layer": 19
+    },
+    "CWE-125": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9933333333333333,
+            -0.9466666666666667
+          ],
+          "delta": -0.9733333333333334,
+          "improved_count": 0,
+          "regressed_count": 146,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.1402439024390244,
+            -0.024390243902439025
+          ],
+          "delta": -0.07926829268292683,
+          "improved_count": 6,
+          "regressed_count": 19,
+          "score": 0.036585365853658534,
+          "success_count": 6,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.2961165048543689,
+            -0.19902912621359223
+          ],
+          "delta": -0.24757281553398058,
+          "improved_count": 15,
+          "regressed_count": 117,
+          "score": 0.33737864077669905,
+          "success_count": 139,
+          "task_count": 412
+        }
+      },
+      "feature": 16655,
+      "layer": 23
+    },
+    "CWE-190": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9933333333333333,
+            -0.9466666666666667
+          ],
+          "delta": -0.9733333333333334,
+          "improved_count": 0,
+          "regressed_count": 146,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06707317073170732
+          ],
+          "delta": -0.11585365853658537,
+          "improved_count": 0,
+          "regressed_count": 19,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.17233009708737865,
+            -0.07281553398058252
+          ],
+          "delta": -0.12135922330097088,
+          "improved_count": 33,
+          "regressed_count": 83,
+          "score": 0.46359223300970875,
+          "success_count": 191,
+          "task_count": 412
+        }
+      },
+      "feature": 16897,
+      "layer": 19
+    },
+    "CWE-327": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.94,
+            -0.8333333333333334
+          ],
+          "delta": -0.8866666666666667,
+          "improved_count": 1,
+          "regressed_count": 134,
+          "score": 0.08666666666666667,
+          "success_count": 13,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.15853658536585366,
+            -0.054878048780487805
+          ],
+          "delta": -0.10365853658536585,
+          "improved_count": 2,
+          "regressed_count": 19,
+          "score": 0.012195121951219513,
+          "success_count": 2,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.05825242718446602,
+            0.038834951456310676
+          ],
+          "delta": -0.009708737864077669,
+          "improved_count": 50,
+          "regressed_count": 54,
+          "score": 0.5752427184466019,
+          "success_count": 237,
+          "task_count": 412
+        }
+      },
+      "feature": 14449,
+      "layer": 23
+    },
+    "CWE-338": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9666666666666667,
+            -0.88
+          ],
+          "delta": -0.9266666666666666,
+          "improved_count": 1,
+          "regressed_count": 140,
+          "score": 0.04666666666666667,
+          "success_count": 7,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06097560975609756
+          ],
+          "delta": -0.10975609756097561,
+          "improved_count": 1,
+          "regressed_count": 19,
+          "score": 0.006097560975609756,
+          "success_count": 1,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.34951456310679613,
+            -0.24029126213592233
+          ],
+          "delta": -0.2961165048543689,
+          "improved_count": 23,
+          "regressed_count": 145,
+          "score": 0.28883495145631066,
+          "success_count": 119,
+          "task_count": 412
+        }
+      },
+      "feature": 7533,
+      "layer": 23
+    },
+    "CWE-476": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.8533333333333334,
+            -0.7133333333333334
+          ],
+          "delta": -0.7866666666666666,
+          "improved_count": 1,
+          "regressed_count": 119,
+          "score": 0.18666666666666668,
+          "success_count": 28,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06097560975609756
+          ],
+          "delta": -0.10975609756097561,
+          "improved_count": 1,
+          "regressed_count": 19,
+          "score": 0.006097560975609756,
+          "success_count": 1,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.11407766990291263,
+            -0.03155339805825243
+          ],
+          "delta": -0.07281553398058252,
+          "improved_count": 23,
+          "regressed_count": 53,
+          "score": 0.5121359223300971,
+          "success_count": 211,
+          "task_count": 412
+        }
+      },
+      "feature": 18397,
+      "layer": 23
+    },
+    "CWE-787": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9933333333333333,
+            -0.9466666666666667
+          ],
+          "delta": -0.9733333333333334,
+          "improved_count": 0,
+          "regressed_count": 146,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06707317073170732
+          ],
+          "delta": -0.11585365853658537,
+          "improved_count": 0,
+          "regressed_count": 19,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.633495145631068,
+            -0.5364077669902912
+          ],
+          "delta": -0.5849514563106796,
+          "improved_count": 0,
+          "regressed_count": 241,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 412
+        }
+      },
+      "feature": 1515,
+      "layer": 19
+    },
+    "CWE-79": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.9866666666666667,
+            -0.9266666666666666
+          ],
+          "delta": -0.96,
+          "improved_count": 0,
+          "regressed_count": 144,
+          "score": 0.013333333333333334,
+          "success_count": 2,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.16463414634146342,
+            -0.06707317073170732
+          ],
+          "delta": -0.11585365853658537,
+          "improved_count": 0,
+          "regressed_count": 19,
+          "score": 0.0,
+          "success_count": 0,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.6019417475728155,
+            -0.5
+          ],
+          "delta": -0.5509708737864077,
+          "improved_count": 5,
+          "regressed_count": 232,
+          "score": 0.03398058252427184,
+          "success_count": 14,
+          "task_count": 412
+        }
+      },
+      "feature": 9816,
+      "layer": 16
+    },
+    "CWE-89": {
+      "benchmarks": {
+        "bigcodebench": {
+          "ci95": [
+            -0.20666666666666667,
+            -0.08
+          ],
+          "delta": -0.14,
+          "improved_count": 3,
+          "regressed_count": 24,
+          "score": 0.8333333333333334,
+          "success_count": 125,
+          "task_count": 150
+        },
+        "humaneval": {
+          "ci95": [
+            -0.15853658536585366,
+            -0.054878048780487805
+          ],
+          "delta": -0.10365853658536585,
+          "improved_count": 2,
+          "regressed_count": 19,
+          "score": 0.012195121951219513,
+          "success_count": 2,
+          "task_count": 164
+        },
+        "mmlu": {
+          "ci95": [
+            -0.26941747572815533,
+            -0.1650485436893204
+          ],
+          "delta": -0.21844660194174756,
+          "improved_count": 25,
+          "regressed_count": 115,
+          "score": 0.36650485436893204,
+          "success_count": 151,
+          "task_count": 412
+        }
+      },
+      "feature": 1652,
+      "layer": 23
+    }
+  },
+  "schema_version": "reduced_routewise_bstar_utility_summary_v1",
+  "status": "COMPLETE",
+  "worst_observed_route_by_benchmark": {
+    "bigcodebench": {
+      "ci95": [
+        -0.9933333333333333,
+        -0.9466666666666667
+      ],
+      "delta": -0.9733333333333334,
+      "improved_count": 0,
+      "regressed_count": 146,
+      "route_cwe_id": "CWE-120",
+      "score": 0.0,
+      "success_count": 0,
+      "task_count": 150
+    },
+    "humaneval": {
+      "ci95": [
+        -0.16463414634146342,
+        -0.06707317073170732
+      ],
+      "delta": -0.11585365853658537,
+      "improved_count": 0,
+      "regressed_count": 19,
+      "route_cwe_id": "CWE-120",
+      "score": 0.0,
+      "success_count": 0,
+      "task_count": 164
+    },
+    "mmlu": {
+      "ci95": [
+        -0.633495145631068,
+        -0.5364077669902912
+      ],
+      "delta": -0.5849514563106796,
+      "improved_count": 0,
+      "regressed_count": 241,
+      "route_cwe_id": "CWE-120",
+      "score": 0.0,
+      "success_count": 0,
+      "task_count": 412
+    }
+  }
+}

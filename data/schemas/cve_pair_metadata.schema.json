@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CVE-pair split metadata row",
+  "type": "object",
+  "required": [
+    "split",
+    "source_order",
+    "pair_id",
+    "cve_id",
+    "cwe_id",
+    "language",
+    "source",
+    "is_augmented",
+    "seed_cve_id",
+    "role",
+    "vulnerable_code_sha256",
+    "fixed_code_sha256",
+    "code_pair_sha256"
+  ],
+  "properties": {
+    "split": {"enum": ["train", "validation", "test"]},
+    "source_order": {"type": "integer", "minimum": 0},
+    "pair_id": {"type": "string"},
+    "cve_id": {"type": "string"},
+    "cwe_id": {"type": "string"},
+    "language": {"type": "string"},
+    "source": {"type": "string"},
+    "is_augmented": {"type": "string"},
+    "seed_cve_id": {"type": "string"},
+    "role": {"type": "string"},
+    "vulnerable_code_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fixed_code_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "code_pair_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

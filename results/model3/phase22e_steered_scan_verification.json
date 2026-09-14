@@ -1,0 +1,67 @@
+{
+  "schema_version": "phase22e_steered_scan_verification_v1",
+  "status": "PASS",
+  "artifact_hashes": {
+    "protocol": "e0fcf227460e7408471caabb1d695fa1905bc51073a1581776aa1772b13932f4",
+    "denominator": "30921b90579dbb9d350c256f90f720332bf41d12f6c4ce6c730ea61240ec7dde",
+    "execution": "86d784318cd7d4b6d4cf770f42650aa4f44981f30b269d49e59d678274a088a3",
+    "generation": "c1844a73f468dd88ce608418ea8ce0cd2802d63a1ce2589ea89c77866917a727",
+    "generation_validation": "394564564cdf9a8cef084fb645896021ccbe15ab63e5ecf70035e235a67b092e",
+    "scan_input": "3add1de4356fdd763888c3a69f2e0509b73b20faa04ab96e38d77779adbdf441",
+    "scan_output": "7f65ecb65ed979a4be6875f293f5858812c05198d7ce7ff7c56edc02abf21c4c",
+    "return_manifest": "6f36f5206c92b672cf96e3783b78865fd855922fb5c3e253fdbf44468dece112",
+    "transfer": "5ea9e1340f13d447f97f8276a46d821902e7fe5227066113e67d993bea8f211a",
+    "scanner": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+    "wrapper": "45a4b798bed4f798438f1db8e4f7c198fd2b7545d5a1d12820ebadb1f597f397"
+  },
+  "record_count": 1170,
+  "eligible_count": 1170,
+  "skipped_count": 0,
+  "target_positive_count": 693,
+  "any_finding_count": 693,
+  "semgrep_version": "1.175.0",
+  "checks": {
+    "immutable_hash_chain": true,
+    "exact_semgrep_version": true,
+    "unchanged_scanner_and_wrapper": true,
+    "complete_exact_order": true,
+    "row_metadata_and_code_projection": true,
+    "finding_and_derived_fields": true,
+    "no_skipped_records": true,
+    "no_generation_during_scan": true,
+    "no_heldout_access": true
+  },
+  "causal_results_sha256": "f71c657bdf1cf8ea91234a80f20562a94b30b9a5410cd651d6d771a5a249448e",
+  "summary_csv_sha256": "c37e97cae50454dbc143a50cb081dec795d4f4c773f6c51a51e2b4a986544e54",
+  "validated_feature_manifest_sha256": "00aa2ee3b250603c9c0dc404b3fde4b9831016bde291bb2ded87aeb4669e0e7c",
+  "validated_assignment_count": 24,
+  "by_target": {
+    "CWE-120": {
+      "candidate_count": 30,
+      "validated_count": 15,
+      "max_repair_count": 3,
+      "max_repair_rate": 0.23076923076923078,
+      "min_corruption_count": 0,
+      "min_corruption_rate": 0.0
+    },
+    "CWE-327": {
+      "candidate_count": 30,
+      "validated_count": 1,
+      "max_repair_count": 1,
+      "max_repair_rate": 0.16666666666666666,
+      "min_corruption_count": 0,
+      "min_corruption_rate": 0.0
+    },
+    "CWE-89": {
+      "candidate_count": 30,
+      "validated_count": 8,
+      "max_repair_count": 1,
+      "max_repair_rate": 0.2,
+      "min_corruption_count": 0,
+      "min_corruption_rate": 0.0
+    }
+  },
+  "scanner_limitation": "The frozen scanner suppresses Semgrep subprocess exceptions and p/security-audit is not content-pinned. Exact files, version, full row coverage, and skip policy are verified, but silent per-record Semgrep failure cannot be independently excluded.",
+  "strength_calibration_run": false,
+  "heldout_used": false
+}

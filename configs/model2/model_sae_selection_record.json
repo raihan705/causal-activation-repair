@@ -1,0 +1,88 @@
+{
+  "schema_version": "phase21_model_sae_selection_v1",
+  "status": "FROZEN_BEFORE_OUTCOME_ACCESS_PASS",
+  "model": {
+    "model_id": "google/gemma-2-9b-it",
+    "resolved_revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+    "architectures": [
+      "Gemma2ForCausalLM"
+    ],
+    "hidden_size": 3584,
+    "num_hidden_layers": 42,
+    "vocab_size": 256000,
+    "model_type": "gemma2",
+    "torch_dtype": "bfloat16",
+    "licence": "gemma",
+    "access_state": "PASS",
+    "hook_framework": "TransformerLens"
+  },
+  "sae": {
+    "repository": "google/gemma-scope-9b-it-res",
+    "resolved_revision": "e86af97a5b6fbbccca28ab654f2fda1b0768f770",
+    "licence": "cc-by-4.0",
+    "width": "width_16k",
+    "selected": [
+      {
+        "layer": 9,
+        "average_l0": 47,
+        "sae_id": "layer_9/width_16k/average_l0_47",
+        "params_file": "layer_9/width_16k/average_l0_47/params.npz",
+        "params_sha256": "60dd98386fa1361f47f9ba25da29dca575c213dc1392f0c57ccefc738b254da5",
+        "source_parameter_keys": [
+          "W_dec",
+          "W_enc",
+          "b_dec",
+          "b_enc",
+          "threshold"
+        ],
+        "d_in": 3584,
+        "d_sae": 16384,
+        "hook_point": "blocks.9.hook_resid_post",
+        "hook_framework": "TransformerLens",
+        "sae_dtype": "torch.float32"
+      },
+      {
+        "layer": 20,
+        "average_l0": 47,
+        "sae_id": "layer_20/width_16k/average_l0_47",
+        "params_file": "layer_20/width_16k/average_l0_47/params.npz",
+        "params_sha256": "63337f10014d4c9096c51ecc372d1b61a8ef2642be2ca01a0d04ccd3dc0e6bf2",
+        "source_parameter_keys": [
+          "W_dec",
+          "W_enc",
+          "b_dec",
+          "b_enc",
+          "threshold"
+        ],
+        "d_in": 3584,
+        "d_sae": 16384,
+        "hook_point": "blocks.20.hook_resid_post",
+        "hook_framework": "TransformerLens",
+        "sae_dtype": "torch.float32"
+      },
+      {
+        "layer": 31,
+        "average_l0": 43,
+        "sae_id": "layer_31/width_16k/average_l0_43",
+        "params_file": "layer_31/width_16k/average_l0_43/params.npz",
+        "params_sha256": "f5b2265ffe36c4e55f6268224b9d6f47742b6ae0e5a393844c1402bf43e0b3b4",
+        "source_parameter_keys": [
+          "W_dec",
+          "W_enc",
+          "b_dec",
+          "b_enc",
+          "threshold"
+        ],
+        "d_in": 3584,
+        "d_sae": 16384,
+        "hook_point": "blocks.31.hook_resid_post",
+        "hook_framework": "TransformerLens",
+        "sae_dtype": "torch.float32"
+      }
+    ]
+  },
+  "selection_rule": "Per retained layer, select the width_16k variant whose average L0 is closest to 50; smaller L0 breaks equal-distance ties.",
+  "selection_before_reconstruction_or_security_outcome": true,
+  "security_feature_discovery_run": false,
+  "heldout_used": false
+}

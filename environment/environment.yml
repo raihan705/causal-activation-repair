@@ -1,0 +1,9 @@
+name: causal-activation-repair
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r environment/requirements-analysis.txt
+      - -r environment/requirements-models.txt

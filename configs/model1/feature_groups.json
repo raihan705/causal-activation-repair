@@ -1,0 +1,650 @@
+{
+  "CWE-120": [
+    {
+      "group_id": "L19_CWE-120_B",
+      "layer_id": 19,
+      "cwe_id": "CWE-120",
+      "group_type": "semantic",
+      "feature_ids": [
+        14193
+      ],
+      "n_features": 1,
+      "repair_rate": 1.0,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6597,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L16_CWE-120_B",
+      "layer_id": 16,
+      "cwe_id": "CWE-120",
+      "group_type": "semantic",
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9287
+      ],
+      "n_features": 4,
+      "repair_rate": 0.9645,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6196,
+      "jaccard": 0.7132,
+      "rank_corr": 0.6298,
+      "source": "cyber_dev",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L16_CWE-120_C",
+      "layer_id": 16,
+      "cwe_id": "CWE-120",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9816,
+        9287
+      ],
+      "n_features": 5,
+      "repair_rate": 0.9288,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6094,
+      "jaccard": 0.7074,
+      "rank_corr": 0.5074,
+      "source": "cyber_dev",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    }
+  ],
+  "CWE-327": [
+    {
+      "group_id": "L23_CWE-327_C",
+      "layer_id": 23,
+      "cwe_id": "CWE-327",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        14449
+      ],
+      "n_features": 1,
+      "repair_rate": 0.933,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6156,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_api",
+        "crypto_weak",
+        "insecure_algorithm"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-327_B",
+      "layer_id": 23,
+      "cwe_id": "CWE-327",
+      "group_type": "semantic",
+      "feature_ids": [
+        14449
+      ],
+      "n_features": 1,
+      "repair_rate": 0.933,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6156,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_api",
+        "crypto_weak",
+        "insecure_algorithm"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-327_A",
+      "layer_id": 23,
+      "cwe_id": "CWE-327",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        14449
+      ],
+      "n_features": 1,
+      "repair_rate": 0.933,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6156,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_api",
+        "crypto_weak",
+        "insecure_algorithm"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.2000000000000002
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 24.0
+    }
+  ],
+  "CWE-89": [
+    {
+      "group_id": "L23_CWE-89_C",
+      "layer_id": 23,
+      "cwe_id": "CWE-89",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "n_features": 3,
+      "repair_rate": 0.9523,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6463,
+      "jaccard": 0.7649,
+      "rank_corr": 0.5816,
+      "source": "cyber_dev",
+      "tags": [
+        "input_validation",
+        "sql_injection",
+        "string_format"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-89_B",
+      "layer_id": 23,
+      "cwe_id": "CWE-89",
+      "group_type": "semantic",
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "n_features": 3,
+      "repair_rate": 0.9523,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6463,
+      "jaccard": 0.7649,
+      "rank_corr": 0.5816,
+      "source": "cyber_dev",
+      "tags": [
+        "input_validation",
+        "sql_injection",
+        "string_format"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-89_A",
+      "layer_id": 23,
+      "cwe_id": "CWE-89",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        4657,
+        22548,
+        1652
+      ],
+      "n_features": 3,
+      "repair_rate": 0.9523,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.6463,
+      "jaccard": 0.7649,
+      "rank_corr": 0.5816,
+      "source": "cyber_dev",
+      "tags": [
+        "input_validation",
+        "sql_injection",
+        "string_format"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.2000000000000002
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 24.0
+    }
+  ],
+  "CWE-338": [
+    {
+      "group_id": "L23_CWE-338_C",
+      "layer_id": 23,
+      "cwe_id": "CWE-338",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        7533
+      ],
+      "n_features": 1,
+      "repair_rate": 1.0,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.656,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_random",
+        "prng_weak",
+        "predictable_seed"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-338_B",
+      "layer_id": 23,
+      "cwe_id": "CWE-338",
+      "group_type": "semantic",
+      "feature_ids": [
+        7533
+      ],
+      "n_features": 1,
+      "repair_rate": 1.0,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.656,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_random",
+        "prng_weak",
+        "predictable_seed"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.5
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 30.0
+    },
+    {
+      "group_id": "L23_CWE-338_A",
+      "layer_id": 23,
+      "cwe_id": "CWE-338",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        7533
+      ],
+      "n_features": 1,
+      "repair_rate": 1.0,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.656,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cyber_dev",
+      "tags": [
+        "crypto_random",
+        "prng_weak",
+        "predictable_seed"
+      ],
+      "recommended_strength_range": [
+        0.5,
+        1.2000000000000002
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 10.0,
+      "high_alpha": 24.0
+    }
+  ],
+  "CWE-79": [
+    {
+      "group_id": "L16_CWE-79_C",
+      "layer_id": 16,
+      "cwe_id": "CWE-79",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        9816
+      ],
+      "n_features": 1,
+      "repair_rate": 0.8,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.5261,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "input_validation",
+        "xss",
+        "output_encoding"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        1.0
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 20.0
+    },
+    {
+      "group_id": "L16_CWE-79_A",
+      "layer_id": 16,
+      "cwe_id": "CWE-79",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        9816,
+        14376,
+        2917,
+        22892
+      ],
+      "n_features": 4,
+      "repair_rate": 0.6668,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.4901,
+      "jaccard": 0.7658,
+      "rank_corr": 0.5547,
+      "source": "cve_pairs",
+      "tags": [
+        "xss",
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow",
+        "string_format",
+        "sql_injection",
+        "input_validation",
+        "output_encoding"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        0.8
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 16.0
+    }
+  ],
+  "CWE-125": [
+    {
+      "group_id": "L23_CWE-125_C",
+      "layer_id": 23,
+      "cwe_id": "CWE-125",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        16655
+      ],
+      "n_features": 1,
+      "repair_rate": 0.867,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.5278,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "out_of_bounds_read"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        1.0
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 20.0
+    },
+    {
+      "group_id": "L16_CWE-125_C",
+      "layer_id": 16,
+      "cwe_id": "CWE-125",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        6312
+      ],
+      "n_features": 1,
+      "repair_rate": 0.733,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.5181,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        1.0
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 20.0
+    },
+    {
+      "group_id": "L16_CWE-125_A",
+      "layer_id": 16,
+      "cwe_id": "CWE-125",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        6312
+      ],
+      "n_features": 1,
+      "repair_rate": 0.733,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.5181,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        0.8
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 16.0
+    }
+  ],
+  "CWE-787": [
+    {
+      "group_id": "L19_CWE-787_C",
+      "layer_id": 19,
+      "cwe_id": "CWE-787",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        1515
+      ],
+      "n_features": 1,
+      "repair_rate": 1.0,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.4866,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "buffer_overflow",
+        "out_of_bounds_write",
+        "memory_unsafe"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        1.0
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 20.0
+    }
+  ],
+  "CWE-190": [
+    {
+      "group_id": "L16_CWE-190_A",
+      "layer_id": 16,
+      "cwe_id": "CWE-190",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        9287
+      ],
+      "n_features": 1,
+      "repair_rate": 0.667,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.5167,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "memory_unsafe",
+        "bounds_check",
+        "buffer_overflow"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        0.8
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 16.0
+    },
+    {
+      "group_id": "L19_CWE-190_A",
+      "layer_id": 19,
+      "cwe_id": "CWE-190",
+      "group_type": "statistical_fallback",
+      "feature_ids": [
+        16897
+      ],
+      "n_features": 1,
+      "repair_rate": 0.6,
+      "corruption_rate": 0.0,
+      "semantic_purity": 0.0,
+      "auc_val": 0.4632,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "crypto_api",
+        "crypto_weak",
+        "insecure_algorithm"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        0.8
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 16.0
+    }
+  ],
+  "CWE-476": [
+    {
+      "group_id": "L23_CWE-476_C",
+      "layer_id": 23,
+      "cwe_id": "CWE-476",
+      "group_type": "mixed_robust",
+      "feature_ids": [
+        18397
+      ],
+      "n_features": 1,
+      "repair_rate": 0.933,
+      "corruption_rate": 0.0,
+      "semantic_purity": 1.0,
+      "auc_val": 0.5139,
+      "jaccard": 1.0,
+      "rank_corr": 0.5,
+      "source": "cve_pairs",
+      "tags": [
+        "pointer_check",
+        "null_dereference",
+        "memory_unsafe"
+      ],
+      "recommended_strength_range": [
+        0.3,
+        1.0
+      ],
+      "base_alpha": 20.0,
+      "low_alpha": 6.0,
+      "high_alpha": 20.0
+    }
+  ]
+}

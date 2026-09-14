@@ -1,0 +1,29 @@
+{
+  "n_prompts": 1341,
+  "n_records": 5325,
+  "n_unsafe": 60,
+  "n_safe": 1281,
+  "noop_mean_base_overall": -0.0893,
+  "noop_mean_base_unsafe": 0.5292,
+  "noop_mean_base_safe": -0.1183,
+  "bstar_mimic_mean_base_unsafe": 1.0071,
+  "bstar_mimic_mean_regret_unsafe": -0.0619,
+  "bstar_positive_on_unsafe": true,
+  "nonnoop_dominance": false,
+  "noop_best_pct": 90.31,
+  "class_composition_note": "No-op dominance (90.3%) follows from the 95.5% safe-prompt composition. B*-mimic remains positive on the unsafe subset (+0.43).",
+  "offline_baselines": {
+    "always_noop": {
+      "base_mean": -0.0893,
+      "regret_mean": -0.1312
+    },
+    "bstar_mimic": {
+      "base_mean": -0.0626,
+      "regret_mean": -0.1045
+    },
+    "always_matched_low": {
+      "base_mean": -0.0565,
+      "regret_mean": -0.0984
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "model1_intervention_boundary_summary_v1",
+  "status": "COMPLETE",
+  "group_intervention": {
+    "bstar": {
+      "absent_or_whitespace_outputs": 26,
+      "b0_positive_absent_or_whitespace_outputs": 0
+    },
+    "b3_ungated": {
+      "paired_repairs": 29,
+      "b0_positive_denominator": 60,
+      "corrvrr": 0.483333,
+      "validity_rate": 0.9493,
+      "absent_or_whitespace_outputs": 68,
+      "b0_positive_absent_or_whitespace_outputs": 9
+    }
+  },
+  "plausibility_gate": {
+    "routed_prompts": 399,
+    "generation_steps": 182965,
+    "nonfinite_kl_steps": 182965,
+    "nonzero_steering_steps": 0,
+    "interpretation": "The evaluated B3-PG condition applied no effective steering."
+  },
+  "layer_placement": {
+    "bstar_layer_sensitive": {
+      "paired_repairs": 36,
+      "b0_positive_denominator": 60,
+      "corrvrr": 0.6,
+      "corruptions": 3,
+      "b0_safe_scanner_eligible_denominator": 863,
+      "corruption_rate": 0.003476
+    },
+    "fixed_layer_19": {
+      "paired_repairs": 32,
+      "b0_positive_denominator": 60,
+      "corrvrr": 0.533333,
+      "corruptions": 6,
+      "b0_safe_scanner_eligible_denominator": 863,
+      "corruption_rate": 0.006952
+    }
+  }
+}

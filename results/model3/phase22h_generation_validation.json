@@ -1,0 +1,56 @@
+{
+  "schema_version": "phase22h_generation_validation_v1",
+  "status": "PASS",
+  "checks": {
+    "frozen_protocol_population_runner_hashes_match": true,
+    "generation_complete_468": true,
+    "worklist_exact_rebuild_and_order_match": true,
+    "all_records_successful": true,
+    "all_records_frozen_valid": true,
+    "all_generated_text_hashes_match": true,
+    "all_b0_records_unsteered": true,
+    "all_routed_records_match_frozen_cwe_route": true,
+    "all_234_prompt_seed_pairs_complete": true,
+    "checkpoint_equals_final_records": true,
+    "model_wholly_on_cuda0": true,
+    "scanner_not_run": true
+  },
+  "protocol_sha256": "ed400877e33e784f33247f82d4186f673caee0d861d5f0b5717bfc4a9afed904",
+  "population_sha256": "1a8ce89e42a075fd09ecc626f51b95561621c70f8c4a6942b113b9213869e2b8",
+  "runner_sha256": "c42fa2fc76f7f2b663435f660d06fb7e70221aa1b0fc91bd1db4513bc78748cc",
+  "generation_sha256": "c6b55804084290f7efb170fdfddbddb0c2f23ef4400e170941765760e1ba1077",
+  "generation_manifest_sha256": "d9c4909333d5a22ac5d71367f247d60bddb797acde9f8f798145b3026251e30a",
+  "checkpoint_sha256": "36498a14e2248da7c2947d0bf9c8a3881978650c91bf7f1744dd8790dc69af93",
+  "run_manifest_sha256": "1a5a2fb2853ce78a41f3394c7e6a32374cf9bf35dca5db46ed703d3a80ad99df",
+  "record_count": 468,
+  "condition_counts": {
+    "B0": 234,
+    "MODEL3_CWE_LABEL_ROUTED": 234
+  },
+  "seed_condition_counts": {
+    "S42|B0": 78,
+    "S42|MODEL3_CWE_LABEL_ROUTED": 78,
+    "S43|B0": 78,
+    "S43|MODEL3_CWE_LABEL_ROUTED": 78,
+    "S44|B0": 78,
+    "S44|MODEL3_CWE_LABEL_ROUTED": 78
+  },
+  "cwe_condition_counts": {
+    "CWE-120|B0": 144,
+    "CWE-120|MODEL3_CWE_LABEL_ROUTED": 144,
+    "CWE-327|B0": 60,
+    "CWE-327|MODEL3_CWE_LABEL_ROUTED": 60,
+    "CWE-89|B0": 30,
+    "CWE-89|MODEL3_CWE_LABEL_ROUTED": 30
+  },
+  "prompt_seed_pair_count": 234,
+  "paired_generated_text_identical_count": 5,
+  "paired_generated_text_changed_count": 229,
+  "success_count": 468,
+  "failure_count": 0,
+  "invalid_count": 0,
+  "elapsed_seconds": 6437.056126699783,
+  "gpu": "NVIDIA RTX A5000",
+  "scanner_run": false,
+  "security_metrics_computed": false
+}

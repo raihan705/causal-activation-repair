@@ -1,0 +1,38 @@
+{
+  "schema_version": "phase21_environment_manifest_v1",
+  "status": "RECORDED",
+  "python": "3.11.14",
+  "pytorch": "2.6.0+cu118",
+  "cuda_runtime": "11.8",
+  "cuda_available": true,
+  "transformers": "4.57.6",
+  "transformer_lens": "2.17.0",
+  "sae_lens": "6.37.6",
+  "huggingface_hub": "0.36.2",
+  "gpu": "NVIDIA RTX A5000",
+  "gpu_total_vram_bytes": 25756696576,
+  "hf_cli_authentication_status": "PASS",
+  "hf_authentication_status": "PASS; username not retained in public release",
+  "gemma_gated_access": "PASS",
+  "model_revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+  "sae_repository_access": "PASS",
+  "sae_revision": "e86af97a5b6fbbccca28ab654f2fda1b0768f770",
+  "hook_framework": "TransformerLens",
+  "execution_isolation": "ONE_FRESH_PROCESS_PER_SAE_LAYER",
+  "model_loading_options": {
+    "fold_ln": true,
+    "center_writing_weights": false,
+    "center_unembed": false,
+    "dtype": "bfloat16",
+    "parameter_devices": [
+      "cuda:0"
+    ]
+  },
+  "compatible_layer_count": 3,
+  "reconstruction_quality_warning": "This compatibility smoke test establishes technical execution only; reconstruction suitability is reported by the layer-level reconstruction analysis.",
+  "package_changes": [],
+  "environment_rebuilt": false,
+  "hardware_migrated": false,
+  "quantization_used": false,
+  "cpu_offload_used": false
+}

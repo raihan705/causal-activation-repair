@@ -1,0 +1,13 @@
+checkpoint,policy,epoch,rcr,top1_acc,noop_rate,unsafe_rate,high_rate,n_actionable_evaluated
+linear_bandit_epoch_01.ckpt,linear,1,0.8156,0.0929,0.0855,0.0186,0.0203,12
+linear_bandit_epoch_02.ckpt,linear,2,0.4556,0.7955,0.8848,0.0,0.0,18
+linear_bandit_epoch_03.ckpt,linear,3,0.4583,0.9033,0.9963,0.0,0.0,18
+linear_bandit_epoch_04.ckpt,linear,4,0.4583,0.9071,1.0,0.0,0.0,18
+linear_bandit_epoch_05.ckpt,linear,5,0.4583,0.9071,1.0,0.0,0.0,18
+linear_bandit_epoch_06.ckpt,linear,6,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_01.ckpt,mlp,1,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_02.ckpt,mlp,2,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_03.ckpt,mlp,3,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_04.ckpt,mlp,4,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_05.ckpt,mlp,5,0.4583,0.9071,1.0,0.0,0.0,18
+mlp_bandit_epoch_06.ckpt,mlp,6,0.4583,0.9071,1.0,0.0,0.0,18

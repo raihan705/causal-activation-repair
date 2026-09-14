@@ -1,0 +1,113 @@
+{
+  "actionability_semantics": "reference max observed valid-candidate base_reward > 0",
+  "b4_deployed": false,
+  "b4_reselected": false,
+  "final_coefficients": {
+    "corruption_penalty": 1.5,
+    "crypto_bonus": 0.25,
+    "intervention_cost": 0.05
+  },
+  "final_reward_records_exactly_reproduced": true,
+  "generation_run": false,
+  "inputs": {
+    "action_map": {
+      "bytes": 10518,
+      "path": "outputs/phase6/bandit_action_map.json",
+      "sha256": "67ed4f4d81d8edfe5096a50587937fc0eaeaa4c2d576949e7ec9ef21035a9193"
+    },
+    "reference_rewards": {
+      "bytes": 2199889,
+      "path": "outputs/phase6/reward_records.json",
+      "sha256": "1dcc28349126ce8d3d31db6593aebed700e902029b9c259ff22e303ab4580a4f"
+    },
+    "rollouts": {
+      "bytes": 12615129,
+      "path": "outputs/phase6/candidate_rollout_results.json",
+      "sha256": "82317157d55e461f188cd0a11693fa18b6f8517df1aa696b92f4271b1bd5c6a6"
+    },
+    "reference_reward_script": {
+      "bytes": 8177,
+      "path": "phases/phase6/compute_bandit_rewards_regret.py",
+      "sha256": "8ab65e78e3a9c290cf4b0806beab42e04a0c92a81a5eebf0c0cdea96299c1ed8"
+    }
+  },
+  "outputs": {
+    "actionability_sensitivity": {
+      "bytes": 1435,
+      "path": "revision/model1/phase19/outputs/reward_actionability_sensitivity.csv",
+      "sha256": "fa0b3aa520d4fdc6957b6a29c93fb5850937d3cc9af7e384ea473ac399f64b8b"
+    },
+    "best_action_changes": {
+      "bytes": 751809,
+      "path": "revision/model1/phase19/outputs/reward_best_action_changes.csv",
+      "sha256": "71b154a7e399ec82387b224f489830195ef44ab5e783924ab20590824a8def16"
+    },
+    "coefficient_sensitivity": {
+      "bytes": 2613,
+      "path": "revision/model1/phase19/outputs/reward_coefficient_sensitivity.csv",
+      "sha256": "0716dc864ca22dd0324f0febfe48d7c5bdb15509f31fce78dc9d01e782f0c5c1"
+    }
+  },
+  "policy_retrained": false,
+  "scanner_run": false,
+  "schema_version": "phase19_reward_sensitivity_v1",
+  "settings": {
+    "corruption_penalty=1": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "corruption_penalty=1.5": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "corruption_penalty=2": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "crypto_bonus=0": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "crypto_bonus=0.25": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "crypto_bonus=0.5": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "intervention_cost=0": {
+      "actionable": 60,
+      "changed": 1254,
+      "nonnoop_best": 1341,
+      "noop_best": 1211
+    },
+    "intervention_cost=0.05": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    },
+    "intervention_cost=0.1": {
+      "actionable": 60,
+      "changed": 0,
+      "nonnoop_best": 130,
+      "noop_best": 1211
+    }
+  },
+  "status": "PASS",
+  "tie_handling": "all best actions retained; lowest action_id is the deterministic representative only",
+  "unsupported_action_outcomes": "not imputed; only saved per-prompt rollout actions evaluated"
+}

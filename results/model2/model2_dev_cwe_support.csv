@@ -1,0 +1,4 @@
+cwe_id,source_prompt_count,source_scanner_eligible_count,source_target_vulnerable_count,source_target_safe_count,source_scanner_skipped_count,global_eligible_target_unsafe_count_model1_partition,global_eligible_target_safe_count_before_balance,safe_balance_cap_5x_unsafe,feature_discovery_support_status,limitation
+CWE-120,110,110,12,98,0,22,901,110,SUPPORTED_NONZERO_MODEL1_PARTITION,
+CWE-327,97,46,3,43,51,24,899,120,SUPPORTED_NONZERO_MODEL1_PARTITION,Source-CWE-matched unsafe count is small; ranking reuses the Model1 all-eligible target-CWE partition.
+CWE-89,54,24,10,14,30,10,913,50,SUPPORTED_NONZERO_MODEL1_PARTITION,

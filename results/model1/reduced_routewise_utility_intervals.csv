@@ -1,0 +1,28 @@
+benchmark,contrast,route_cwe_id,layer,feature,alpha,task_count,metric,point_estimate,ci95_lower,ci95_upper,improved_count,regressed_count,bootstrap_replicates,bootstrap_seed
+HumanEval,CWE-120 active route - paired B0,CWE-120,19,14193,40,164,pass@1,-0.115854,-0.164634,-0.067073,0,19,10000,42
+BigCodeBench,CWE-120 active route - paired B0,CWE-120,19,14193,40,150,AST syntax-pass proxy,-0.973333,-0.993333,-0.946667,0,146,10000,42
+MMLU,CWE-120 active route - paired B0,CWE-120,19,14193,40,412,accuracy,-0.584951,-0.633495,-0.536408,0,241,10000,42
+HumanEval,CWE-125 active route - paired B0,CWE-125,23,16655,40,164,pass@1,-0.079268,-0.140244,-0.024390,6,19,10000,42
+BigCodeBench,CWE-125 active route - paired B0,CWE-125,23,16655,40,150,AST syntax-pass proxy,-0.973333,-0.993333,-0.946667,0,146,10000,42
+MMLU,CWE-125 active route - paired B0,CWE-125,23,16655,40,412,accuracy,-0.247573,-0.296117,-0.199029,15,117,10000,42
+HumanEval,CWE-190 active route - paired B0,CWE-190,19,16897,40,164,pass@1,-0.115854,-0.164634,-0.067073,0,19,10000,42
+BigCodeBench,CWE-190 active route - paired B0,CWE-190,19,16897,40,150,AST syntax-pass proxy,-0.973333,-0.993333,-0.946667,0,146,10000,42
+MMLU,CWE-190 active route - paired B0,CWE-190,19,16897,40,412,accuracy,-0.121359,-0.172330,-0.072816,33,83,10000,42
+HumanEval,CWE-327 active route - paired B0,CWE-327,23,14449,40,164,pass@1,-0.103659,-0.158537,-0.054878,2,19,10000,42
+BigCodeBench,CWE-327 active route - paired B0,CWE-327,23,14449,40,150,AST syntax-pass proxy,-0.886667,-0.940000,-0.833333,1,134,10000,42
+MMLU,CWE-327 active route - paired B0,CWE-327,23,14449,40,412,accuracy,-0.009709,-0.058252,0.038835,50,54,10000,42
+HumanEval,CWE-338 active route - paired B0,CWE-338,23,7533,40,164,pass@1,-0.109756,-0.164634,-0.060976,1,19,10000,42
+BigCodeBench,CWE-338 active route - paired B0,CWE-338,23,7533,40,150,AST syntax-pass proxy,-0.926667,-0.966667,-0.880000,1,140,10000,42
+MMLU,CWE-338 active route - paired B0,CWE-338,23,7533,40,412,accuracy,-0.296117,-0.349515,-0.240291,23,145,10000,42
+HumanEval,CWE-476 active route - paired B0,CWE-476,23,18397,40,164,pass@1,-0.109756,-0.164634,-0.060976,1,19,10000,42
+BigCodeBench,CWE-476 active route - paired B0,CWE-476,23,18397,40,150,AST syntax-pass proxy,-0.786667,-0.853333,-0.713333,1,119,10000,42
+MMLU,CWE-476 active route - paired B0,CWE-476,23,18397,40,412,accuracy,-0.072816,-0.114078,-0.031553,23,53,10000,42
+HumanEval,CWE-787 active route - paired B0,CWE-787,19,1515,40,164,pass@1,-0.115854,-0.164634,-0.067073,0,19,10000,42
+BigCodeBench,CWE-787 active route - paired B0,CWE-787,19,1515,40,150,AST syntax-pass proxy,-0.973333,-0.993333,-0.946667,0,146,10000,42
+MMLU,CWE-787 active route - paired B0,CWE-787,19,1515,40,412,accuracy,-0.584951,-0.633495,-0.536408,0,241,10000,42
+HumanEval,CWE-79 active route - paired B0,CWE-79,16,9816,40,164,pass@1,-0.115854,-0.164634,-0.067073,0,19,10000,42
+BigCodeBench,CWE-79 active route - paired B0,CWE-79,16,9816,40,150,AST syntax-pass proxy,-0.960000,-0.986667,-0.926667,0,144,10000,42
+MMLU,CWE-79 active route - paired B0,CWE-79,16,9816,40,412,accuracy,-0.550971,-0.601942,-0.500000,5,232,10000,42
+HumanEval,CWE-89 active route - paired B0,CWE-89,23,1652,40,164,pass@1,-0.103659,-0.158537,-0.054878,2,19,10000,42
+BigCodeBench,CWE-89 active route - paired B0,CWE-89,23,1652,40,150,AST syntax-pass proxy,-0.140000,-0.206667,-0.080000,3,24,10000,42
+MMLU,CWE-89 active route - paired B0,CWE-89,23,1652,40,412,accuracy,-0.218447,-0.269417,-0.165049,25,115,10000,42

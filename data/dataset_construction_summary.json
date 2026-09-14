@@ -1,0 +1,49 @@
+{
+  "schema_version": "dataset_construction_summary_v1",
+  "status": "CANONICAL_ACCEPTED",
+  "unit": "file-level vulnerable/fixed pair",
+  "construction_counts": {
+    "filtered_language_length_deduplicated_pairs": 8229,
+    "target_cwe_scope_raw_pairs": 2722,
+    "development_only_augmented_pairs_before_balancing": 40,
+    "pre_balancing_total_pairs": 2762,
+    "balanced_working_set_total": 843,
+    "balanced_working_set_raw": 828,
+    "balanced_working_set_augmented": 15
+  },
+  "working_set_split_counts": {
+    "train": 391,
+    "validation": 121,
+    "test": 331,
+    "total": 843,
+    "cve_overlap_across_splits": 0
+  },
+  "scope_note": "The CVE-pair data support development-stage feature discovery and method selection; held-out repair effectiveness is evaluated on CyberSecEval.",
+  "source_artifacts": [
+    {
+      "path": "data/processed/cve_pairs_filtered.csv",
+      "sha256": "b0418511b167040d6aaa3c049bf3c5e6feb1f12282593785e6a6ccb92333a2e1",
+      "redistributed": false
+    },
+    {
+      "path": "data/processed/vulnerability_pairs.csv",
+      "sha256": "6d0f6917f4293c583bb35ac0a39cf625a3fbbd03db24d68f64fd1b9dac5de0e2",
+      "redistributed": false
+    },
+    {
+      "path": "data/processed/crypto_augmented_pairs.csv",
+      "sha256": "a18d7c233e92b7334eada6b80996a2b15419d2432756c8ae489038861f81f0ab",
+      "redistributed": false
+    },
+    {
+      "path": "data/processed/vulnerability_pairs_balanced.csv",
+      "sha256": "96bcfa2060acd5eeb92665259afc0b09a82506a31df82485398218fd4987323a",
+      "redistributed": false
+    },
+    {
+      "path": "data/processed/dataset_statistics.csv",
+      "sha256": "24fd2d2fe2d0efc16d0f1d0a3b70d05a7b29b531018d45c829c3dde53d16cdba",
+      "redistributed": false
+    }
+  ]
+}

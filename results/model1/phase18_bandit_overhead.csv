@@ -1,0 +1,5 @@
+method,repetition,decision_count,total_wall_seconds,mean_latency_seconds,median_latency_seconds,failure_count
+B4-policy-decision,1,50,0.0030630999999999996,6.1262e-05,5.5e-05,0
+B4-policy-decision,2,50,0.002634699999999999,5.269400000000001e-05,5.4250000000000004e-05,0
+B4-policy-decision,3,50,0.0030218999999999992,6.0438e-05,5.41e-05,0
+B4-policy-decision,ALL,150,0.008719699999999995,5.813133333333334e-05,5.435e-05,0

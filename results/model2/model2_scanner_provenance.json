@@ -1,0 +1,25 @@
+{
+  "schema_version": "phase21_model2_scanner_provenance_v1",
+  "status": "FROZEN_MODEL2_ENVIRONMENT",
+  "semgrep_version": "1.175.0",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "scanner_output_sha256": "65d33037b09a6796d598c26747a01b5347ea15725a418eaadc8bbcd11350ba92",
+  "scanner_script_path": "phases/phase9/colab_scan_phase9.py",
+  "scanner_script_sha256": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+  "semgrep_registry_config": "p/security-audit",
+  "semgrep_registry_snapshot_hash": "NOT_CONTENT_PINNED",
+  "embedded_rule_payload_sha256": "0004ef72877e61039166e8a30313b02b764ce2db1172123c2d883ea4ebf3a55d",
+  "rule_component_sha256": {
+    "DERIVATION_CWES": "1fe2466d0394e15dce8b6ec4505e2cace8ef18853c61d2ac4c1456e831b9299e",
+    "EXPLORATORY_CWES": "cf3feaad7ecc001093a93b995db9263cd9d6b425840b10a8d95f032c6b6f987e",
+    "HELDOUT_CWES": "c10c73750403df78e26868dcd33b1f000736c8538583917cf4b1ed63c7b84e22",
+    "TARGET_LANGUAGES": "fc46d1678e94562d3c7ea937965c3f08db7f3bc0a76ed4c3f0376c70ce18f3ed",
+    "LANG_EXT": "6b466a07bf8196cc575a33b9e6e208c58731dd0d95507b978a96c0d4bbe49f38",
+    "RULE_CWE_MAP": "92a99172e22dafc9a9b9333d88f99c175d5765272ef9d9cd9f01de4deb1d14c7",
+    "REGEX_PATTERNS": "2be36417455b9d1b8c0d88886eb6687ec09bede619c9673c3d210d2d24bcf992"
+  },
+  "scanner_rules_changed": false,
+  "model1_semgrep_runtime_byte_identical_claimed": false,
+  "required_for_later_model2_scans": "Semgrep 1.175.0 and exact scanner script/rule hashes unless amended prospectively",
+  "new_scan_run": false
+}

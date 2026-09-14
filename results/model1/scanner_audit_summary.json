@@ -1,0 +1,19 @@
+{
+  "schema_version": "model1_scanner_audit_summary_v1",
+  "status": "COMPLETE",
+  "audit_design": "stratified manual audit of scanner decisions",
+  "decision_count": 50,
+  "confusion_matrix": {
+    "true_positive": 20,
+    "false_positive": 4,
+    "false_negative": 5,
+    "true_negative": 21
+  },
+  "false_positive_rate": {
+    "formula": "FP / (FP + TN)",
+    "numerator": 4,
+    "denominator": 25,
+    "value": 0.16
+  },
+  "reporting_note": "The false-positive rate is computed over the 25 audit decisions whose reference label is negative."
+}

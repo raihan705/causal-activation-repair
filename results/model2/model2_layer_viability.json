@@ -1,0 +1,356 @@
+{
+  "schema_version": "phase21_model2_layer_viability_v1",
+  "status": "PASS",
+  "state": "COMPLETE",
+  "decision_scope": "SAE reconstruction and sparsity viability only; no layer ranking or security feature discovery",
+  "frozen_model": {
+    "id": "google/gemma-2-9b-it",
+    "revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819"
+  },
+  "frozen_sae_repository": {
+    "id": "google/gemma-scope-9b-it-res",
+    "revision": "e86af97a5b6fbbccca28ab654f2fda1b0768f770"
+  },
+  "gates": {
+    "mean_relative_l2_per_required_source": "strictly less than 0.65",
+    "mean_active_feature_fraction_per_required_source": "less than or equal to 0.20",
+    "relative_l2_row_formula": "||h - SAE.decode(SAE.encode(h))||_2 / ||h||_2",
+    "population_standard_deviation_ddof": 0
+  },
+  "source_populations": {
+    "CVE_VULNERABLE": {
+      "n": 128,
+      "source": "development train+validation vulnerable code; planned CWE-120/CWE-327/CWE-89 only"
+    },
+    "CVE_FIXED": {
+      "n": 128,
+      "source": "exactly paired development train+validation fixed code"
+    },
+    "MODEL2_B0": {
+      "n": 261,
+      "source": "frozen Model2 B0 development generations for planned source CWEs; reconstruction is not conditioned on scanner eligibility"
+    }
+  },
+  "layers": [
+    {
+      "layer": 9,
+      "hook": "blocks.9.hook_resid_post",
+      "sae_id": "layer_9/width_16k/average_l0_47",
+      "params_sha256": "60dd98386fa1361f47f9ba25da29dca575c213dc1392f0c57ccefc738b254da5",
+      "status": "VIABLE",
+      "required_sources": [
+        {
+          "layer": 9,
+          "hook": "blocks.9.hook_resid_post",
+          "source": "CVE_VULNERABLE",
+          "n": 128,
+          "relative_l2_mean": 0.41310916538350284,
+          "relative_l2_median": 0.40521691739559174,
+          "relative_l2_population_sd": 0.05549238797999676,
+          "relative_l2_min": 0.3113104999065399,
+          "relative_l2_max": 0.6522490978240967,
+          "raw_mse_mean": 0.5709948330186307,
+          "mean_l0": 32.171875,
+          "mean_active_feature_fraction": 0.0019636154174804688,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 9,
+          "hook": "blocks.9.hook_resid_post",
+          "source": "CVE_FIXED",
+          "n": 128,
+          "relative_l2_mean": 0.41360177122987807,
+          "relative_l2_median": 0.40561650693416595,
+          "relative_l2_population_sd": 0.05683929626836382,
+          "relative_l2_min": 0.3099534213542938,
+          "relative_l2_max": 0.6522490978240967,
+          "raw_mse_mean": 0.5794483022764325,
+          "mean_l0": 32.7578125,
+          "mean_active_feature_fraction": 0.001999378204345703,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 9,
+          "hook": "blocks.9.hook_resid_post",
+          "source": "MODEL2_B0",
+          "n": 261,
+          "relative_l2_mean": 0.40813031324481597,
+          "relative_l2_median": 0.4062998592853546,
+          "relative_l2_population_sd": 0.015189571314698754,
+          "relative_l2_min": 0.3314521610736847,
+          "relative_l2_max": 0.46860072016716003,
+          "raw_mse_mean": 1.0297775887438163,
+          "mean_l0": 52.72030651340996,
+          "mean_active_feature_fraction": 0.0032177921455938696,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        }
+      ],
+      "all_required_source_reconstruction_pass": true,
+      "all_required_source_sparsity_pass": true,
+      "technical_failure": false
+    },
+    {
+      "layer": 20,
+      "hook": "blocks.20.hook_resid_post",
+      "sae_id": "layer_20/width_16k/average_l0_47",
+      "params_sha256": "63337f10014d4c9096c51ecc372d1b61a8ef2642be2ca01a0d04ccd3dc0e6bf2",
+      "status": "VIABLE",
+      "required_sources": [
+        {
+          "layer": 20,
+          "hook": "blocks.20.hook_resid_post",
+          "source": "CVE_VULNERABLE",
+          "n": 128,
+          "relative_l2_mean": 0.4581271521747112,
+          "relative_l2_median": 0.4621676802635193,
+          "relative_l2_population_sd": 0.04437881234431261,
+          "relative_l2_min": 0.3537118136882782,
+          "relative_l2_max": 0.5582732558250427,
+          "raw_mse_mean": 4.157190337777138,
+          "mean_l0": 43.546875,
+          "mean_active_feature_fraction": 0.0026578903198242188,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 20,
+          "hook": "blocks.20.hook_resid_post",
+          "source": "CVE_FIXED",
+          "n": 128,
+          "relative_l2_mean": 0.45896847429685295,
+          "relative_l2_median": 0.46110495924949646,
+          "relative_l2_population_sd": 0.04561708457971755,
+          "relative_l2_min": 0.3537118136882782,
+          "relative_l2_max": 0.5557464957237244,
+          "raw_mse_mean": 4.17762547172606,
+          "mean_l0": 43.609375,
+          "mean_active_feature_fraction": 0.0026617050170898438,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 20,
+          "hook": "blocks.20.hook_resid_post",
+          "source": "MODEL2_B0",
+          "n": 261,
+          "relative_l2_mean": 0.3361827293803409,
+          "relative_l2_median": 0.32770127058029175,
+          "relative_l2_population_sd": 0.032977491263961475,
+          "relative_l2_min": 0.2975379228591919,
+          "relative_l2_max": 0.5051767230033875,
+          "raw_mse_mean": 4.062041428810792,
+          "mean_l0": 35.69348659003831,
+          "mean_active_feature_fraction": 0.002178557531130268,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        }
+      ],
+      "all_required_source_reconstruction_pass": true,
+      "all_required_source_sparsity_pass": true,
+      "technical_failure": false
+    },
+    {
+      "layer": 31,
+      "hook": "blocks.31.hook_resid_post",
+      "sae_id": "layer_31/width_16k/average_l0_43",
+      "params_sha256": "f5b2265ffe36c4e55f6268224b9d6f47742b6ae0e5a393844c1402bf43e0b3b4",
+      "status": "VIABLE",
+      "required_sources": [
+        {
+          "layer": 31,
+          "hook": "blocks.31.hook_resid_post",
+          "source": "CVE_VULNERABLE",
+          "n": 128,
+          "relative_l2_mean": 0.4467524162027985,
+          "relative_l2_median": 0.43753980100154877,
+          "relative_l2_population_sd": 0.05081429132162381,
+          "relative_l2_min": 0.3464938998222351,
+          "relative_l2_max": 0.6481059789657593,
+          "raw_mse_mean": 10.5562330968678,
+          "mean_l0": 34.1875,
+          "mean_active_feature_fraction": 0.002086639404296875,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 31,
+          "hook": "blocks.31.hook_resid_post",
+          "source": "CVE_FIXED",
+          "n": 128,
+          "relative_l2_mean": 0.4465798323508352,
+          "relative_l2_median": 0.4377579689025879,
+          "relative_l2_population_sd": 0.05067213507798359,
+          "relative_l2_min": 0.34567418694496155,
+          "relative_l2_max": 0.6365160346031189,
+          "raw_mse_mean": 10.579283058643341,
+          "mean_l0": 34.28125,
+          "mean_active_feature_fraction": 0.0020923614501953125,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        },
+        {
+          "layer": 31,
+          "hook": "blocks.31.hook_resid_post",
+          "source": "MODEL2_B0",
+          "n": 261,
+          "relative_l2_mean": 0.4045699221649389,
+          "relative_l2_median": 0.4042089283466339,
+          "relative_l2_population_sd": 0.02332777652757651,
+          "relative_l2_min": 0.28473374247550964,
+          "relative_l2_max": 0.5173813700675964,
+          "raw_mse_mean": 10.379603957764491,
+          "mean_l0": 40.81992337164751,
+          "mean_active_feature_fraction": 0.0024914504011015327,
+          "nan_count_all_reported_metrics": 0,
+          "inf_count_all_reported_metrics": 0,
+          "relative_l2_gate_strict_less_than": 0.65,
+          "active_fraction_gate_less_than_or_equal": 0.2,
+          "relative_l2_pass": true,
+          "active_fraction_pass": true
+        }
+      ],
+      "all_required_source_reconstruction_pass": true,
+      "all_required_source_sparsity_pass": true,
+      "technical_failure": false
+    }
+  ],
+  "viable_layers": [
+    9,
+    20,
+    31
+  ],
+  "viable_layer_ranking": null,
+  "cwe_327_support_note": "DISCOVERY_USABLE_SOURCE_MATCHED_SUPPORT_LIMITED: B0 source n=97; scanner-eligible n=46; target-positive n=3; target-safe n=43. This does not alter reconstruction viability and must constrain later discovery interpretation.",
+  "artifacts": {
+    "9": {
+      "raw": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_9_raw.pt",
+        "sha256": "bb76e7217df3afcf41dcda11061a428f21bb1b1c88e1595cf0f4e5825621b033",
+        "verified_sha256": "bb76e7217df3afcf41dcda11061a428f21bb1b1c88e1595cf0f4e5825621b033"
+      },
+      "latents": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_9_latents.pt",
+        "sha256": "34bdf5751c8804985fcf3161a4ceff5ab445a97d55c50a6e585b896f4a60c8a2",
+        "verified_sha256": "34bdf5751c8804985fcf3161a4ceff5ab445a97d55c50a6e585b896f4a60c8a2"
+      },
+      "reconstruction": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_9_reconstruction.pt",
+        "sha256": "e18ebc84b087b8291cd58b5b417ba417f3b749b42b33fd626fae93a7c41c3dbc",
+        "verified_sha256": "e18ebc84b087b8291cd58b5b417ba417f3b749b42b33fd626fae93a7c41c3dbc"
+      },
+      "row_metrics": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_9_reconstruction_rows.csv",
+        "sha256": "df2740aed10f2ffc66e95f401bd1cac9c3ca85c5f1d02ce246d0bf2b4300ff63",
+        "verified_sha256": "df2740aed10f2ffc66e95f401bd1cac9c3ca85c5f1d02ce246d0bf2b4300ff63"
+      }
+    },
+    "20": {
+      "raw": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_20_raw.pt",
+        "sha256": "551d684c111e2beecbdc3fbba1b6425652e0810ad800ee5b2c55bb3082df1da9",
+        "verified_sha256": "551d684c111e2beecbdc3fbba1b6425652e0810ad800ee5b2c55bb3082df1da9"
+      },
+      "latents": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_20_latents.pt",
+        "sha256": "0dd684cdc28429fa07a89e1b73a51a3f2aa64846599887d766c938989600a628",
+        "verified_sha256": "0dd684cdc28429fa07a89e1b73a51a3f2aa64846599887d766c938989600a628"
+      },
+      "reconstruction": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_20_reconstruction.pt",
+        "sha256": "a8c5cda4d904f939b700c61bb243811fe61a8360215ce353a27bf76e5fa24aac",
+        "verified_sha256": "a8c5cda4d904f939b700c61bb243811fe61a8360215ce353a27bf76e5fa24aac"
+      },
+      "row_metrics": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_20_reconstruction_rows.csv",
+        "sha256": "2973a3ae344106ad3646596d36fe668fc1223cb46c6c57cf707ef19b4fdb1540",
+        "verified_sha256": "2973a3ae344106ad3646596d36fe668fc1223cb46c6c57cf707ef19b4fdb1540"
+      }
+    },
+    "31": {
+      "raw": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_31_raw.pt",
+        "sha256": "ed7e692ee17c86b0926999058117d1b67a0e63196257f8654c69388aa92f34a9",
+        "verified_sha256": "ed7e692ee17c86b0926999058117d1b67a0e63196257f8654c69388aa92f34a9"
+      },
+      "latents": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_31_latents.pt",
+        "sha256": "50447f2886f2d7747f8e1ff497b05467c8c6d7d361fe29e2b4901e55d9e3b965",
+        "verified_sha256": "50447f2886f2d7747f8e1ff497b05467c8c6d7d361fe29e2b4901e55d9e3b965"
+      },
+      "reconstruction": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_31_reconstruction.pt",
+        "sha256": "ec8b45d40096185b24cbb35a6a6218c667408458b169a68967bffa7f6db6fcbe",
+        "verified_sha256": "ec8b45d40096185b24cbb35a6a6218c667408458b169a68967bffa7f6db6fcbe"
+      },
+      "row_metrics": {
+        "path": "revision/model2/phase21/outputs/activations/model2_layer_31_reconstruction_rows.csv",
+        "sha256": "38c3cdb9680c986bd78aced7fdd7089e57829810e6e80d8b27c3f5b7b8deefec",
+        "verified_sha256": "38c3cdb9680c986bd78aced7fdd7089e57829810e6e80d8b27c3f5b7b8deefec"
+      }
+    }
+  },
+  "provenance": {
+    "source_manifest": {
+      "path": "revision/model2/phase21/outputs/model2_activation_source_manifest.json",
+      "sha256": "4d4d80b4174b871f0dc96c6db888ecf3a98943c86e18fc143ba745254567ccf0"
+    },
+    "activation_manifest": {
+      "path": "revision/model2/phase21/outputs/model2_activation_manifest.csv",
+      "sha256": "0ecff36e346740e71f0ce43d7eff43d00117c891b9a6f6e05adea2990f4b1f47"
+    },
+    "activation_run_manifest": {
+      "path": "revision/model2/phase21/outputs/model2_activation_run_manifest.json",
+      "sha256": "0f76e85b5dbac01738a388af87b23d8435854c49f176d63d5d9dbc45e6951955"
+    },
+    "scanner_provenance": {
+      "path": "revision/model2/phase21/outputs/model2_scanner_provenance.json",
+      "sha256": "e249982d929f13c7a0cda0211f73e4cd721331b98cf483e9b205f3c4936d64a9"
+    },
+    "source_reconstruction_csv": {
+      "path": "revision/model2/phase21/outputs/model2_source_reconstruction.csv",
+      "sha256": "bfeb71655fd17bc072527eca8ca92dbaa893337bd72a607b1a3eed0c478d68f9"
+    }
+  },
+  "security_feature_ranking_run": false,
+  "top200_created": false,
+  "causal_intervention_run": false,
+  "steered_generation_run": false,
+  "scanner_run_during_this_substage": false,
+  "heldout_used": false,
+  "model1_modified": false
+}

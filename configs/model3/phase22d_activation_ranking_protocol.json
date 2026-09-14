@@ -1,0 +1,1519 @@
+{
+  "schema_version": "phase22d_model3_activation_ranking_protocol_v1",
+  "status": "FROZEN_BEFORE_ACTIVATION_EXTRACTION",
+  "split": "DEVELOPMENT",
+  "partition_path": "revision/model3/phase22/outputs/phase22d_feature_partition_manifest.json",
+  "partition_sha256": "f4d9671c2d8d3e7fb309ea44a1644d6f811a2b560a0da49d2dc1f175f808f845",
+  "ranking_prompt_union_count": 144,
+  "ranking_prompt_union_ids_source_order": [
+    1009,
+    310,
+    1079,
+    133,
+    1688,
+    297,
+    105,
+    296,
+    137,
+    123,
+    233,
+    1007,
+    1077,
+    1183,
+    1163,
+    264,
+    42,
+    1841,
+    132,
+    1800,
+    253,
+    18,
+    342,
+    45,
+    86,
+    27,
+    1814,
+    1748,
+    5,
+    1162,
+    265,
+    207,
+    382,
+    112,
+    1136,
+    1123,
+    290,
+    214,
+    354,
+    115,
+    1061,
+    1615,
+    359,
+    220,
+    227,
+    1174,
+    1113,
+    1092,
+    113,
+    1675,
+    1128,
+    1847,
+    1794,
+    89,
+    276,
+    1124,
+    1850,
+    396,
+    1835,
+    238,
+    125,
+    62,
+    241,
+    1603,
+    1105,
+    404,
+    1045,
+    1172,
+    373,
+    99,
+    1159,
+    281,
+    309,
+    1684,
+    1829,
+    9,
+    1194,
+    1823,
+    47,
+    306,
+    70,
+    324,
+    1722,
+    1188,
+    346,
+    1858,
+    1175,
+    147,
+    44,
+    71,
+    1662,
+    162,
+    134,
+    1184,
+    331,
+    37,
+    1678,
+    1013,
+    1190,
+    1154,
+    26,
+    256,
+    278,
+    479,
+    314,
+    1695,
+    237,
+    76,
+    304,
+    121,
+    254,
+    311,
+    1643,
+    1779,
+    66,
+    1151,
+    259,
+    1786,
+    394,
+    391,
+    434,
+    1170,
+    1704,
+    25,
+    155,
+    406,
+    41,
+    63,
+    277,
+    1155,
+    12,
+    473,
+    165,
+    1106,
+    992,
+    1060,
+    11,
+    302,
+    301,
+    1055,
+    347,
+    1187,
+    1122,
+    1165
+  ],
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "quantization": false,
+    "offload": false
+  },
+  "sae": {
+    "repository": "andyrdt/saes-qwen2.5-7b-instruct",
+    "revision": "c37e53c4bb07127ad17ab88f28b93d4e87142e59",
+    "loader_revision": "de9138b02fffdf9919c53cee828beb4e05049741",
+    "layers": [
+      7,
+      15,
+      23
+    ],
+    "trainer": "trainer_0",
+    "type": "BatchTopK",
+    "d_in": 3584,
+    "d_sae": 131072,
+    "k": 32,
+    "encoding": "encode(use_threshold=True)",
+    "sae_batch_size": 1
+  },
+  "tokenization": {
+    "input": "raw generated_code text",
+    "chat_template": false,
+    "add_special_tokens": true,
+    "truncation": true,
+    "max_length": 512,
+    "model_batch_size": 1,
+    "selection": "last index whose attention_mask value is one",
+    "minimum_nonpadding_tokens": 9,
+    "qwen_sae_first_eight_token_exclusion_respected": true
+  },
+  "ranking": {
+    "cells": 9,
+    "histogram_bins": 20,
+    "weights": {
+      "histogram_distance": 0.4,
+      "absolute_raw_mean_difference": 0.4,
+      "ks_statistic": 0.2
+    },
+    "ks_preselection_count": 500,
+    "non_preselected_ks_default": 0.0,
+    "top_ranked_features_per_cell": 200,
+    "candidate_rule": "first 10 finite top-200 features active (>0) in at least one unsafe-arm record",
+    "candidates_per_cell_maximum": 10,
+    "absolute_model1_or_model2_frequency_score_or_magnitude_thresholds_reused": false,
+    "reason": "BatchTopK activation scale is Model3-specific; fixed cross-model activation-scale pruning thresholds are prohibited",
+    "deterministic_full_replay_required": true
+  },
+  "scripts": {
+    "raw_extraction_path": "revision/model3/phase22/scripts/extract_phase22d_raw_activations.py",
+    "raw_extraction_sha256": "e0beafed1c2a73414bcb212fc7df805c1a4b867e060a180c80692a92faa3719f",
+    "latent_encoding_path": "revision/model3/phase22/scripts/encode_phase22d_latents.py",
+    "latent_encoding_sha256": "b9f33aed4683da7dd91f481b2c4d8f642cf3f2ef9ebf26772bcc1c4e3df45b44",
+    "sae_helper_path": "revision/model3/phase22/scripts/phase22d_sae.py",
+    "sae_helper_sha256": "dfbb5a8a1110da610105873cc11727af9cbe31d1f0f5688fa5a4d0e764613dee",
+    "ranking_path": "revision/model3/phase22/scripts/rank_phase22d_features.py",
+    "ranking_sha256": "7a4a801c125d78ee4a0f8be3d5c2ec7634a82df53a57e57281671011c4c74090"
+  },
+  "records": [
+    {
+      "ranking_order": 0,
+      "prompt_id": 1009,
+      "generated_code_sha256": "3182d0132b6a90fb3eff10a1c5f77d91d98626a66c7c20bf2b82cdcca5cf38e8",
+      "input_token_count": 141,
+      "selected_token_index": 140,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 1,
+      "prompt_id": 310,
+      "generated_code_sha256": "2928c7e9e9d581a589e12bf9a26c018cdddf2c8e6ca2cc7113cd733c5c5d3ccd",
+      "input_token_count": 512,
+      "selected_token_index": 511,
+      "selected_token_id": 2972,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 2,
+      "prompt_id": 1079,
+      "generated_code_sha256": "d82926430c93fefd474733660ac8122e8cc587264452a3dcaab4729ac633888b",
+      "input_token_count": 363,
+      "selected_token_index": 362,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 3,
+      "prompt_id": 133,
+      "generated_code_sha256": "d0880734f4ec39b270993245c2ee36319b273c58d256e0a9bad80e21d355f141",
+      "input_token_count": 135,
+      "selected_token_index": 134,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 4,
+      "prompt_id": 1688,
+      "generated_code_sha256": "7bc5b1ea1abd6f542b82dcbe7d71a76b59f689c3ebffbb2c430db3d6540384e1",
+      "input_token_count": 316,
+      "selected_token_index": 315,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 5,
+      "prompt_id": 297,
+      "generated_code_sha256": "51230f2efe0e04d93983178d45220918d5f577f7508a9595c6baf8a80b80bfba",
+      "input_token_count": 217,
+      "selected_token_index": 216,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 6,
+      "prompt_id": 105,
+      "generated_code_sha256": "7a8fd76bc736ce46f74628eb2f1f7ea959daa00c3f2d1bca46ed5160b9d03c70",
+      "input_token_count": 80,
+      "selected_token_index": 79,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 7,
+      "prompt_id": 296,
+      "generated_code_sha256": "894c71571eeea1aeff31ed99589345de111d887eee0a70d4a43dff219bfdd0ba",
+      "input_token_count": 107,
+      "selected_token_index": 106,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 8,
+      "prompt_id": 137,
+      "generated_code_sha256": "bbbd546aa8adba295518d8e80616e9190022196904c41d823193225e0b4a3c89",
+      "input_token_count": 207,
+      "selected_token_index": 206,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 9,
+      "prompt_id": 123,
+      "generated_code_sha256": "a2cebc1ad635a7b1e9287b1c95c5c0a1530990e577f9a8592edd058da428b35d",
+      "input_token_count": 125,
+      "selected_token_index": 124,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 10,
+      "prompt_id": 233,
+      "generated_code_sha256": "ee468c1253920383227eeda114a62708e4df9f265bce40353d33ae4863e5fc1d",
+      "input_token_count": 322,
+      "selected_token_index": 321,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 11,
+      "prompt_id": 1007,
+      "generated_code_sha256": "843458964e530f05928c4267679b89bcfd9ace09c042f50b57b02effb1e92c38",
+      "input_token_count": 139,
+      "selected_token_index": 138,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 12,
+      "prompt_id": 1077,
+      "generated_code_sha256": "ad1122c620a837c74ffe3fa9f7867db70bc4be1672ac11b0dabbe3865b9dd243",
+      "input_token_count": 233,
+      "selected_token_index": 232,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 13,
+      "prompt_id": 1183,
+      "generated_code_sha256": "2c4bb7284cde093b1f9af0fe083b60d1d3250c8cb683bd60d39cd18930e3f714",
+      "input_token_count": 153,
+      "selected_token_index": 152,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 14,
+      "prompt_id": 1163,
+      "generated_code_sha256": "e9fada9b2dd9a44cc7cc3afd8922fbc61900e6a5b538a919be796f275e8736c8",
+      "input_token_count": 149,
+      "selected_token_index": 148,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 15,
+      "prompt_id": 264,
+      "generated_code_sha256": "97cc9739de8b6d6aafeae3546953240c9be0cd7d5f553dab1c2e5b97360e1ec4",
+      "input_token_count": 512,
+      "selected_token_index": 511,
+      "selected_token_id": 497,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 16,
+      "prompt_id": 42,
+      "generated_code_sha256": "f59cbad394ce861a201aa17c682900e36a30ad06133c2d908c63f455fc115abb",
+      "input_token_count": 221,
+      "selected_token_index": 220,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 17,
+      "prompt_id": 1841,
+      "generated_code_sha256": "3dbd211529dca73fb45c95038aba61d0d03c1f53656f0ba1788a75e22de36ec9",
+      "input_token_count": 86,
+      "selected_token_index": 85,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 18,
+      "prompt_id": 132,
+      "generated_code_sha256": "a5b89d9e4a01b5e80b65be10cbd199ff79b71ea6b251f95f2edc12d1afa11790",
+      "input_token_count": 255,
+      "selected_token_index": 254,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 19,
+      "prompt_id": 1800,
+      "generated_code_sha256": "d21a4f1e3d16a5b63997ae5243c5e004b28c79a6a9b5a01264f12674f4f8959d",
+      "input_token_count": 22,
+      "selected_token_index": 21,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 20,
+      "prompt_id": 253,
+      "generated_code_sha256": "ec96e259468978356009b28061e616b3cad1f67f41d939987cb3eafb0a86b389",
+      "input_token_count": 127,
+      "selected_token_index": 126,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 21,
+      "prompt_id": 18,
+      "generated_code_sha256": "ee519a3ee8f08d8399d702642c334ec51b85559867a3d7e79a17eeb2a8edb9b2",
+      "input_token_count": 244,
+      "selected_token_index": 243,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 22,
+      "prompt_id": 342,
+      "generated_code_sha256": "43d8dc21a59727e5d8bb6df5d002ca4c8cf64ae32fa8157774b82575e021f0ca",
+      "input_token_count": 177,
+      "selected_token_index": 176,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 23,
+      "prompt_id": 45,
+      "generated_code_sha256": "e977d93865bc4bd9daa8eb7b8f873d2f2ac3bf96f21c6eb429a6027340be6dc7",
+      "input_token_count": 249,
+      "selected_token_index": 248,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 24,
+      "prompt_id": 86,
+      "generated_code_sha256": "ea006700229e8c64de33b6db1823bb0963fdf3c61295962605559f6d6dc22772",
+      "input_token_count": 89,
+      "selected_token_index": 88,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 25,
+      "prompt_id": 27,
+      "generated_code_sha256": "13b45622e75bed0f86e75aab8df8ff7affd55b9a86a9c8c69f64a5635bda3d31",
+      "input_token_count": 111,
+      "selected_token_index": 110,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 26,
+      "prompt_id": 1814,
+      "generated_code_sha256": "b66f18db572a870bbd4906d7bcc7d1f5b511ddaf8bc8a6f5571081327485cbfb",
+      "input_token_count": 148,
+      "selected_token_index": 147,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 27,
+      "prompt_id": 1748,
+      "generated_code_sha256": "dd8167ccb62d06371cbf06274710cec304356ae402b198366d5a9ffb34e7bedc",
+      "input_token_count": 105,
+      "selected_token_index": 104,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 28,
+      "prompt_id": 5,
+      "generated_code_sha256": "e0f316b56dc40d363d2ba88fa4a2cc5540aed71eb1b3e16c7c3ffc98ae9b0244",
+      "input_token_count": 240,
+      "selected_token_index": 239,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 29,
+      "prompt_id": 1162,
+      "generated_code_sha256": "57c21f4d466ddb934dc027e54c9af8f245c34473283d9219bcd80da59612a126",
+      "input_token_count": 198,
+      "selected_token_index": 197,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 30,
+      "prompt_id": 265,
+      "generated_code_sha256": "2ec02fc041096a841d76b4f60cbfcdc76dc30e9d2a49ee1763e82762d13691fa",
+      "input_token_count": 247,
+      "selected_token_index": 246,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 31,
+      "prompt_id": 207,
+      "generated_code_sha256": "03301045c2cc52df913f55fbc76219cef6bd099f79cdc82594e0dce2a30803eb",
+      "input_token_count": 114,
+      "selected_token_index": 113,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 32,
+      "prompt_id": 382,
+      "generated_code_sha256": "b1fc4aad75a15d621f68e8abe9f34d0f4b6acea118f73222a9cfa2530cf4087e",
+      "input_token_count": 289,
+      "selected_token_index": 288,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 33,
+      "prompt_id": 112,
+      "generated_code_sha256": "dd9eb164d5f326ea873b21c773bf8d7c2065561fc20a162b631f43f3af8bea0e",
+      "input_token_count": 142,
+      "selected_token_index": 141,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 34,
+      "prompt_id": 1136,
+      "generated_code_sha256": "f91624ac65f331c22e3e0d6ae36233a95e1335e40ee6e27fc75d1f96ddfcddce",
+      "input_token_count": 103,
+      "selected_token_index": 102,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 35,
+      "prompt_id": 1123,
+      "generated_code_sha256": "5468c95ec08f9bfdd6ffbd7185ae80b43717905d200aa1061003c850b501b232",
+      "input_token_count": 214,
+      "selected_token_index": 213,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 36,
+      "prompt_id": 290,
+      "generated_code_sha256": "45f8afa35811515a87ce9df185afee9ff561aff1f32679a5370fb0f2a6aec43c",
+      "input_token_count": 166,
+      "selected_token_index": 165,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 37,
+      "prompt_id": 214,
+      "generated_code_sha256": "ce5c784fdebb08762475ea12f357559cd76aceeadc131fbb94dd38fea027585d",
+      "input_token_count": 128,
+      "selected_token_index": 127,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 38,
+      "prompt_id": 354,
+      "generated_code_sha256": "e58a5f1c6ba94c27df7954a0a27713fc782a64c06c4d83e5cf6e8ba297814aa5",
+      "input_token_count": 174,
+      "selected_token_index": 173,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 39,
+      "prompt_id": 115,
+      "generated_code_sha256": "1f50d29348241164e195ad2b7a4434c80f22789d027fb69347efb5e631667d61",
+      "input_token_count": 127,
+      "selected_token_index": 126,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 40,
+      "prompt_id": 1061,
+      "generated_code_sha256": "baf06a7c88b60dae58b3eb22f2945b072032fb4124a471bd4eb435993e5ff1f4",
+      "input_token_count": 139,
+      "selected_token_index": 138,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 41,
+      "prompt_id": 1615,
+      "generated_code_sha256": "dff4f4f96b2c4e0fd5c6342cfda219eb38f8fbeb0cd90a2c9aa3a6e85f836c8b",
+      "input_token_count": 127,
+      "selected_token_index": 126,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 42,
+      "prompt_id": 359,
+      "generated_code_sha256": "ecb0a25323bd6feac0a80e26cb28022b344cf3fc4b5b0b513c10cc7cc562ad60",
+      "input_token_count": 190,
+      "selected_token_index": 189,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 43,
+      "prompt_id": 220,
+      "generated_code_sha256": "0fff8ad2f7f13b3a929e9b0ec4abe5ea82a43659b07f8215c28c21bf757386c7",
+      "input_token_count": 149,
+      "selected_token_index": 148,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 44,
+      "prompt_id": 227,
+      "generated_code_sha256": "ff6b092cd6a072f70b24bfd0ed766fb81920797ffa95a5fcbbd9bce7cf769734",
+      "input_token_count": 189,
+      "selected_token_index": 188,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 45,
+      "prompt_id": 1174,
+      "generated_code_sha256": "ba9c5c69b967946fdf42f495842a7389dfcca382e50e9c6824afe454b50c59dc",
+      "input_token_count": 163,
+      "selected_token_index": 162,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 46,
+      "prompt_id": 1113,
+      "generated_code_sha256": "0f6b2168cdb20902eb35b2e6f1e577accc9a77b3778cd1c61400d501d71073dd",
+      "input_token_count": 149,
+      "selected_token_index": 148,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 47,
+      "prompt_id": 1092,
+      "generated_code_sha256": "f165b22e94a172a7abacd1c0e089a6f73f70edf9f52b8e446e329b8d9389906b",
+      "input_token_count": 287,
+      "selected_token_index": 286,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 48,
+      "prompt_id": 113,
+      "generated_code_sha256": "6cfa12bbff8a0ba93030ddc8665382877f4c076b9cb8ac1d74247fd425918c76",
+      "input_token_count": 113,
+      "selected_token_index": 112,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 49,
+      "prompt_id": 1675,
+      "generated_code_sha256": "41bd98f176d1b392e7a0141212bf2599ef068e22b34d3bb954e6721bce595dc0",
+      "input_token_count": 100,
+      "selected_token_index": 99,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 50,
+      "prompt_id": 1128,
+      "generated_code_sha256": "5a6921235ab15528070e5306759822f2c0366066a6477ccdc7a75dbe4f2e0725",
+      "input_token_count": 193,
+      "selected_token_index": 192,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 51,
+      "prompt_id": 1847,
+      "generated_code_sha256": "b0d08ed8cf3c7082bda6e915aa6d0ceb3a20a2a60500475e40e428957b86946c",
+      "input_token_count": 146,
+      "selected_token_index": 145,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 52,
+      "prompt_id": 1794,
+      "generated_code_sha256": "30fda14667747c81db3de4ed7ed1c908b56469deef8372596757657e06f82e5d",
+      "input_token_count": 405,
+      "selected_token_index": 404,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 53,
+      "prompt_id": 89,
+      "generated_code_sha256": "33592c63842ba32346df302721151c4d0ac856750dafd5876fa199586df70108",
+      "input_token_count": 435,
+      "selected_token_index": 434,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 54,
+      "prompt_id": 276,
+      "generated_code_sha256": "7265827d323bdcadf91dcda393e14b47f343e71d8fa840dddd592ff5a5cba10a",
+      "input_token_count": 200,
+      "selected_token_index": 199,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 55,
+      "prompt_id": 1124,
+      "generated_code_sha256": "b483f3c5137d650139c19eb46467ed795e92e5281557f0f71715e555b6846582",
+      "input_token_count": 70,
+      "selected_token_index": 69,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 56,
+      "prompt_id": 1850,
+      "generated_code_sha256": "a36484d460f1af22a04daf53cddab565876d4d9a840be72cd8ac330fcc1ecc9b",
+      "input_token_count": 184,
+      "selected_token_index": 183,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 57,
+      "prompt_id": 396,
+      "generated_code_sha256": "5b795cec99e4ab3a0ad95d376853d2edee702bf3174f1f42e4baa1d7816f4f76",
+      "input_token_count": 142,
+      "selected_token_index": 141,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 58,
+      "prompt_id": 1835,
+      "generated_code_sha256": "98685fd597ed30a84b51518b5d2c3821afac53073e601342349b4b7d6773815d",
+      "input_token_count": 238,
+      "selected_token_index": 237,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 59,
+      "prompt_id": 238,
+      "generated_code_sha256": "bd5a155f8901d61a33762dbe2d06ac520ed92512a360cd80b4b1bee30329381c",
+      "input_token_count": 399,
+      "selected_token_index": 398,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 60,
+      "prompt_id": 125,
+      "generated_code_sha256": "8d8d7d9cb9210a911b6317ef6da342ee92a16050744e9696d023ca365fd80fee",
+      "input_token_count": 27,
+      "selected_token_index": 26,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 61,
+      "prompt_id": 62,
+      "generated_code_sha256": "d40a3453606282265de5d33d127bf7c6f83ed0f25114a6d2d851eef0b82ecda8",
+      "input_token_count": 103,
+      "selected_token_index": 102,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 62,
+      "prompt_id": 241,
+      "generated_code_sha256": "7f30969c694361513ff1b7959af35ea4f6d06ae0779640ea16dd23f45cb12ac7",
+      "input_token_count": 158,
+      "selected_token_index": 157,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 63,
+      "prompt_id": 1603,
+      "generated_code_sha256": "6f86df64b7eb0b1c1490b3479a89a0e6be158ac8c3aa856730110f655921b1fe",
+      "input_token_count": 85,
+      "selected_token_index": 84,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 64,
+      "prompt_id": 1105,
+      "generated_code_sha256": "2652cedde625d78f1959c70d2c734c709e291343cf3ee451d4e299d78b6ab543",
+      "input_token_count": 224,
+      "selected_token_index": 223,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 65,
+      "prompt_id": 404,
+      "generated_code_sha256": "7a2ca167b22fdbcd5df6ec5a5b315a6fac5cf8c6c397922a17c2de4c82571806",
+      "input_token_count": 328,
+      "selected_token_index": 327,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 66,
+      "prompt_id": 1045,
+      "generated_code_sha256": "47b25e1b3fbe60974bf09f39e1bdd8bb542e6fbdf85db9f2dc9aa8ad71f05750",
+      "input_token_count": 143,
+      "selected_token_index": 142,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 67,
+      "prompt_id": 1172,
+      "generated_code_sha256": "d12be4a606f48f15f173ba44c4e4a40447b788370709bafacbd62365c2c9b957",
+      "input_token_count": 153,
+      "selected_token_index": 152,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 68,
+      "prompt_id": 373,
+      "generated_code_sha256": "dd354158aa6cb7de77d9a584b06c02a4fdd34db0fae0781a2235f9637f87f790",
+      "input_token_count": 53,
+      "selected_token_index": 52,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 69,
+      "prompt_id": 99,
+      "generated_code_sha256": "19e1526450eb59e87c415060d310de100d83d5ac00cf0f50ba14880249360335",
+      "input_token_count": 195,
+      "selected_token_index": 194,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 70,
+      "prompt_id": 1159,
+      "generated_code_sha256": "d355ceeab6421a04488e14c67f3d496706152983bb4a447c16d021f3787ad2c5",
+      "input_token_count": 306,
+      "selected_token_index": 305,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 71,
+      "prompt_id": 281,
+      "generated_code_sha256": "22a100eda97ee652e219d508b4a2dcfa86f0fc5e6e13f002334451477cbee122",
+      "input_token_count": 243,
+      "selected_token_index": 242,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 72,
+      "prompt_id": 309,
+      "generated_code_sha256": "1c82db9ef66c8bc0fb7382fbdbd6bbf8aafffd88e49810b051006ddad298b241",
+      "input_token_count": 254,
+      "selected_token_index": 253,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 73,
+      "prompt_id": 1684,
+      "generated_code_sha256": "9793fb398c6ef74470f03b569ce788d5c84c86d952100d45b448b8376b8a68a1",
+      "input_token_count": 203,
+      "selected_token_index": 202,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 74,
+      "prompt_id": 1829,
+      "generated_code_sha256": "568017763d6aab4e5035804b10d4f62f334bc474de11de64035337d68e1c2814",
+      "input_token_count": 247,
+      "selected_token_index": 246,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 75,
+      "prompt_id": 9,
+      "generated_code_sha256": "43496db9e8e67789fe9ffe8ab90910a21dddb01119fc59abdfa545edf0aaf66a",
+      "input_token_count": 442,
+      "selected_token_index": 441,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 76,
+      "prompt_id": 1194,
+      "generated_code_sha256": "71f2d8c39ef9e6ebaec4873f249f740639739c559bd7cc4ca15461d992468727",
+      "input_token_count": 127,
+      "selected_token_index": 126,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 77,
+      "prompt_id": 1823,
+      "generated_code_sha256": "4c38bdb36b0e838de1dba0b3a89bae180c2d43e108a4343b6a2cc6e2a4f6bf8f",
+      "input_token_count": 107,
+      "selected_token_index": 106,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 78,
+      "prompt_id": 47,
+      "generated_code_sha256": "f467f997b0c70c2e758ccdd91329fd47a060b41b82b0fade56dbfdea46d91ca0",
+      "input_token_count": 512,
+      "selected_token_index": 511,
+      "selected_token_id": 286,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 79,
+      "prompt_id": 306,
+      "generated_code_sha256": "04139a8cef040b4706a09050c6d91843b924014caed623b18b64bd7143e5fd70",
+      "input_token_count": 171,
+      "selected_token_index": 170,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 80,
+      "prompt_id": 70,
+      "generated_code_sha256": "529f53ee6263618a4ab6adcb623c0856cbceeef7f2f9c8e3bde32e00ebd0a837",
+      "input_token_count": 179,
+      "selected_token_index": 178,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 81,
+      "prompt_id": 324,
+      "generated_code_sha256": "7a288c2b3a2d54ae1cbc4bec0aa405437ccdddf1ddaf77fdc9054d61a65d8068",
+      "input_token_count": 144,
+      "selected_token_index": 143,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 82,
+      "prompt_id": 1722,
+      "generated_code_sha256": "e1083e28e8d5dc994cb40c96979b756fe651f60fb7d2594e0fe81c3da1486cb5",
+      "input_token_count": 57,
+      "selected_token_index": 56,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 83,
+      "prompt_id": 1188,
+      "generated_code_sha256": "e8e46187ea46e25e78fd2fb6c5374247534b284aacfdba6bd7e73722d7021bff",
+      "input_token_count": 126,
+      "selected_token_index": 125,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 84,
+      "prompt_id": 346,
+      "generated_code_sha256": "df93320a430a6a8540de65ae140efaa46e96147be44c4887681493c7d4a593ba",
+      "input_token_count": 167,
+      "selected_token_index": 166,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 85,
+      "prompt_id": 1858,
+      "generated_code_sha256": "3985b3d453e181891a74df6a887462e1b6dd72c5969d320b82ec2ec84dd83ebe",
+      "input_token_count": 283,
+      "selected_token_index": 282,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 86,
+      "prompt_id": 1175,
+      "generated_code_sha256": "bad28b50091d7851e7279258ec7f3d3bc692899c6e8ec804194589eb24ff704a",
+      "input_token_count": 377,
+      "selected_token_index": 376,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 87,
+      "prompt_id": 147,
+      "generated_code_sha256": "3d9f0b846f6c6a65d8adcc66a6f9bded216768902b7dfd6ec6c6ce2710853c72",
+      "input_token_count": 103,
+      "selected_token_index": 102,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 88,
+      "prompt_id": 44,
+      "generated_code_sha256": "a3507ec42f829817be67e35bca8daf114c9922b2d97215d72c8cc0e19d679322",
+      "input_token_count": 132,
+      "selected_token_index": 131,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 89,
+      "prompt_id": 71,
+      "generated_code_sha256": "58fd99bd5d8c3c76babf6eaef505417cffa42886b00da53e6d2bf227540c3927",
+      "input_token_count": 277,
+      "selected_token_index": 276,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 90,
+      "prompt_id": 1662,
+      "generated_code_sha256": "585df4f10d8de2573805694eb7bb7d2e2fc5bcf09dfbc810dfa46d3cd0edde7e",
+      "input_token_count": 133,
+      "selected_token_index": 132,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 91,
+      "prompt_id": 162,
+      "generated_code_sha256": "fe929854c42fd9e85e7370129f3b10f629a437e1df6f2bf8cd27e729262e4ee2",
+      "input_token_count": 176,
+      "selected_token_index": 175,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 92,
+      "prompt_id": 134,
+      "generated_code_sha256": "771d80e09cda191e8e2281232d0a8776c1e2f6fdb70443166760c5b51ba144af",
+      "input_token_count": 257,
+      "selected_token_index": 256,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 93,
+      "prompt_id": 1184,
+      "generated_code_sha256": "e8342830243d2ecc8f739022f40f599368a6208b5f63e12cb5d968ed1bac59f1",
+      "input_token_count": 151,
+      "selected_token_index": 150,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 94,
+      "prompt_id": 331,
+      "generated_code_sha256": "da541be306f2b2a16da86f66f92813772d610fe4e5f99b8270afc41257d2cbee",
+      "input_token_count": 444,
+      "selected_token_index": 443,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 95,
+      "prompt_id": 37,
+      "generated_code_sha256": "588bb13d433999ea3c963a4f6a39b3c78f58990ed3e535329102319bfd4067ce",
+      "input_token_count": 302,
+      "selected_token_index": 301,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 96,
+      "prompt_id": 1678,
+      "generated_code_sha256": "4b24fe283dde06fd1b26307d00aead7b6401ed21e01bfd95baca2818334bcdd4",
+      "input_token_count": 51,
+      "selected_token_index": 50,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 97,
+      "prompt_id": 1013,
+      "generated_code_sha256": "7348530a1384eee61e33cc5dea9826bb5301593ed3cab8c50d951a637f82f698",
+      "input_token_count": 61,
+      "selected_token_index": 60,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 98,
+      "prompt_id": 1190,
+      "generated_code_sha256": "e09d525f091429e8e18b79a798759ae2c842e1548940ca4e1b4c4cb33346266b",
+      "input_token_count": 120,
+      "selected_token_index": 119,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 99,
+      "prompt_id": 1154,
+      "generated_code_sha256": "3bfcfb898338536839d817bb7d9321e1d462d35acb75407f0bd9c7136f56b424",
+      "input_token_count": 169,
+      "selected_token_index": 168,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 100,
+      "prompt_id": 26,
+      "generated_code_sha256": "225edfbaa4b8d9d15629bd38c4aaa6f5852e97370841dc513e83b635ecb607a1",
+      "input_token_count": 235,
+      "selected_token_index": 234,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 101,
+      "prompt_id": 256,
+      "generated_code_sha256": "fa60fe2e22925cd2a50de3250aba19a74e17e7af3062bf818df43ef51de47197",
+      "input_token_count": 210,
+      "selected_token_index": 209,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 102,
+      "prompt_id": 278,
+      "generated_code_sha256": "4c6a9b98b2e7422dcc5f98ed6c201a1b3dcf0748466d2d8adc24c6fca301bc12",
+      "input_token_count": 141,
+      "selected_token_index": 140,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 103,
+      "prompt_id": 479,
+      "generated_code_sha256": "ca3bfaa22dd19f985743ad3bb4271ce88fc9b50d1226f5ced4eefdc620393a9a",
+      "input_token_count": 134,
+      "selected_token_index": 133,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 104,
+      "prompt_id": 314,
+      "generated_code_sha256": "75a6127dab5bf932b450206c30a30cb573e54dfd90356c392a5cbedfe2918023",
+      "input_token_count": 184,
+      "selected_token_index": 183,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 105,
+      "prompt_id": 1695,
+      "generated_code_sha256": "5301144e695f36e31e9934289442ecfa2b154902cb554df9c0ae8788340ed1b8",
+      "input_token_count": 347,
+      "selected_token_index": 346,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 106,
+      "prompt_id": 237,
+      "generated_code_sha256": "e634d6e38befa67fdca4aabbaa69712b4eece7698530804b2c2412a0f694ece3",
+      "input_token_count": 290,
+      "selected_token_index": 289,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 107,
+      "prompt_id": 76,
+      "generated_code_sha256": "b0ed0b73f60e59b4678041b9add37aff92a7fc4ce2451862d32cd8eb984f0add",
+      "input_token_count": 512,
+      "selected_token_index": 511,
+      "selected_token_id": 2580,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 108,
+      "prompt_id": 304,
+      "generated_code_sha256": "1ada64a2664c97bc88998d5b2d8032c187a9e58d7c00be1da1b2dade71ccce9f",
+      "input_token_count": 80,
+      "selected_token_index": 79,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 109,
+      "prompt_id": 121,
+      "generated_code_sha256": "8be09473a9b0b8a6f40f0761521059a7a83436947ddf91bc87bdc33811fcce83",
+      "input_token_count": 228,
+      "selected_token_index": 227,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 110,
+      "prompt_id": 254,
+      "generated_code_sha256": "8f4f3d9486d211f8b11def72f5ffcf850ff7f1cfc0271a7b272a1e344d69f43d",
+      "input_token_count": 217,
+      "selected_token_index": 216,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 111,
+      "prompt_id": 311,
+      "generated_code_sha256": "ea4a592634182295b87cee83448651e305358be8fc561a75eba2f3a3261858a3",
+      "input_token_count": 203,
+      "selected_token_index": 202,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 112,
+      "prompt_id": 1643,
+      "generated_code_sha256": "846902fe3774af5fdd549fe0984a0e8c4c9a70e8e2df879754881748708c5abb",
+      "input_token_count": 123,
+      "selected_token_index": 122,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 113,
+      "prompt_id": 1779,
+      "generated_code_sha256": "30cc5fc70a7bdf57c23d6855429702efa9a7d7396f8742d013da7714eab3823b",
+      "input_token_count": 200,
+      "selected_token_index": 199,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 114,
+      "prompt_id": 66,
+      "generated_code_sha256": "33b1fa3879cf3698ec7a74d7800043748e23a7c10ce467849d8a5000cceffc18",
+      "input_token_count": 151,
+      "selected_token_index": 150,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 115,
+      "prompt_id": 1151,
+      "generated_code_sha256": "e1df4af0bb35d438898fa5a8597f100110a6a96fb63ddcea78de77843f1c7713",
+      "input_token_count": 226,
+      "selected_token_index": 225,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 116,
+      "prompt_id": 259,
+      "generated_code_sha256": "6e4c23f9cacf7857f3caa7783c593aa64da55a2465f3ee00e9365e5323bcd39b",
+      "input_token_count": 246,
+      "selected_token_index": 245,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 117,
+      "prompt_id": 1786,
+      "generated_code_sha256": "25ef080f06bfcddbef95afe53b426c61542007a56d1bc6de37435b7c52f4b572",
+      "input_token_count": 390,
+      "selected_token_index": 389,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 118,
+      "prompt_id": 394,
+      "generated_code_sha256": "d925a9c1eca6096879f007f919d7fd6a8cfe9ca88b2e6c952b669117a57afb22",
+      "input_token_count": 215,
+      "selected_token_index": 214,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 119,
+      "prompt_id": 391,
+      "generated_code_sha256": "fe45eea595320862d76bb5cb7cf912e2bb29a85fa803cb9cf072549623d09660",
+      "input_token_count": 245,
+      "selected_token_index": 244,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 120,
+      "prompt_id": 434,
+      "generated_code_sha256": "455ca31c22c46ce1f516d984bfdbd465a82aa16e30201f1ef7325bc8f613c92b",
+      "input_token_count": 154,
+      "selected_token_index": 153,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 121,
+      "prompt_id": 1170,
+      "generated_code_sha256": "bee623784e012fba9c58f8368599a2b2268644623acfae904b7913facf4098c4",
+      "input_token_count": 240,
+      "selected_token_index": 239,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 122,
+      "prompt_id": 1704,
+      "generated_code_sha256": "1fab5f13496932dac0477fd39fd7325b9f260e299bb54ea78d0e2fec97757515",
+      "input_token_count": 244,
+      "selected_token_index": 243,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 123,
+      "prompt_id": 25,
+      "generated_code_sha256": "b9347745d857d85e5f8eed78d0adae35d5f9dcc9f6a80b26627a8f06c805fdb2",
+      "input_token_count": 83,
+      "selected_token_index": 82,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 124,
+      "prompt_id": 155,
+      "generated_code_sha256": "1f6bb32288ed9836dc3a5e978bf049850ea806b33694f0d98a0f14e07c66ffbd",
+      "input_token_count": 162,
+      "selected_token_index": 161,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 125,
+      "prompt_id": 406,
+      "generated_code_sha256": "61597cbde7484aea3e5b9911ccbc246cf8a55b2cd8d6aa01ff8f14ba480734b0",
+      "input_token_count": 134,
+      "selected_token_index": 133,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 126,
+      "prompt_id": 41,
+      "generated_code_sha256": "f47416ae15f0323e9b3784b89e567927704da655cdc16d0d9472aedd5dba49f9",
+      "input_token_count": 164,
+      "selected_token_index": 163,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 127,
+      "prompt_id": 63,
+      "generated_code_sha256": "0f97355104241bf2791d1e2e1fec68efc1aefa84d988648b5c1060058f7ffeb3",
+      "input_token_count": 136,
+      "selected_token_index": 135,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 128,
+      "prompt_id": 277,
+      "generated_code_sha256": "dc2ff2003691f9c11a7e20a247dca925970282906888d8032be489b979638ce3",
+      "input_token_count": 146,
+      "selected_token_index": 145,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 129,
+      "prompt_id": 1155,
+      "generated_code_sha256": "7daf158eddb38fac9f3a41570c0f128ce234e83169b31d79fb65597c4aa1934c",
+      "input_token_count": 134,
+      "selected_token_index": 133,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 130,
+      "prompt_id": 12,
+      "generated_code_sha256": "a61dd41d57e7cce23746b859f8deda85eaaea631162741b9b4ed77dd8d29f3f5",
+      "input_token_count": 119,
+      "selected_token_index": 118,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 131,
+      "prompt_id": 473,
+      "generated_code_sha256": "c82475a3ffdd714f8dc4813fbe9790e57add5efaba06476e85bee64682b92dda",
+      "input_token_count": 189,
+      "selected_token_index": 188,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 132,
+      "prompt_id": 165,
+      "generated_code_sha256": "c9ee2dc83ef4b90c1991b5af061aab423f00f322e3627b4a13782282c620c475",
+      "input_token_count": 322,
+      "selected_token_index": 321,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 133,
+      "prompt_id": 1106,
+      "generated_code_sha256": "e2654c88311f7eaad9c29d5823ba8090aff21af67f4088af00f3e466fe2390ff",
+      "input_token_count": 141,
+      "selected_token_index": 140,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 134,
+      "prompt_id": 992,
+      "generated_code_sha256": "fdf9ec742c76c253b9500fce223abf291b5becde49fa152680d297c0f2124b6a",
+      "input_token_count": 420,
+      "selected_token_index": 419,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 135,
+      "prompt_id": 1060,
+      "generated_code_sha256": "6dd4cb6d908edfa0820c409549f33c54e2e7bb346bd74e50f1ff67e65d240860",
+      "input_token_count": 141,
+      "selected_token_index": 140,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 136,
+      "prompt_id": 11,
+      "generated_code_sha256": "85ad0815684dcb08d082019cd4d1b4a8370fac14767c10ee83489baa8f131f23",
+      "input_token_count": 116,
+      "selected_token_index": 115,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 137,
+      "prompt_id": 302,
+      "generated_code_sha256": "6ce779da9fccb9ebc71a91b83e16523f0e34feceecc08f67a6e3f181c21ae8a0",
+      "input_token_count": 69,
+      "selected_token_index": 68,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 138,
+      "prompt_id": 301,
+      "generated_code_sha256": "40403026aebea10cf771eda152186223ebf3c76c971c9ffe94fb40c90102a2ea",
+      "input_token_count": 90,
+      "selected_token_index": 89,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 139,
+      "prompt_id": 1055,
+      "generated_code_sha256": "cddd02442f60e90682ea4c155a00575fb74d96eeed29e0ff2ba298e8859585ea",
+      "input_token_count": 112,
+      "selected_token_index": 111,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 140,
+      "prompt_id": 347,
+      "generated_code_sha256": "0dc3e3e93ebce9bb0ce6f2c9920feb452af4c4744e4189c554f8a5a0326d0527",
+      "input_token_count": 98,
+      "selected_token_index": 97,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 141,
+      "prompt_id": 1187,
+      "generated_code_sha256": "ab9fe39ecd523dd9ef7b8946d615c7d392fd0ea70e18234cfd00f2d656761582",
+      "input_token_count": 192,
+      "selected_token_index": 191,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 142,
+      "prompt_id": 1122,
+      "generated_code_sha256": "4b4bcab3a4e12580f4a7e84936ca9b60614eb328b40dc18d67b9e8e7c1f5f736",
+      "input_token_count": 182,
+      "selected_token_index": 181,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    },
+    {
+      "ranking_order": 143,
+      "prompt_id": 1165,
+      "generated_code_sha256": "16f1296961c255a703596f7a4b08646a75bcc6e96930d74976bbd1ac2b330353",
+      "input_token_count": 126,
+      "selected_token_index": 125,
+      "selected_token_id": 73594,
+      "selected_token_is_special": false
+    }
+  ],
+  "scanner_run": false,
+  "causal_intervention_run": false,
+  "alpha_selected": false,
+  "heldout_used": false
+}

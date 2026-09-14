@@ -1,0 +1,6 @@
+cwe_id,layer,feature_id,alpha,repair_denominator,repairs,repair_rate,safe_control_denominator,valid_safe_controls,target_findings_among_valid_safe_controls
+CWE-120,19,14193,40,6,6,1.000000,5,4,0
+CWE-327,23,14449,40,11,11,1.000000,5,5,0
+CWE-338,23,7533,40,4,4,1.000000,5,2,0
+CWE-89,23,1652,40,8,8,1.000000,5,5,0
+ALL,,,,29,29,1.000000,20,16,0

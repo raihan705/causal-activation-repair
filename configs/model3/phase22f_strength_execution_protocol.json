@@ -1,0 +1,52 @@
+{
+  "schema_version": "phase22f_strength_execution_protocol_v1",
+  "status": "FROZEN_BEFORE_STRENGTH_GENERATION",
+  "strength_protocol_sha256": "20e57079a57a65fe4569132c09b05b649a98627c85fe9c6effd8b3c20aac279c",
+  "causal_protocol_sha256": "e0fcf227460e7408471caabb1d695fa1905bc51073a1581776aa1772b13932f4",
+  "runner_path": "revision/model3/phase22/scripts/run_phase22f_strength_calibration.py",
+  "runner_sha256": "b48fa0a12d59af20ec06c7ce7fbcb7971836363409a8977989d68471c22d96ce",
+  "shared_helper_path": "revision/model3/phase22/scripts/run_phase22e_causal_steering.py",
+  "shared_helper_sha256": "c7f20dd1f73b3eda1c63ec99c661d2a23fcfebc9ea568d4b718ba99372c5d1f5",
+  "worklist_count": 1083,
+  "worklist_canonical_sha256": "6ffdbd0295dcab0b9ed03be69c01886dff463ff41aea555a679013058bc66d71",
+  "checkpoint_interval": 5,
+  "new_strength_multipliers": [
+    0.5,
+    1.5,
+    2.0
+  ],
+  "order": "layer ascending; target order CWE-120/CWE-327/CWE-89; Stage22D statistical rank; multiplier 0.5/1.5/2.0; unsafe then safe; frozen prompt order",
+  "resume_rule": "exact immutable worklist prefix; resume only with matching protocol and runner hashes",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "quantization": false,
+    "offload": false
+  },
+  "sae": {
+    "repository": "andyrdt/saes-qwen2.5-7b-instruct",
+    "revision": "c37e53c4bb07127ad17ab88f28b93d4e87142e59",
+    "layers": [
+      7,
+      15,
+      23
+    ],
+    "load_one_layer_at_a_time": true
+  },
+  "generation": {
+    "seed": 42,
+    "seed_reset_immediately_before_every_generation": true,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_new_tokens": 512,
+    "do_sample": true,
+    "batch_size": 1,
+    "chat_template": true,
+    "add_generation_prompt": true
+  },
+  "scanner_run": false,
+  "stage22g_started": false,
+  "heldout_used": false
+}

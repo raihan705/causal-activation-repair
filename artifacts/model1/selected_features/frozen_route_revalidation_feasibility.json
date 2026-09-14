@@ -1,0 +1,244 @@
+{
+  "schema_version": "model1_causal_revalidation_protocol_public_v1",
+  "status": "FROZEN",
+  "scanner": {
+    "sha256": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+    "supported_languages": [
+      "c",
+      "cpp",
+      "c++",
+      "python",
+      "java",
+      "javascript",
+      "js"
+    ],
+    "target_support": {
+      "CWE-120": "five mapped C Semgrep rules plus two regex patterns",
+      "CWE-327": "four mapped Java/Python Semgrep rules plus four regex patterns",
+      "CWE-89": "one mapped Java Semgrep rule plus four regex patterns",
+      "CWE-338": "one mapped Java Semgrep rule plus two regex patterns",
+      "CWE-79": "two mapped Java/Python Semgrep rules plus two regex patterns",
+      "CWE-125": "one mapped C Semgrep rule; no regex pattern",
+      "CWE-787": "one mapped C Semgrep rule; no regex pattern",
+      "CWE-190": "no mapped Semgrep rule and no regex pattern",
+      "CWE-476": "no mapped Semgrep rule and no regex pattern"
+    }
+  },
+  "corruption_population": {
+    "scanner_observed_safe_eligible_count": 856,
+    "fixed_sample_record_ids": [
+      961,
+      404,
+      953,
+      1793,
+      916
+    ],
+    "fixed_sample_languages": [
+      "javascript",
+      "cpp",
+      "javascript",
+      "python",
+      "javascript"
+    ],
+    "scanner_skipped_included": false,
+    "any_baseline_finding_included": false
+  },
+  "routes": [
+    {
+      "cwe_id": "CWE-120",
+      "feature_id": 14193,
+      "layer": 19,
+      "alpha": 40.0,
+      "source_population": "CyberSecEval development B0 generated-output records with a preserved CWE-120 finding",
+      "baseline_evidence_type": "Preserved Phase 2 B0 ICD target finding cross-checked against the frozen scanner rule map: 21 Semgrep-positive records and 1 regex-positive record.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 22,
+      "eligible_record_count": 15,
+      "eligible_record_ids": [
+        105,
+        213,
+        18,
+        17,
+        45,
+        27,
+        207,
+        115,
+        31,
+        38,
+        194,
+        22,
+        44,
+        195,
+        157
+      ],
+      "evaluation_status": "EVALUABLE",
+      "reason": "The frozen scanner supports CWE-120, 22 development B0 records have preserved target findings, all are scanner-eligible, exact prompts are preserved, and 15 can be frozen under the prespecified N_TEST cap."
+    },
+    {
+      "cwe_id": "CWE-327",
+      "feature_id": 14449,
+      "layer": 23,
+      "alpha": 40.0,
+      "source_population": "CyberSecEval development B0 generated-output records with a preserved CWE-327 finding",
+      "baseline_evidence_type": "Preserved Phase 2 B0 ICD target finding cross-checked against frozen rules: 17 regex-only, 8 Semgrep-only, and 4 regex-plus-Semgrep records.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 29,
+      "eligible_record_count": 15,
+      "eligible_record_ids": [
+        1866,
+        1752,
+        1903,
+        1163,
+        1901,
+        1162,
+        1655,
+        1860,
+        1123,
+        1846,
+        1832,
+        1879,
+        1566,
+        1191,
+        1124
+      ],
+      "evaluation_status": "EVALUABLE",
+      "reason": "The frozen scanner supports CWE-327, 29 scanner-eligible B0 records have preserved target findings, and 15 exact prompts can be frozen without held-out use."
+    },
+    {
+      "cwe_id": "CWE-89",
+      "feature_id": 1652,
+      "layer": 23,
+      "alpha": 40.0,
+      "source_population": "CyberSecEval development B0 generated-output records with a preserved CWE-89 finding",
+      "baseline_evidence_type": "Nine preserved Phase 2 B0 ICD regex findings produced by regex patterns that are byte-identical in the frozen scanner.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 9,
+      "eligible_record_count": 9,
+      "eligible_record_ids": [
+        1688,
+        1748,
+        1615,
+        1794,
+        1850,
+        1603,
+        1695,
+        1643,
+        1704
+      ],
+      "evaluation_status": "EVALUABLE",
+      "reason": "All nine records have exact frozen-regex target findings and preserved prompts. Prompt 1794 retains its known human-note/label inconsistency but is still an actual frozen-scanner finding and is not silently relabelled."
+    },
+    {
+      "cwe_id": "CWE-338",
+      "feature_id": 7533,
+      "layer": 23,
+      "alpha": 40.0,
+      "source_population": "CyberSecEval development B0 generated-output records with a preserved exploratory CWE-338 finding",
+      "baseline_evidence_type": "Seven preserved Phase 2 B0 ICD regex findings produced by a regex pattern that is byte-identical in the frozen scanner.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 7,
+      "eligible_record_count": 7,
+      "eligible_record_ids": [
+        819,
+        773,
+        780,
+        807,
+        763,
+        768,
+        755
+      ],
+      "evaluation_status": "EVALUABLE",
+      "reason": "Seven scanner-eligible development records have exact frozen-regex CWE-338 findings and preserved prompts; all seven can be evaluated as exploratory evidence."
+    },
+    {
+      "cwe_id": "CWE-79",
+      "feature_id": 9816,
+      "layer": 16,
+      "alpha": 40.0,
+      "source_population": "Phase 1 train+validation CWE-79 vulnerable-code pairs",
+      "baseline_evidence_type": "No preserved frozen-scanner baseline. CWE labels are not baseline findings; read-only replay of the frozen regex component yields zero target findings, and no Semgrep scan artifact exists.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 0,
+      "eligible_record_count": 0,
+      "eligible_record_ids": [],
+      "evaluation_status": "NOT_EVALUABLE_WITH_FROZEN_SCANNER",
+      "reason": "Although the frozen scanner has CWE-79 rules and all 79 source languages are scanner-eligible, no preserved record has a verified target finding. Zero frozen-regex matches were found, Semgrep was not executed in this feasibility turn, and the dataset CWE label cannot substitute for baseline evidence."
+    },
+    {
+      "cwe_id": "CWE-125",
+      "feature_id": 16655,
+      "layer": 23,
+      "alpha": 40.0,
+      "source_population": "Phase 1 train+validation CWE-125 vulnerable-code pairs",
+      "baseline_evidence_type": "No preserved frozen-scanner baseline; the target has no regex fallback and no CVE Semgrep artifact exists.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 0,
+      "eligible_record_count": 0,
+      "eligible_record_ids": [],
+      "evaluation_status": "NOT_EVALUABLE_WITH_FROZEN_SCANNER",
+      "reason": "The frozen scanner nominally maps one C memcpy rule, but no source record has a preserved target-positive scan and the scanner has no CWE-125 regex fallback. A CWE label alone is not baseline evidence."
+    },
+    {
+      "cwe_id": "CWE-787",
+      "feature_id": 1515,
+      "layer": 19,
+      "alpha": 40.0,
+      "source_population": "Phase 1 train+validation CWE-787 vulnerable-code pairs",
+      "baseline_evidence_type": "No preserved frozen-scanner baseline; the target has no regex fallback and no CVE Semgrep artifact exists.",
+      "scanner_supported": true,
+      "baseline_target_finding_count": 0,
+      "eligible_record_count": 0,
+      "eligible_record_ids": [],
+      "evaluation_status": "NOT_EVALUABLE_WITH_FROZEN_SCANNER",
+      "reason": "The frozen scanner nominally maps one C memset rule, but there is no preserved target-positive scan and no CWE-787 regex fallback. The source CWE label is insufficient."
+    },
+    {
+      "cwe_id": "CWE-190",
+      "feature_id": 16897,
+      "layer": 19,
+      "alpha": 40.0,
+      "source_population": "Phase 1 train+validation CWE-190 vulnerable-code pairs",
+      "baseline_evidence_type": "None; the frozen scanner has no CWE-190 rule or regex and no preserved target-positive artifact exists.",
+      "scanner_supported": false,
+      "baseline_target_finding_count": 0,
+      "eligible_record_count": 0,
+      "eligible_record_ids": [],
+      "evaluation_status": "NOT_EVALUABLE_WITH_FROZEN_SCANNER",
+      "reason": "CWE-190 has neither a mapped Semgrep rule nor a frozen regex pattern. No target-CWE before/after transition can be measured without changing the scanner or using a prohibited proxy."
+    },
+    {
+      "cwe_id": "CWE-476",
+      "feature_id": 18397,
+      "layer": 23,
+      "alpha": 40.0,
+      "source_population": "Phase 1 train+validation CWE-476 vulnerable-code pairs",
+      "baseline_evidence_type": "None; the frozen scanner has no CWE-476 rule or regex and no preserved target-positive artifact exists.",
+      "scanner_supported": false,
+      "baseline_target_finding_count": 0,
+      "eligible_record_count": 0,
+      "eligible_record_ids": [],
+      "evaluation_status": "NOT_EVALUABLE_WITH_FROZEN_SCANNER",
+      "reason": "CWE-476 has neither a mapped Semgrep rule nor a frozen regex pattern. Evaluating it would require a scanner change, new classifier, or proxy CWE, all prohibited."
+    }
+  ],
+  "summary": {
+    "route_count": 9,
+    "evaluable_count": 4,
+    "not_evaluable_with_frozen_scanner_count": 5,
+    "provenance_unverified_count": 0,
+    "evaluable_routes": [
+      "CWE-120:L19:F14193",
+      "CWE-327:L23:F14449",
+      "CWE-89:L23:F1652",
+      "CWE-338:L23:F7533"
+    ],
+    "not_evaluable_routes": [
+      "CWE-79:L16:F9816",
+      "CWE-125:L23:F16655",
+      "CWE-787:L19:F1515",
+      "CWE-190:L19:F16897",
+      "CWE-476:L23:F18397"
+    ],
+    "all_nine_route_proposal_executable": false
+  }
+}

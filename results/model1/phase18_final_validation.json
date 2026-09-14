@@ -1,0 +1,103 @@
+{
+  "artifact_hashes": {
+    "phase18_bandit_overhead.csv": "3e59b7c18156e6df622b1fc12b6ed397aaacafc7876ae20bd72b840398728ea8",
+    "phase18_cost_summary.json": "207d878a721ba2eefe8f3f3a7ca2d41326bd8ba7261b6aadb3829b451ddc80c4",
+    "phase18_memory.csv": "ea03eaac021f9c08e673a77a89233758f3c8d395e599d236722d80ed5eb4f676",
+    "phase18_method_latency.csv": "d407a6980f45758722e7a1afc48491c2a58359a078d579b4b55deb674fbce90c",
+    "phase18_scanner_time.csv": "446f16f77dce7daf334cbf17b7f998d48fca7e57e52028fa296f1d3ac11924e0",
+    "phase18_scanner_timing.json": "4de1b535ba8a1f7198c25c6559a02cf90196779b3b9e09ff7981a55fddb9af1a",
+    "phase18_tokens_throughput.csv": "32b3262a4e8498d75ea936adef413ac5f3a4314718916f7b6f1575783313e77e",
+    "raw_timing/b0_timing.json": "ae85b3ce40703a0abb185bfeaf130734819b8fbd7f1ce642136f7d5721668b39",
+    "raw_timing/b1_cwe_timing.json": "d89204ed39617a4978f56bcf0559838bd65ca09e969ba9e7de07f0cc7ad9409e",
+    "raw_timing/b1_timing.json": "f2d46f4c583d4acc88df7bc24c07b8fbc8eafcd7c8abc0bceff24e1af0d149f9",
+    "raw_timing/b3_pg_timing.json": "ca074ce18963a5c6cac3f6d221baf871fab078644e7797b8ac500e85e427aa0e",
+    "raw_timing/b3_ungated_timing.json": "a156af5ef62d9dd6958c3091b7f6eed3b4880be360c2972019e6c26bada0bb1e",
+    "raw_timing/b4_policy_timing.json": "a112225aee13e31e7f9f77353fdd6a450bfde8feb1fe76baa68e78173045e7df",
+    "raw_timing/bstar_timing.json": "0bfa4c742b576fa977a3428cb4668fe5f68e67636a74e82d0d88e0d2de2a5946",
+    "raw_timing/caa_cwe_timing.json": "e075b9db75af12489e4bbea5aa5639f277894f7e6666ae04e136c03c36873fc2",
+    "raw_timing/rci_1_timing.json": "9046e943dc050759dabf1a6f9ce69137d22978dcc1b87bb7445cd76205e1a815",
+    "timing_subset_manifest.json": "b25fc05efc915f1f6fcde7b4a78b06f771605c356ce991551a0c38b451665c3c"
+  },
+  "b3pg": {
+    "alpha_zero_count": 71532,
+    "gate_steps": 71532,
+    "model_calls": 214596,
+    "nan_kl_count": 71532
+  },
+  "b4": {
+    "decision_count": 150,
+    "failure_count": 0,
+    "status": "PASS"
+  },
+  "checkpoint_candidate": "PASS",
+  "heldout_used": false,
+  "method_checks": {
+    "B*": {
+      "generated_tokens": 76800,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "B0": {
+      "generated_tokens": 66657,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "B1": {
+      "generated_tokens": 76695,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "B1-CWE": {
+      "generated_tokens": 76695,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "B3-PG": {
+      "generated_tokens": 71532,
+      "model_calls": 214596,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "B3-ungated": {
+      "generated_tokens": 76800,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "CAA-CWE": {
+      "generated_tokens": 66531,
+      "model_calls": 150,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    },
+    "RCI-1": {
+      "generated_tokens": 205359,
+      "model_calls": 402,
+      "record_count": 150,
+      "runtime_exception_count": 0,
+      "status": "PASS"
+    }
+  },
+  "optimization_introduced": false,
+  "phase": 18,
+  "rci_structural_failure_count": 39,
+  "scanner": {
+    "identical_outputs": true,
+    "measured_repetitions": 3,
+    "status": "PASS"
+  },
+  "schema_version": "phase18_final_validation_v1",
+  "status": "PASS",
+  "timing_subset_sha256": "b25fc05efc915f1f6fcde7b4a78b06f771605c356ce991551a0c38b451665c3c"
+}

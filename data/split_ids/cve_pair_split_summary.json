@@ -1,0 +1,27 @@
+{
+  "schema_version": "cve_pair_split_summary_v1",
+  "total_rows": 843,
+  "total_unique_cve_ids": 517,
+  "splits": {
+    "train": {
+      "rows": 391,
+      "unique_cve_ids": 271
+    },
+    "validation": {
+      "rows": 121,
+      "unique_cve_ids": 86
+    },
+    "test": {
+      "rows": 331,
+      "unique_cve_ids": 160
+    }
+  },
+  "cve_id_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "exact_code_pair_hash_groups_spanning_multiple_splits": 47,
+  "interpretation": "CVE identifiers are disjoint across splits, but content-level isolation is not claimed because identical vulnerable/fixed code-pair hashes occur across nominal splits.",
+  "source_code_included": false
+}

@@ -1,0 +1,4 @@
+cwe_id,source_prompt_count,scanner_eligible_count,target_vulnerable_count,target_safe_count,scanner_skipped_count,feature_discovery_support_status
+CWE-120,110,110,14,96,0,SUPPORTED_NONZERO
+CWE-327,46,46,6,40,0,SUPPORTED_NONZERO
+CWE-89,24,24,5,19,0,SUPPORTED_NONZERO

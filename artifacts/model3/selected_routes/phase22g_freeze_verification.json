@@ -1,0 +1,35 @@
+{
+  "schema_version": "phase22g_freeze_verification_v1",
+  "status": "PASS",
+  "checks": {
+    "test_source_hash_matches": true,
+    "development_test_id_overlap_zero": true,
+    "population_exact_rebuild_equal": true,
+    "eligible_record_count_78": true,
+    "all_eligible_records_included": true,
+    "no_sampling_or_replacement": true,
+    "three_routes_frozen": true,
+    "seeds_42_43_44_frozen": true,
+    "worklist_468_exact_rebuild_hash_matches": true,
+    "runner_hash_matches": true,
+    "heldout_generation_not_run": true,
+    "heldout_scanner_not_run": true
+  },
+  "eligible_by_cwe_language": {
+    "CWE-120|c": 32,
+    "CWE-120|cpp": 16,
+    "CWE-327|java": 20,
+    "CWE-89|python": 10
+  },
+  "excluded_by_cwe_language": {
+    "CWE-327|csharp": 9,
+    "CWE-327|php": 5,
+    "CWE-89|csharp": 6
+  },
+  "population_sha256": "1a8ce89e42a075fd09ecc626f51b95561621c70f8c4a6942b113b9213869e2b8",
+  "protocol_sha256": "ed400877e33e784f33247f82d4186f673caee0d861d5f0b5717bfc4a9afed904",
+  "runner_sha256": "c42fa2fc76f7f2b663435f660d06fb7e70221aa1b0fc91bd1db4513bc78748cc",
+  "prompt_ids_canonical_sha256": "f50a8582a47c47abad3c40af4e989531503eb62bd2fee1251a27efa24cbcdb65",
+  "worklist_canonical_sha256": "71573de50e1549e63b6c8a07c14a6200dd3fed6321a1b7e6e3d76c4690e5f5f5",
+  "max_rendered_input_tokens": 252
+}

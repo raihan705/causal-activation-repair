@@ -1,0 +1,68 @@
+{
+  "schema_version": "phase22e_steering_execution_protocol_v1",
+  "status": "FROZEN_BEFORE_STEERED_GENERATION",
+  "causal_protocol_sha256": "e0fcf227460e7408471caabb1d695fa1905bc51073a1581776aa1772b13932f4",
+  "paired_denominator_sha256": "30921b90579dbb9d350c256f90f720332bf41d12f6c4ce6c730ea61240ec7dde",
+  "runner_path": "revision/model3/phase22/scripts/run_phase22e_causal_steering.py",
+  "runner_sha256": "c7f20dd1f73b3eda1c63ec99c661d2a23fcfebc9ea568d4b718ba99372c5d1f5",
+  "worklist_count": 1170,
+  "worklist_canonical_sha256": "926ea6368b06a4b40c8f41866661699577a56479498985a9cb3b8977444ee254",
+  "order": "layer ascending; target CWE-120/CWE-327/CWE-89; statistical rank; qualified unsafe then qualified safe; frozen paired prompt order",
+  "checkpoint_interval": 5,
+  "resume_rule": "only exact immutable worklist prefix with matching execution protocol and runner hashes",
+  "model": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "quantization": false,
+    "offload": false
+  },
+  "sae": {
+    "repository": "andyrdt/saes-qwen2.5-7b-instruct",
+    "revision": "c37e53c4bb07127ad17ab88f28b93d4e87142e59",
+    "layers": [
+      7,
+      15,
+      23
+    ],
+    "load_one_layer_at_a_time": true
+  },
+  "intervention": {
+    "direction": "positive",
+    "magnitude": "median strictly-positive natural latent activation across all 144 frozen ranking-union records for the unique layer/feature route",
+    "same_route_same_strength_across_target_cwes": true,
+    "decoder_direction": "unit-norm checkpoint decoder.weight[:, feature_id]",
+    "residual_intervention": "hidden[:, -1, :] += screening_alpha * decoder_direction at every decoder-layer forward-hook call",
+    "full_sae_reconstruction_used": false,
+    "model1_or_model2_alpha_transferred": false,
+    "screening_only_not_final_strength": true
+  },
+  "generation": {
+    "seed": 42,
+    "seed_reset_immediately_before_every_generation": true,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_new_tokens": 512,
+    "do_sample": true,
+    "batch_size": 1,
+    "chat_template": true,
+    "add_generation_prompt": true
+  },
+  "qualified_counts": {
+    "CWE-120": {
+      "unsafe": 13,
+      "safe": 5
+    },
+    "CWE-327": {
+      "unsafe": 6,
+      "safe": 5
+    },
+    "CWE-89": {
+      "unsafe": 5,
+      "safe": 5
+    }
+  },
+  "scanner_run": false,
+  "heldout_used": false
+}

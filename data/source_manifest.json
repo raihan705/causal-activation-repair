@@ -1,0 +1,44 @@
+{
+  "schema_version": "causal_activation_repair_data_sources_v1",
+  "redistribution_policy": "metadata_and_hashes_only",
+  "sources": [
+    {
+      "name": "CVEFixes",
+      "type": "vulnerability_database",
+      "repository": "https://github.com/secureIT-project/CVEFixes",
+      "revision": "9283b50b3f04e3c5b0a17fc419ab0feea23fc438",
+      "recorded_database_sha256": "96ebfabb6ebd4960539e73c0840d74607d56e8d18465ba97cdbe1898b7fc30f5",
+      "included": false,
+      "reason": "database size and underlying source-code redistribution constraints"
+    },
+    {
+      "name": "CyberSecEval",
+      "type": "security_prompt_benchmark",
+      "repository": "walledai/CyberSecEval",
+      "revision": "main",
+      "included": false,
+      "identity_artifact": "split_ids/cyberseceval_split_manifest.json"
+    },
+    {
+      "name": "HumanEvalPack",
+      "type": "utility_benchmark",
+      "repository": "bigcode/humanevalpack",
+      "revision": "main",
+      "included": false
+    },
+    {
+      "name": "BigCodeBench",
+      "type": "utility_benchmark",
+      "repository": "bigcode/bigcodebench",
+      "revision": "main",
+      "included": false
+    },
+    {
+      "name": "MMLU",
+      "type": "utility_benchmark",
+      "repository": "cais/mmlu",
+      "revision": "c30699e8356da336a370243923dbaf21066bb9fe",
+      "included": false
+    }
+  ]
+}

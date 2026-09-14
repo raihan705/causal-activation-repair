@@ -1,0 +1,92 @@
+{
+  "schema_version": "phase21_reconstruction_metric_audit_v1",
+  "status": "DIAGNOSTIC_METRIC_MISMATCH_FOUND",
+  "formulas": {
+    "raw_mse": "sum((x_hat - x)^2) / (N_tokens * d_in)",
+    "relative_l2": "sqrt(sum((x_hat - x)^2) / sum(x^2))",
+    "existing_normalized_mse": "sum((x_hat - x)^2) / sum((x - mean_hidden_coordinates_per_token(x))^2)",
+    "existing_explained_variance": "1 - existing_normalized_mse",
+    "audited_featurewise_normalized_mse": "sum((x_hat - x)^2) / sum((x - mean_over_tokens_per_hidden_coordinate(x))^2)",
+    "audited_featurewise_explained_variance": "1 - audited_featurewise_normalized_mse"
+  },
+  "arithmetic_bug_found": false,
+  "semantic_labeling_problem_found": true,
+  "explanation": "The prior implementation exactly computed its written expression, but centering each token across hidden coordinates is not feature-wise variance over observations. Its value is retained as existing diagnostic history; the audit reports both it and a clearly named feature-wise alternative from the same tensors.",
+  "model1_metric_changed": false,
+  "phase21_only": true,
+  "validated_results_source": "phase21_reconstruction_fidelity.csv",
+  "validated_layer_results": {
+    "9": {
+      "all_tokens": {
+        "token_count": 1424,
+        "element_count": 5103616,
+        "raw_mse": 215.263311457878,
+        "relative_l2_error": 3.873582626071068,
+        "existing_normalized_mse": 15.012310888776813,
+        "existing_explained_variance": -14.012310888776813,
+        "audited_featurewise_normalized_mse": 17.584566916908827,
+        "audited_featurewise_explained_variance": -16.584566916908827,
+        "audited_mean_l0": 121.32303370786516
+      },
+      "content_tokens": {
+        "token_count": 1360,
+        "element_count": 4874240,
+        "raw_mse": 0.8410955893791189,
+        "relative_l2_error": 0.4150764658577756,
+        "existing_normalized_mse": 0.1723183930543173,
+        "existing_explained_variance": 0.8276816069456827,
+        "audited_featurewise_normalized_mse": 0.2639888115680373,
+        "audited_featurewise_explained_variance": 0.7360111884319627,
+        "audited_mean_l0": 46.14558823529412
+      }
+    },
+    "20": {
+      "all_tokens": {
+        "token_count": 1424,
+        "element_count": 5103616,
+        "raw_mse": 468.0292270363068,
+        "relative_l2_error": 2.247314049121819,
+        "existing_normalized_mse": 5.052739040772604,
+        "existing_explained_variance": -4.052739040772604,
+        "audited_featurewise_normalized_mse": 6.723579141604237,
+        "audited_featurewise_explained_variance": -5.723579141604237,
+        "audited_mean_l0": 107.1755617977528
+      },
+      "content_tokens": {
+        "token_count": 1360,
+        "element_count": 4874240,
+        "raw_mse": 4.758093945330312,
+        "relative_l2_error": 0.3677105496244487,
+        "existing_normalized_mse": 0.13525030325924203,
+        "existing_explained_variance": 0.864749696740758,
+        "audited_featurewise_normalized_mse": 0.25921450699444953,
+        "audited_featurewise_explained_variance": 0.7407854930055504,
+        "audited_mean_l0": 52.51176470588236
+      }
+    },
+    "31": {
+      "all_tokens": {
+        "token_count": 1424,
+        "element_count": 5103616,
+        "raw_mse": 1564.4926072014637,
+        "relative_l2_error": 2.4632667748646435,
+        "existing_normalized_mse": 6.07027504066419,
+        "existing_explained_variance": -5.07027504066419,
+        "audited_featurewise_normalized_mse": 7.642514877077044,
+        "audited_featurewise_explained_variance": -6.642514877077044,
+        "audited_mean_l0": 123.40800561797752
+      },
+      "content_tokens": {
+        "token_count": 1360,
+        "element_count": 4874240,
+        "raw_mse": 10.36077292336897,
+        "relative_l2_error": 0.3714827386344901,
+        "existing_normalized_mse": 0.13802653727183511,
+        "existing_explained_variance": 0.8619734627281649,
+        "audited_featurewise_normalized_mse": 0.3024439662164767,
+        "audited_featurewise_explained_variance": 0.6975560337835234,
+        "audited_mean_l0": 45.61029411764706
+      }
+    }
+  }
+}

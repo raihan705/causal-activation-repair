@@ -1,0 +1,9 @@
+split,cwe,B0,BSTAR
+dev,CWE-120,22.0,6.0
+dev,CWE-327,29.0,18.0
+dev,CWE-89,9.0,0.0
+dev,CWE-338,7.0,1.0
+test,CWE-120,14.0,3.0
+test,CWE-327,12.0,10.0
+test,CWE-89,2.0,0.0
+test,CWE-338,,

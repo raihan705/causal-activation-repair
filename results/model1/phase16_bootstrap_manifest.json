@@ -1,0 +1,15 @@
+{
+  "schema_version": "phase16_bootstrap_manifest_public_v1",
+  "status": "COMPLETE",
+  "metric": "CorrVRR",
+  "replicates": 10000,
+  "bootstrap_seed": 42,
+  "rng": "Python random.Random MT19937",
+  "sampling_unit": "paired prompt-level cluster record",
+  "resampling_universe_count": 392,
+  "interval": "equal-tailed 95% percentile interval with Type-7 linear interpolation",
+  "seed_identifiers_resampled": false,
+  "method_outcomes_resampled_independently": false,
+  "output": "results/model1/phase16_pairwise_intervals.csv",
+  "reporting_note": "The B2-alpha20 contrast is descriptive; the primary repeated-seed comparison is B* versus B1."
+}

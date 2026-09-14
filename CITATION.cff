@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or its research artifacts, please cite the accompanying paper."
+title: "Causal Activation Repair for Reducing CWE-Level Vulnerabilities in LLM-Generated Code"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Uddin
+    given-names: Md Raihan
+  - family-names: Kumar
+    given-names: Prabhat
+  - family-names: Islam
+    given-names: Najmul
+abstract: "Code and research artifacts for evaluating sparse activation interventions that reduce scanner-observed CWE-level vulnerabilities in LLM-generated code."
+keywords:
+  - activation steering
+  - sparse autoencoders
+  - secure code generation
+  - common weakness enumeration
+  - large language models

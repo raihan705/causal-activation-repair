@@ -1,0 +1,60 @@
+{
+  "cwe290_status": "NOT_ESTIMABLE",
+  "cwe338_status": "EXPLORATORY",
+  "evidence_status_counts": {
+    "EXPLORATORY": 2,
+    "NOT_ESTIMABLE": 5,
+    "NO_SCANNER_SUPPORT": 2,
+    "PRIMARY": 2
+  },
+  "generation_run": false,
+  "no_pooling_of_tiny_or_unsupported_cells": true,
+  "output": {
+    "bytes": 22107,
+    "path": "revision/model1/phase19/outputs/cwe_evidence_support.csv",
+    "sha256": "9066afe7dd9b2797285803b410d7c179d86354047627020575281fca8b3edd7e"
+  },
+  "scanner_run": false,
+  "schema_version": "phase19_cwe_support_consistency_v1",
+  "status": "PASS_WITH_SCOPE_LIMITATIONS",
+  "support_mismatches": [
+    {
+      "cwe": "CWE-125",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-787",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-190",
+      "type": "TRAINING_SUPPORT_WITHOUT_SCANNER_SUPPORT"
+    },
+    {
+      "cwe": "CWE-476",
+      "type": "TRAINING_SUPPORT_WITHOUT_SCANNER_SUPPORT"
+    },
+    {
+      "cwe": "CWE-89",
+      "denominator": 2,
+      "type": "SCANNER_SUPPORT_WITH_TINY_HELDOUT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-79",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-338",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-22",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    },
+    {
+      "cwe": "CWE-290",
+      "type": "SCANNER_SUPPORT_WITH_ZERO_HELDOUT_EFFECT_DENOMINATOR"
+    }
+  ],
+  "target_cwe_count": 11
+}

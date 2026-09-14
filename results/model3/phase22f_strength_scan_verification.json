@@ -1,0 +1,43 @@
+{
+  "schema_version": "phase22f_strength_scan_verification_v1",
+  "status": "PASS",
+  "artifact_hashes": {
+    "protocol": "20e57079a57a65fe4569132c09b05b649a98627c85fe9c6effd8b3c20aac279c",
+    "denominator": "30921b90579dbb9d350c256f90f720332bf41d12f6c4ce6c730ea61240ec7dde",
+    "stage22e_results": "f71c657bdf1cf8ea91234a80f20562a94b30b9a5410cd651d6d771a5a249448e",
+    "generation": "7d8996c7d62c8966eea62f51324a3a6c264c3a92284361cf59c495362fac24c9",
+    "generation_validation": "4a89da1cf2de53a96193ffc962feb131a4086e1debd6ab7e20f77dedea08cb6d",
+    "scan_input": "8acd02f79d5cef56339ae85b35d3ad7211989525db815dabb7b889fdc888909a",
+    "scan_output": "3006c2130315c8c5fbc600a617b4e8bfae568ca80d61a62cad674708a217a694",
+    "return_manifest": "5ab6c1bc1db180806fb4908b0d5ae8ab4b6abebe86b72d8b8e884925b21b8559",
+    "transfer": "8a3093d3079e8d40e92646caedfff4956fbfe0e98ae8d73005af1cd709f3f684",
+    "scanner": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+    "wrapper": "b986faae0411c0d60753be52c582edb12ec556446b5da79b20bff2a9c887aa10"
+  },
+  "record_count": 1083,
+  "invalid_generation_count": 34,
+  "eligible_count": 1083,
+  "skipped_count": 0,
+  "checks": {
+    "immutable_hash_chain": true,
+    "exact_semgrep_version": true,
+    "unchanged_scanner_and_wrapper": true,
+    "complete_exact_order": true,
+    "validity_and_code_projection": true,
+    "finding_and_derived_fields": true,
+    "retained_invalid_outputs": true,
+    "no_generation_during_scan": true,
+    "stage22g_not_started": true,
+    "heldout_not_used": true
+  },
+  "calibration_results_sha256": "a9fc582e1e8cece36a3e5339bea7c8f4d20e561f42150528bd95b2cb7e76b46c",
+  "summary_csv_sha256": "316044b6a3034e0956d3c6e6b1a132d2b1b2a900189fdc2b9bd366c48ab51877",
+  "selected_routes_sha256": "c19994f5beaed5e4df1b426a25cd14b3f40de2b82ec8fb93b11e74eff9987695",
+  "new_valid_unsafe_repairs": 76,
+  "new_safe_corruptions": 13,
+  "new_unsafe_invalids": 22,
+  "admissible_cell_count": 72,
+  "scanner_limitation": "The frozen scanner suppresses Semgrep subprocess exceptions and p/security-audit is not content-pinned. Exact artifacts, version, ordered coverage, and skip policy are verified, but silent per-record Semgrep failure cannot be independently excluded.",
+  "stage22g_started": false,
+  "heldout_used": false
+}

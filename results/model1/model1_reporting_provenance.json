@@ -1,0 +1,25 @@
+{
+  "schema_version": "model1_reporting_provenance_public_v1",
+  "status": "COMPLETE",
+  "reporting_rule": "Manuscript values are drawn from the canonical public result files listed below; configuration files define execution settings and routes rather than reported outcomes.",
+  "canonical_artifacts": {
+    "scanner_audit": "results/model1/scanner_audit_summary.json",
+    "dataset_construction": "data/dataset_construction_summary.json",
+    "development_selection": "results/model1/development_method_selection.csv",
+    "reconstruction": "results/model1/sae_reconstruction_summary.csv",
+    "layer_sensitivity": "results/model1/layer_sensitivity_metrics.csv",
+    "causal_validation": "results/model1/causal_revalidation_summary.csv",
+    "strength_sweep": "results/model1/strength_sweep_overall.csv",
+    "intervention_boundaries": "results/model1/intervention_boundary_summary.json",
+    "heldout_per_seed": "results/model1/phase16_per_seed_results.csv",
+    "heldout_aggregate": "results/model1/phase16_aggregate_results.csv",
+    "paired_intervals": "results/model1/phase16_pairwise_intervals.csv",
+    "utility": "results/model1/phase17_utility_results.csv",
+    "cost": "results/model1/phase18_cost_summary.json"
+  },
+  "reporting_roles": {
+    "B0_B1_Bstar": "primary repeated-seed comparison",
+    "B2_alpha20_seed42": "descriptive strength comparison",
+    "other_seed42_methods": "complementary method comparisons"
+  }
+}

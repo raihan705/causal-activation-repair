@@ -1,0 +1,3 @@
+method,seed,seed_status,total_prompts,supported_route_prompts,unsupported_route_prompts,active_guidance_or_intervention_prompts,fallback_prompts,no_intervention_prompts,active_coverage_rate,route_status_counts,reason
+B1-CWE,42,SINGLE_SEED,575,150,425,0,575,0,0.000000,"{'ROUTE_GUIDANCE_UNAVAILABLE': 150, 'UNSUPPORTED_ROUTE_FALLBACK_B1': 425}",No route-specific guidance was available; every record used the B1 fallback
+CAA-CWE,42,SINGLE_SEED,575,150,425,150,0,425,0.260870,"{'SUPPORTED_VECTOR_APPLIED': 150, 'UNSUPPORTED_ROUTE_NO_INTERVENTION': 425}",Frozen supported vectors applied; unsupported routes use explicit no-intervention

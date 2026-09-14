@@ -1,0 +1,66 @@
+{
+  "amendment_sha256": "9817a30c3949bd54adaa934f0f5967932c0bd0ac40394e0437b6f1e1f3744624",
+  "candidate_manifest_sha256": "be072afa3a9c58c20729bcd5deb343007f15b7c981e4fe02bb857bc17d00b401",
+  "causal_results_sha256": "5ff0714b42178e5f691ccd01e6cd3d5944cdb67aacba0bcb53c85cd4441b820f",
+  "final_model2_alpha_selected": false,
+  "final_model2_configuration_selected": false,
+  "heldout_accessed": false,
+  "model1_modified": false,
+  "route_map_canonical_sha256": "3c4d060906e863b037d66b033234c9a8911753c5dc029f124232be5c229e87f0",
+  "routes": {
+    "CWE-120": {
+      "feature_id": 14471,
+      "layer": 20
+    },
+    "CWE-327": {
+      "feature_id": 529,
+      "layer": 20
+    },
+    "CWE-89": {
+      "feature_id": 12328,
+      "layer": 20
+    }
+  },
+  "rule_name": "MODEL2_PROSPECTIVE_ROUTE_SELECTION_V1",
+  "rule_version": 1,
+  "schema_version": "phase21_model2_selected_routes_v1",
+  "selection_trace": {
+    "CWE-120": {
+      "eligible_candidate_count": 30,
+      "reason": "first candidate after applying the frozen five-field hierarchy",
+      "winner": {
+        "feature_id": 14471,
+        "layer": 20
+      },
+      "winner_json_pointer": "/cells/CWE-120/L20/candidates/3",
+      "winner_manifest_position": 14,
+      "winner_repair": "5/14",
+      "winner_target_cwe_manifest_position": 14
+    },
+    "CWE-327": {
+      "eligible_candidate_count": 28,
+      "reason": "first candidate after applying the frozen five-field hierarchy",
+      "winner": {
+        "feature_id": 529,
+        "layer": 20
+      },
+      "winner_json_pointer": "/cells/CWE-327/L20/candidates/4",
+      "winner_manifest_position": 45,
+      "winner_repair": "3/15",
+      "winner_target_cwe_manifest_position": 15
+    },
+    "CWE-89": {
+      "eligible_candidate_count": 22,
+      "reason": "first candidate after applying the frozen five-field hierarchy",
+      "winner": {
+        "feature_id": 12328,
+        "layer": 20
+      },
+      "winner_json_pointer": "/cells/CWE-89/L20/candidates/8",
+      "winner_manifest_position": 79,
+      "winner_repair": "4/10",
+      "winner_target_cwe_manifest_position": 19
+    }
+  },
+  "status": "FROZEN"
+}

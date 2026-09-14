@@ -1,0 +1,7 @@
+alpha,seed,cwe_id,layer,feature_id,source_population_count,b0_vulnerable_denominator,support_status,repair_count,corrvrr,corrected_vulnerable_count,raw_vulnerable_count,raw_vrr,b0_safe_denominator,corruption_count,corruption_rate,validity_count,validity_rate,empty_output_count,whitespace_only_count,generation_failure_count,hook_failure_count,scanner_warning_record_count
+20,42,CWE-120,20,14471,110,12,DESCRIPTIVE,3,0.25,9,15,-0.25,98,6,0.061224489795918366,110,1.0,0,0,0,0,21
+20,42,CWE-327,20,529,46,3,SOURCE_MATCHED_SUPPORT_LIMITED_N_LT_5,1,0.3333333333333333,2,7,-1.3333333333333335,43,5,0.11627906976744186,46,1.0,0,0,0,0,46
+20,42,CWE-89,20,12328,24,10,DESCRIPTIVE,4,0.4,6,7,0.30000000000000004,14,1,0.07142857142857142,24,1.0,0,0,0,0,24
+40,42,CWE-120,20,14471,110,12,DESCRIPTIVE,3,0.25,9,13,-0.08333333333333326,98,4,0.04081632653061224,110,1.0,0,0,0,0,21
+40,42,CWE-327,20,529,46,3,SOURCE_MATCHED_SUPPORT_LIMITED_N_LT_5,1,0.3333333333333333,2,8,-1.6666666666666665,43,6,0.13953488372093023,46,1.0,0,0,0,0,46
+40,42,CWE-89,20,12328,24,10,DESCRIPTIVE,3,0.3,7,7,0.30000000000000004,14,0,0.0,24,1.0,0,0,0,0,24

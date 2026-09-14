@@ -1,0 +1,4 @@
+layer,sae_id,n_samples,n_skipped,mean_logit_shift,max_logit_shift,non_trivial
+16,l16r_8x,50,0,0.858125,2.276562,True
+19,l19r_8x,50,0,0.910195,1.903906,True
+23,l23r_8x,50,0,1.012682,1.730469,True

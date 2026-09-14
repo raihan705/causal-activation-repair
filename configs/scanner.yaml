@@ -1,0 +1,22 @@
+scanner: semgrep
+ruleset: p/security-audit
+platform: linux
+timeout_per_file_seconds: 10
+max_memory_mb: 1000
+code_truncation_characters: 3000
+
+versions:
+  model1_original_environment: 1.154.0
+  model2_final_protocol: 1.175.0
+  model3_final_protocol: 1.175.0
+
+policy:
+  rules_changed_after_freeze: false
+  substitute_scanner_allowed: false
+  unsupported_cwe_proxy_allowed: false
+  scanner_skipped_records_count_as_safe: false
+
+known_limitation: >-
+  The remote p/security-audit registry content was not saved as a fully content-addressed
+  ruleset for every execution stage. Exact Semgrep versions, wrapper scripts, scan manifests,
+  and returned-result hashes are retained; future registry resolution may differ.

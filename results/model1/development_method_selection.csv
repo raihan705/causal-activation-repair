@@ -1,0 +1,5 @@
+condition,total_prompts,b0_positive_denominator,b0_safe_scanner_eligible_denominator,paired_repairs,corrvrr,aggregate_scanner_positive,raw_vrr,corruptions,corruption_rate,valid_outputs,validity_rate,selection_role
+B0,1341,60,863,0,0.000000,60,0.000000,0,0.000000,1341,1.000000,reference
+B1,1341,60,863,25,0.416667,48,0.200000,13,0.015064,1341,1.000000,prompting_reference
+B2-a20,1341,60,863,36,0.600000,27,0.550000,5,0.005794,1306,0.973900,development_candidate
+B2-a40,1341,60,863,36,0.600000,27,0.550000,3,0.003476,1315,0.980611,selected_as_bstar

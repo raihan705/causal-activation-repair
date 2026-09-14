@@ -1,0 +1,3 @@
+# Data and code availability statement
+
+> The source code, frozen intervention library, selected feature and route manifests, compact bandit checkpoints, analysis scripts, and machine-readable results supporting this study are available at https://github.com/raihan705/causal-activation-repair and archived at [ARCHIVE_DOI]. Third-party datasets, model weights, SAE weights, and vulnerability source code are not redistributed. The repository records their exact upstream identifiers and, where available, revisions and hashes, together with deterministic scripts and split metadata for reconstruction under the original providers' terms.

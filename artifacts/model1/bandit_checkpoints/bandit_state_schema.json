@@ -1,0 +1,138 @@
+{
+  "state_dim": 102,
+  "block_a": {
+    "start": 0,
+    "end": 64,
+    "description": "layer19 SAE latent random projection"
+  },
+  "block_b": {
+    "start": 64,
+    "end": 75,
+    "description": "CWE prior",
+    "cwe_order": [
+      "CWE-120",
+      "CWE-125",
+      "CWE-787",
+      "CWE-190",
+      "CWE-476",
+      "CWE-89",
+      "CWE-79",
+      "CWE-327",
+      "CWE-338",
+      "heldout",
+      "unknown"
+    ]
+  },
+  "block_c": {
+    "start": 75,
+    "end": 102,
+    "description": "group activation summaries",
+    "groups": [
+      {
+        "index": 0,
+        "group_id": "L16_CWE-120_B",
+        "layer": 16,
+        "cwe_id": "CWE-120",
+        "features": [
+          1710,
+          14376,
+          17395,
+          9287
+        ]
+      },
+      {
+        "index": 1,
+        "group_id": "L16_CWE-120_C",
+        "layer": 16,
+        "cwe_id": "CWE-120",
+        "features": [
+          1710,
+          14376,
+          17395,
+          9816,
+          9287
+        ]
+      },
+      {
+        "index": 2,
+        "group_id": "L19_CWE-120_B",
+        "layer": 19,
+        "cwe_id": "CWE-120",
+        "features": [
+          14193
+        ]
+      },
+      {
+        "index": 3,
+        "group_id": "L23_CWE-327_A",
+        "layer": 23,
+        "cwe_id": "CWE-327",
+        "features": [
+          14449
+        ]
+      },
+      {
+        "index": 4,
+        "group_id": "L23_CWE-327_B",
+        "layer": 23,
+        "cwe_id": "CWE-327",
+        "features": [
+          14449
+        ]
+      },
+      {
+        "index": 5,
+        "group_id": "L23_CWE-327_C",
+        "layer": 23,
+        "cwe_id": "CWE-327",
+        "features": [
+          14449
+        ]
+      },
+      {
+        "index": 6,
+        "group_id": "L23_CWE-89_A",
+        "layer": 23,
+        "cwe_id": "CWE-89",
+        "features": [
+          4657,
+          22548,
+          1652
+        ]
+      },
+      {
+        "index": 7,
+        "group_id": "L23_CWE-89_B",
+        "layer": 23,
+        "cwe_id": "CWE-89",
+        "features": [
+          1652,
+          4657,
+          22548
+        ]
+      },
+      {
+        "index": 8,
+        "group_id": "L23_CWE-89_C",
+        "layer": 23,
+        "cwe_id": "CWE-89",
+        "features": [
+          1652,
+          4657,
+          22548
+        ]
+      }
+    ],
+    "dims_per_group": [
+      "max_activation",
+      "mean_activation",
+      "frac_active"
+    ]
+  },
+  "seed": 42,
+  "projection_shape": [
+    32768,
+    64
+  ],
+  "n_prompts": 1341
+}

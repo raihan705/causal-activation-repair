@@ -1,0 +1,33 @@
+{
+  "freeze_timestamp": "2026-03-30T10:52:17.798486Z",
+  "phase8_frozen": true,
+  "cyberseceval_dev": {
+    "path": "data/cyberseceval/dev_prompts.json",
+    "count": 1341
+  },
+  "cyberseceval_test": {
+    "path": "data/cyberseceval/test_prompts.json",
+    "count": 575,
+    "access_restriction": "Phase 9 only"
+  },
+  "bandit_train": {
+    "path": "outputs/phase7/bandit_train_split.json",
+    "count": 1072
+  },
+  "bandit_val": {
+    "path": "outputs/phase7/bandit_val_split.json",
+    "count": 269
+  },
+  "cve_splits": {
+    "train": "data/processed/train_pairs.csv",
+    "val": "data/processed/val_pairs.csv",
+    "test": "data/processed/test_pairs.csv",
+    "split_unit": "cve_id",
+    "ratio": "60/20/20"
+  },
+  "disjointness_assertions": {
+    "dev_test_overlap": 0,
+    "bandit_test_overlap": 0,
+    "verified": true
+  }
+}

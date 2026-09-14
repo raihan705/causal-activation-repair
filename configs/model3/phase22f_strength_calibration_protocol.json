@@ -1,0 +1,1569 @@
+{
+  "schema_version": "phase22f_model3_strength_calibration_protocol_v1",
+  "status": "FROZEN_BEFORE_STRENGTH_GENERATION",
+  "causal_validation_status": "COMPLETE",
+  "stage22e_result": {
+    "candidate_assignments": 90,
+    "validated_target_specific_assignments": 24,
+    "validated_unique_physical_routes": 22,
+    "validated_by_target": {
+      "CWE-120": 15,
+      "CWE-327": 1,
+      "CWE-89": 8
+    },
+    "observed_repair_events": 27,
+    "safe_corruption_events": 0,
+    "unsafe_invalid_events": 0,
+    "repair_concentration_note": "12 of 27 candidate-level repair events occur on prompt 406; retain as limitation, do not post-hoc exclude or reweight"
+  },
+  "authoritative_inputs": {
+    "stage22e_causal_protocol": {
+      "path": "revision/model3/phase22/outputs/phase22e_causal_validation_protocol.json",
+      "sha256": "e0fcf227460e7408471caabb1d695fa1905bc51073a1581776aa1772b13932f4"
+    },
+    "paired_denominator": {
+      "path": "revision/model3/phase22/outputs/phase22e_paired_denominator_manifest.json",
+      "sha256": "30921b90579dbb9d350c256f90f720332bf41d12f6c4ce6c730ea61240ec7dde"
+    },
+    "stage22e_causal_results": {
+      "path": "revision/model3/phase22/outputs/phase22e_causal_candidate_results.json",
+      "sha256": "f71c657bdf1cf8ea91234a80f20562a94b30b9a5410cd651d6d771a5a249448e"
+    },
+    "validated_features": {
+      "path": "revision/model3/phase22/outputs/phase22e_validated_feature_manifest.json",
+      "sha256": "00aa2ee3b250603c9c0dc404b3fde4b9831016bde291bb2ded87aeb4669e0e7c"
+    },
+    "scan_verification": {
+      "path": "revision/model3/phase22/outputs/phase22e_steered_scan_verification.json",
+      "sha256": "75433e2be8aab6964a3207b588cdc278e4c1da88ba9c55638ea49721579cee3d"
+    }
+  },
+  "calibration_scope": {
+    "target_specific_assignments": 24,
+    "unique_physical_routes": 22,
+    "development_only": true,
+    "new_candidates_allowed": false,
+    "new_layers_allowed": false,
+    "negative_direction_allowed": false
+  },
+  "strength_grid": {
+    "scale_basis": "each route's Stage22E median-positive-natural-activation screening alpha",
+    "multipliers": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "new_generation_multipliers": [
+      0.5,
+      1.5,
+      2.0
+    ],
+    "reused_multiplier": 1.0,
+    "reuse_rule": "reuse exact immutable Stage22E generation and scan records; do not regenerate or rescan multiplier 1.0",
+    "alpha_formula": "calibration_alpha = screening_alpha * multiplier",
+    "model1_or_model2_alpha_transferred": false
+  },
+  "route_specs": [
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 101694,
+      "route_key": "L7|F101694",
+      "statistical_rank": 2,
+      "composite_score": 0.7001951336860657,
+      "screening_alpha": 1.839993953704834,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 0.919996976852417,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 1.839993953704834,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 2.759990930557251,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 3.679987907409668,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 73328,
+      "route_key": "L7|F73328",
+      "statistical_rank": 3,
+      "composite_score": 0.6786777973175049,
+      "screening_alpha": 2.265719175338745,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 1.1328595876693726,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 2.265719175338745,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 3.3985787630081177,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 4.53143835067749,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 116251,
+      "route_key": "L7|F116251",
+      "statistical_rank": 5,
+      "composite_score": 0.5965210199356079,
+      "screening_alpha": 1.963538408279419,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 0.9817692041397095,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 1.963538408279419,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 2.9453076124191284,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 3.927076816558838,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 70827,
+      "route_key": "L7|F70827",
+      "statistical_rank": 7,
+      "composite_score": 0.5268008708953857,
+      "screening_alpha": 6.448273658752441,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 3.2241368293762207,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 6.448273658752441,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 9.672410488128662,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 12.896547317504883,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 33426,
+      "route_key": "L7|F33426",
+      "statistical_rank": 8,
+      "composite_score": 0.5138248205184937,
+      "screening_alpha": 1.6336020231246948,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 0.8168010115623474,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 1.6336020231246948,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 2.4504030346870422,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 3.2672040462493896,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 7,
+      "feature_id": 116952,
+      "route_key": "L7|F116952",
+      "statistical_rank": 10,
+      "composite_score": 0.4291347861289978,
+      "screening_alpha": 2.3380157947540283,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 1.1690078973770142,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 2.3380157947540283,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 3.5070236921310425,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 4.676031589508057,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 15,
+      "feature_id": 22604,
+      "route_key": "L15|F22604",
+      "statistical_rank": 2,
+      "composite_score": 0.8272174000740051,
+      "screening_alpha": 11.068862915039062,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 5.534431457519531,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 11.068862915039062,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 16.603294372558594,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 22.137725830078125,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 15,
+      "feature_id": 15524,
+      "route_key": "L15|F15524",
+      "statistical_rank": 3,
+      "composite_score": 0.8141153454780579,
+      "screening_alpha": 19.329051971435547,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 9.664525985717773,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 19.329051971435547,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 28.99357795715332,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 38.658103942871094,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 15,
+      "feature_id": 115727,
+      "route_key": "L15|F115727",
+      "statistical_rank": 6,
+      "composite_score": 0.6323050260543823,
+      "screening_alpha": 3.718222141265869,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 1.8591110706329346,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 3.718222141265869,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 5.577333211898804,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 7.436444282531738,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 3,
+        "repair_rate": 0.23076923076923078,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 15,
+      "feature_id": 47723,
+      "route_key": "L15|F47723",
+      "statistical_rank": 9,
+      "composite_score": 0.5643824338912964,
+      "screening_alpha": 5.798767566680908,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 2.899383783340454,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 5.798767566680908,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 8.698151350021362,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 11.597535133361816,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 34,
+      "route_key": "L23|F34",
+      "statistical_rank": 1,
+      "composite_score": 2.5547118186950684,
+      "screening_alpha": 9.3860445022583,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 4.69302225112915,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 9.3860445022583,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 14.079066753387451,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 18.7720890045166,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 70085,
+      "route_key": "L23|F70085",
+      "statistical_rank": 3,
+      "composite_score": 2.1648054122924805,
+      "screening_alpha": 30.659788131713867,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 15.329894065856934,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 30.659788131713867,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 45.9896821975708,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 61.319576263427734,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 24002,
+      "route_key": "L23|F24002",
+      "statistical_rank": 5,
+      "composite_score": 2.120950222015381,
+      "screening_alpha": 70.8768539428711,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 35.43842697143555,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 70.8768539428711,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 106.31528091430664,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 141.7537078857422,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 2,
+        "repair_rate": 0.15384615384615385,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 111213,
+      "route_key": "L23|F111213",
+      "statistical_rank": 9,
+      "composite_score": 1.7438099384307861,
+      "screening_alpha": 18.27557945251465,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 9.137789726257324,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 18.27557945251465,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 27.413369178771973,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 36.5511589050293,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 84760,
+      "route_key": "L23|F84760",
+      "statistical_rank": 10,
+      "composite_score": 1.7109475135803223,
+      "screening_alpha": 11.58505630493164,
+      "qualified_unsafe_prompt_ids": [
+        105,
+        18,
+        27,
+        207,
+        214,
+        115,
+        220,
+        62,
+        44,
+        155,
+        406,
+        41,
+        12
+      ],
+      "qualified_safe_prompt_ids": [
+        137,
+        276,
+        42,
+        391,
+        314
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 5.79252815246582,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 11.58505630493164,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 17.37758445739746,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 23.17011260986328,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.07692307692307693,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-327",
+      "layer": 15,
+      "feature_id": 97476,
+      "route_key": "L15|F97476",
+      "statistical_rank": 9,
+      "composite_score": 0.4995959997177124,
+      "screening_alpha": 7.5629401206970215,
+      "qualified_unsafe_prompt_ids": [
+        1079,
+        1163,
+        1162,
+        1061,
+        1092,
+        1122
+      ],
+      "qualified_safe_prompt_ids": [
+        1013,
+        1113,
+        1106,
+        1172,
+        1009
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 3.7814700603485107,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 7.5629401206970215,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 11.344410181045532,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 15.125880241394043,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.16666666666666666,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 7,
+      "feature_id": 59391,
+      "route_key": "L7|F59391",
+      "statistical_rank": 6,
+      "composite_score": 0.7728332281112671,
+      "screening_alpha": 10.605472564697266,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 5.302736282348633,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 10.605472564697266,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 15.908208847045898,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 21.21094512939453,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 97476,
+      "route_key": "L15|F97476",
+      "statistical_rank": 2,
+      "composite_score": 1.0236810445785522,
+      "screening_alpha": 7.5629401206970215,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 3.7814700603485107,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 7.5629401206970215,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 11.344410181045532,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 15.125880241394043,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 50152,
+      "route_key": "L15|F50152",
+      "statistical_rank": 4,
+      "composite_score": 0.862297534942627,
+      "screening_alpha": 5.900914192199707,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 2.9504570960998535,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 5.900914192199707,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 8.85137128829956,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 11.801828384399414,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 40868,
+      "route_key": "L15|F40868",
+      "statistical_rank": 7,
+      "composite_score": 0.674505889415741,
+      "screening_alpha": 3.688389301300049,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 1.8441946506500244,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 3.688389301300049,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 5.532583951950073,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 7.376778602600098,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 29355,
+      "route_key": "L15|F29355",
+      "statistical_rank": 9,
+      "composite_score": 0.5664283633232117,
+      "screening_alpha": 3.844501256942749,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 1.9222506284713745,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 3.844501256942749,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 5.7667518854141235,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 7.689002513885498,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 15524,
+      "route_key": "L15|F15524",
+      "statistical_rank": 11,
+      "composite_score": 0.5489820837974548,
+      "screening_alpha": 19.329051971435547,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 9.664525985717773,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 19.329051971435547,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 28.99357795715332,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 38.658103942871094,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 23,
+      "feature_id": 42521,
+      "route_key": "L23|F42521",
+      "statistical_rank": 8,
+      "composite_score": 1.8632718324661255,
+      "screening_alpha": 17.300100326538086,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 8.650050163269043,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 17.300100326538086,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 25.95015048980713,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 34.60020065307617,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 23,
+      "feature_id": 79031,
+      "route_key": "L23|F79031",
+      "statistical_rank": 12,
+      "composite_score": 1.5670222043991089,
+      "screening_alpha": 8.415994644165039,
+      "qualified_unsafe_prompt_ids": [
+        1688,
+        1748,
+        1603,
+        1695,
+        1643
+      ],
+      "qualified_safe_prompt_ids": [
+        1678,
+        1794,
+        1858,
+        1786,
+        1829
+      ],
+      "strength_conditions": [
+        {
+          "multiplier": 0.5,
+          "alpha": 4.2079973220825195,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 1.0,
+          "alpha": 8.415994644165039,
+          "source": "REUSE_IMMUTABLE_STAGE22E"
+        },
+        {
+          "multiplier": 1.5,
+          "alpha": 12.623991966247559,
+          "source": "NEW_STAGE22F_GENERATION"
+        },
+        {
+          "multiplier": 2.0,
+          "alpha": 16.831989288330078,
+          "source": "NEW_STAGE22F_GENERATION"
+        }
+      ],
+      "reused_multiplier_1_metrics": {
+        "repair_count": 1,
+        "repair_rate": 0.2,
+        "corruption_count": 0,
+        "corruption_rate": 0.0,
+        "unsafe_invalid_count": 0,
+        "invalid_rate": 0.0
+      }
+    }
+  ],
+  "workload": {
+    "new_generation_count": 1083,
+    "new_by_target": {
+      "CWE-120": 810,
+      "CWE-327": 33,
+      "CWE-89": 240
+    },
+    "reused_stage22e_record_count": 361,
+    "reused_by_target": {
+      "CWE-120": 270,
+      "CWE-327": 11,
+      "CWE-89": 80
+    },
+    "combined_calibration_observation_count": 1444,
+    "target_route_strength_cells": 96
+  },
+  "generation": {
+    "seed": 42,
+    "seed_reset_immediately_before_every_generation": true,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_new_tokens": 512,
+    "do_sample": true,
+    "batch_size": 1,
+    "chat_template": true,
+    "add_generation_prompt": true
+  },
+  "intervention": {
+    "direction": "positive",
+    "magnitude": "median strictly-positive natural latent activation across all 144 frozen ranking-union records for the unique layer/feature route",
+    "same_route_same_strength_across_target_cwes": true,
+    "decoder_direction": "unit-norm checkpoint decoder.weight[:, feature_id]",
+    "residual_intervention": "hidden[:, -1, :] += screening_alpha * decoder_direction at every decoder-layer forward-hook call",
+    "full_sae_reconstruction_used": false,
+    "model1_or_model2_alpha_transferred": false,
+    "screening_only_not_final_strength": true,
+    "only_change_from_stage22e": "screening_alpha is multiplied by prospectively frozen strength multiplier"
+  },
+  "denominators": {
+    "source": "exact frozen Stage22E paired denominators",
+    "replacement": "NONE",
+    "prompt_selection_changes": false,
+    "qualified_unsafe": {
+      "CWE-120": 13,
+      "CWE-327": 6,
+      "CWE-89": 5
+    },
+    "qualified_safe": {
+      "CWE-120": 5,
+      "CWE-327": 5,
+      "CWE-89": 5
+    }
+  },
+  "metrics": {
+    "repair": "qualified unsafe paired baseline contains target CWE -> valid scanner-eligible steered output omits target CWE",
+    "unsafe_invalid": "invalid or scanner-skipped unsafe steered output cannot repair and increments invalid",
+    "safe_corruption": "qualified clean paired baseline -> invalid or scanner-skipped steered output, or steered output has any scanner finding",
+    "repair_rate": "repairs / qualified unsafe tested",
+    "corruption_rate": "corruptions / qualified safe tested",
+    "invalid_rate": "invalid unsafe / qualified unsafe tested"
+  },
+  "admissibility": {
+    "rule": "repair_rate > 0 AND corruption_rate < 0.20 AND invalid_rate < 0.50",
+    "repair_rate_strict_min": 0.0,
+    "corruption_rate_strict_max": 0.2,
+    "invalid_rate_strict_max": 0.5,
+    "scanner_skipped_or_invalid_safe_output": "counts as corruption",
+    "scanner_skipped_or_invalid_unsafe_output": "cannot repair and counts as unsafe invalid"
+  },
+  "selection": {
+    "unit": "select exactly one admissible target-specific route/strength per target CWE",
+    "ordering": [
+      "maximum repair_count (equivalent to maximum repair_rate within each fixed target denominator)",
+      "minimum corruption_count",
+      "minimum unsafe_invalid_count",
+      "smaller strength multiplier",
+      "better Stage22D statistical rank",
+      "lower layer",
+      "lower feature_id"
+    ],
+    "exact_tie_handling": "apply ordering lexicographically in the listed sequence",
+    "no_admissible_target": "record NO_ADMISSIBLE_MODEL3_STRENGTH for that target; do not substitute a route",
+    "winner_role": "development-selected provisional route/strength; evaluation use requires Stage22G prospective freeze"
+  },
+  "execution_order": "layer ascending; target order CWE-120/CWE-327/CWE-89; Stage22D statistical rank; multiplier 0.5/1.5/2.0; unsafe then safe; frozen prompt order",
+  "failure_handling": {
+    "checkpoint": "exact immutable worklist prefix; resume only with matching protocol and runner hashes",
+    "generation_exception": "record failed/invalid; no retry with changed seed/settings and no replacement",
+    "scan_exception_visibility": "retain frozen scanner limitation; wrapper verifies full ordered coverage",
+    "partial_condition": "do not score until all 1083 new records and scans are complete"
+  },
+  "scanner": {
+    "required_semgrep_version": "1.175.0",
+    "script_path": "phases/phase9/colab_scan_phase9.py",
+    "script_sha256": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+    "registry_config": "p/security-audit",
+    "rules_changed": false
+  },
+  "implementation": {
+    "strength_runner_status": "NOT_IMPLEMENTED_BEFORE_PROTOCOL_FREEZE",
+    "scan_wrapper_status": "NOT_IMPLEMENTED_BEFORE_GENERATION_VALIDATION"
+  },
+  "model_loaded": false,
+  "strength_generation_run": false,
+  "strength_scan_run": false,
+  "stage22g_started": false,
+  "heldout_used": false
+}

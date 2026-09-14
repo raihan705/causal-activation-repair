@@ -1,0 +1,26 @@
+{
+  "schema_version": "phase22h_scan_verification_v1",
+  "status": "PASS",
+  "checks": {
+    "return_and_scan_complete": true,
+    "exact_semgrep_1_175_0": true,
+    "scan_output_hash_matches": true,
+    "generation_protocol_population_lineage_matches": true,
+    "scanner_and_wrapper_hashes_match": true,
+    "all_468_rows_in_frozen_order": true,
+    "all_scan_metadata_matches_projection": true,
+    "all_findings_and_flags_internally_consistent": true,
+    "all_468_records_scanner_eligible": true,
+    "zero_skipped_records": true,
+    "scanner_rules_unchanged": true
+  },
+  "scan_output_sha256": "59907ee84885dc200045197b0a365c38eb04da5b28eb7862c82cd623c3a36fa0",
+  "scan_return_manifest_sha256": "ef1008215f6185f3dc2f73fce93fe328698a89e1a4a184fa924e15a18fb0552d",
+  "scan_input_sha256": "87943976d699f00f9a14569070d53db066a0bc65edb73ca5835ed24d17f2ef67",
+  "scanner_sha256": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+  "wrapper_sha256": "a90a02cdaf7801581af05fb29fde04cec7fc2012d738dcf98f58f39d0e88110c",
+  "record_count": 468,
+  "eligible_count": 468,
+  "skipped_count": 0,
+  "security_metrics_computed": false
+}

@@ -1,0 +1,31 @@
+sources:
+  cvefixes:
+    repository: https://github.com/secureIT-project/CVEFixes
+    git_revision: 9283b50b3f04e3c5b0a17fc419ab0feea23fc438
+    recorded_database_sha256: 96ebfabb6ebd4960539e73c0840d74607d56e8d18465ba97cdbe1898b7fc30f5
+    redistribution: false
+  cyberseceval:
+    repository: walledai/CyberSecEval
+    revision: main
+    total_records: 1916
+    development_records: 1341
+    held_out_records: 575
+    split_seed: 42
+    redistribution: false
+  humanevalpack:
+    repository: bigcode/humanevalpack
+    revision: main
+    redistribution: false
+  bigcodebench:
+    repository: bigcode/bigcodebench
+    revision: main
+    redistribution: false
+  mmlu:
+    repository: cais/mmlu
+    recorded_revision: c30699e8356da336a370243923dbaf21066bb9fe
+    redistribution: false
+
+release_policy:
+  source_or_fixed_code: metadata_and_hashes_only
+  benchmark_prompt_text: identifiers_and_hashes_only
+  generated_code: compact_aggregate_results_only

@@ -1,0 +1,233 @@
+{
+  "schema_version": "phase22a_provenance_preflight_v1",
+  "created_at": "2026-09-03",
+  "stage": "22A",
+  "status": "PASS",
+  "scope": "READ_ONLY_METADATA_AND_LOCAL_ENVIRONMENT_AUDIT",
+  "execution_attestation": {
+    "model_weight_downloads": 0,
+    "sae_weight_downloads": 0,
+    "model_loads": 0,
+    "sae_loads": 0,
+    "gpu_executions": 0,
+    "generation_runs": 0,
+    "scanner_runs": 0,
+    "heldout_accesses": 0
+  },
+  "model": {
+    "repository": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "public": true,
+    "gated": false,
+    "license": "apache-2.0",
+    "architecture": "Qwen2ForCausalLM",
+    "model_type": "qwen2",
+    "parameter_count_bf16": 7615616512,
+    "hidden_size": 3584,
+    "num_hidden_layers": 28,
+    "num_attention_heads": 28,
+    "num_key_value_heads": 4,
+    "torch_dtype": "bfloat16",
+    "config_transformers_version": "4.43.1",
+    "max_position_embeddings": 32768,
+    "weight_storage_bytes": 15231271888,
+    "weight_files": [
+      {
+        "path": "model-00001-of-00004.safetensors",
+        "bytes": 3945441440,
+        "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+      },
+      {
+        "path": "model-00002-of-00004.safetensors",
+        "bytes": 3864726352,
+        "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+      },
+      {
+        "path": "model-00003-of-00004.safetensors",
+        "bytes": 3864726424,
+        "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+      },
+      {
+        "path": "model-00004-of-00004.safetensors",
+        "bytes": 3556377672,
+        "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+      }
+    ],
+    "metadata_files": [
+      {"path": "LICENSE", "bytes": 11343, "git_blob_sha1": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab"},
+      {"path": "config.json", "bytes": 663, "git_blob_sha1": "0178295f88afc3c7f279ed284f961f8c1be00654"},
+      {"path": "generation_config.json", "bytes": 243, "git_blob_sha1": "0eb3c536657dcd12626e09eca4b6198c0cbcde1e"},
+      {"path": "model.safetensors.index.json", "bytes": 27752, "git_blob_sha1": "14d037fdda5a1311dcc0275003a7a370d84114e6"},
+      {"path": "merges.txt", "bytes": 1671839, "git_blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0"},
+      {"path": "tokenizer.json", "bytes": 7031645, "git_blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00"},
+      {"path": "tokenizer_config.json", "bytes": 7305, "git_blob_sha1": "07bfe0640cb5a0037f9322287fbfc682806cf672"},
+      {"path": "vocab.json", "bytes": 2776833, "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"}
+    ],
+    "tokenizer_and_chat": {
+      "tokenizer_class": "Qwen2Tokenizer",
+      "apply_chat_template_required": true,
+      "add_generation_prompt": true,
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "pad_token_id_from_generation_config": 151643,
+      "template_identity": "PINNED_TOKENIZER_CONFIG_AT_MODEL_REVISION"
+    }
+  },
+  "sae_repository": {
+    "repository": "andyrdt/saes-qwen2.5-7b-instruct",
+    "revision": "c37e53c4bb07127ad17ab88f28b93d4e87142e59",
+    "public": true,
+    "gated": false,
+    "license": "apache-2.0",
+    "model_card_scope": "Residual stream SAEs for Qwen2.5-7B-Instruct",
+    "architecture": "BatchTopKSAE",
+    "trainer": "trainer_0",
+    "hook_semantics_from_config": "resid_post_layer_N; buffer io=out",
+    "selected_files": [
+      {
+        "layer": 7,
+        "weight_path": "resid_post_layer_7/trainer_0/ae.pt",
+        "weight_bytes": 3758637401,
+        "weight_sha256": "e9c88dc39dd89bc80bcea688c91739a37d1ec55bd7bf676f9cfb4bbf847fbd73",
+        "config_path": "resid_post_layer_7/trainer_0/config.json",
+        "config_sha256": "b9d2d76eea9fb3eb3c9ca51f8ed319ca118de6ac455c30da4990a8f8aa320dee",
+        "eval_path": "resid_post_layer_7/trainer_0/eval_results.json",
+        "eval_sha256": "f82a1bb704ebdcc7ad05af0abd58d726a0f29890aa176d3a986981e9e93cc918",
+        "activation_dim": 3584,
+        "dictionary_size": 131072,
+        "k": 32,
+        "lm_name": "Qwen/Qwen2.5-7B-Instruct",
+        "submodule_name": "resid_post_layer_7",
+        "buffer_io": "out",
+        "published_eval": {"l0": 29.8081884765625, "fraction_variance_explained": 0.8355078125, "cosine_similarity": 0.9326953125, "fraction_loss_recovered": 0.99724609375}
+      },
+      {
+        "layer": 15,
+        "weight_path": "resid_post_layer_15/trainer_0/ae.pt",
+        "weight_bytes": 3758637401,
+        "weight_sha256": "1339c52258e95bc64535a90e45067187722e659e0ee03c976db813614b29ab5b",
+        "config_path": "resid_post_layer_15/trainer_0/config.json",
+        "config_sha256": "b61f27dca073d4eb069580ba705f998cbb7c58fc85033bce6b9d1e26a4dcd3e2",
+        "eval_path": "resid_post_layer_15/trainer_0/eval_results.json",
+        "eval_sha256": "a4b2ce403137cee3d4e4f452348af9297a51ef3eae689a2b7d8f94edcebc1f93",
+        "activation_dim": 3584,
+        "dictionary_size": 131072,
+        "k": 32,
+        "lm_name": "Qwen/Qwen2.5-7B-Instruct",
+        "submodule_name": "resid_post_layer_15",
+        "buffer_io": "out",
+        "published_eval": {"l0": 29.5351513671875, "fraction_variance_explained": 0.76798828125, "cosine_similarity": 0.90923828125, "fraction_loss_recovered": 0.99515625}
+      },
+      {
+        "layer": 23,
+        "weight_path": "resid_post_layer_23/trainer_0/ae.pt",
+        "weight_bytes": 3758637401,
+        "weight_sha256": "a593d0da4a10cde4674b48749bf573b14e40119c1cff34cf2d499f334940ef4b",
+        "config_path": "resid_post_layer_23/trainer_0/config.json",
+        "config_sha256": "2a60e761525b555d0e0ea76562e5f98394eb21447bab2034d5a2491bfbb03841",
+        "eval_path": "resid_post_layer_23/trainer_0/eval_results.json",
+        "eval_sha256": "83686762ff6586a31b38e093b4b8f86f827cba85537568073da977dfcd5f9884",
+        "activation_dim": 3584,
+        "dictionary_size": 131072,
+        "k": 32,
+        "lm_name": "Qwen/Qwen2.5-7B-Instruct",
+        "submodule_name": "resid_post_layer_23",
+        "buffer_io": "out",
+        "published_eval": {"l0": 29.5232763671875, "fraction_variance_explained": 0.77451171875, "cosine_similarity": 0.91509765625, "fraction_loss_recovered": 0.98640625}
+      }
+    ],
+    "all_three_weight_bytes": 11275912203,
+    "serialization": {
+      "format": "PyTorch ae.pt state_dict",
+      "pickle_surface_reported_by_host": true,
+      "reported_imports": ["collections.OrderedDict", "torch.FloatStorage", "torch.IntStorage", "torch._utils._rebuild_tensor_v2"],
+      "phase22b_policy": "VERIFY_SHA256_THEN_EXPLICIT_TORCH_LOAD_WEIGHTS_ONLY_TRUE"
+    }
+  },
+  "loader_provenance": {
+    "repository": "https://github.com/andyrdt/dictionary_learning",
+    "branch": "andyrdt/qwen",
+    "revision": "de9138b02fffdf9919c53cee828beb4e05049741",
+    "license": "MIT",
+    "package_version": "0.1.0",
+    "python_requirement": ">=3.10,<4.0",
+    "documented_loader": "dictionary_learning.trainers.batch_top_k.BatchTopKSAE.from_pretrained",
+    "encode_default": "learned threshold",
+    "decode": "decoder(features) + b_dec",
+    "nnsight_requirement_in_package": ">=0.3.0,<0.4.0",
+    "phase22b_recommendation": "Use a frozen minimal upstream-equivalent BatchTopK loader plus direct Transformers layer hooks; do not add nnsight to the established environment solely for loading."
+  },
+  "local_environment": {
+    "python": "3.11.14",
+    "torch": "2.6.0+cu118",
+    "transformers": "4.57.6",
+    "huggingface_hub": "0.36.2",
+    "accelerate": "1.12.0",
+    "einops": "0.8.2",
+    "sae_lens": "6.37.6",
+    "dictionary_learning_installed": false,
+    "nnsight_installed": false,
+    "qwen_minimum_transformers": ">=4.37.0",
+    "qwen_transformers_requirement_status": "PASS",
+    "qwen_decoder_layer_return_in_installed_transformers": "torch.Tensor",
+    "direct_hook_target": "model.model.layers[layer] output tensor",
+    "dependency_status": "COMPATIBLE_BASE_ENVIRONMENT; PHASE22B_LOADER_IMPLEMENTATION_REQUIRED",
+    "pip_freeze_sha256": "d7a10bf10a1ac55f8fd907372957d7e1436cd5e6a0e5b6425405b9803203f1d4"
+  },
+  "storage_and_memory_feasibility": {
+    "local_available_storage_bytes_observed": 872240783360,
+    "model_weight_bytes": 15231271888,
+    "three_sae_weight_bytes": 11275912203,
+    "combined_download_bytes_excluding_small_metadata": 26507184091,
+    "storage_status": "PASS",
+    "a5000_total_vram_bytes_from_verified_phase21_manifest": 25756696576,
+    "model_bf16_parameter_bytes_estimate": 15231233024,
+    "one_sae_float32_resident_bytes_estimate": 3758637401,
+    "combined_static_resident_bytes_estimate": 18989870425,
+    "static_margin_bytes_before_runtime_allocations": 6766826151,
+    "fit_assessment": "PLAUSIBLE_BUT_UNVERIFIED",
+    "required_phase22b_policy": "ONE_SAE_AT_A_TIME; BATCH_SIZE_1; NO_QUANTIZATION; NO_CPU_OFFLOAD; FAIL_CLOSED_ON_OOM"
+  },
+  "compatibility_checks": {
+    "exact_model_revision_pinned": "PASS",
+    "exact_sae_revision_pinned": "PASS",
+    "model_and_sae_public_access": "PASS",
+    "license_metadata": "PASS",
+    "sae_lm_name_matches_model_repository": "PASS",
+    "hidden_and_activation_dimensions_match": "PASS",
+    "candidate_layer_indices_exist": "PASS",
+    "sae_output_residual_metadata": "PASS",
+    "tokenizer_chat_template_available": "PASS",
+    "installed_transformers_minimum": "PASS",
+    "exact_weight_integrity_identifiers_available": "PASS",
+    "actual_model_load": "NOT_RUN_STAGE22B",
+    "actual_sae_load": "NOT_RUN_STAGE22B",
+    "actual_hook_reinsertion": "NOT_RUN_STAGE22B",
+    "local_reconstruction_fidelity": "NOT_RUN_STAGE22B",
+    "actual_peak_vram": "NOT_RUN_STAGE22B"
+  },
+  "local_evidence": [
+    {
+      "path": "pip_freeze.txt",
+      "sha256": "d7a10bf10a1ac55f8fd907372957d7e1436cd5e6a0e5b6425405b9803203f1d4"
+    },
+    {
+      "path": "revision/model2/phase21/outputs/phase21_environment_manifest.json",
+      "sha256": "5c760e201be20a6957791eb06ac9e064300624560c21b9fa00ae88a7abe58ab2"
+    },
+    {
+      "path": "revision/model3/phase22/model3_pair_selection.json",
+      "pre_phase22a_sha256": "369abe3b981394c9e3b534de6b7b4dc5f3b857f6b152c1a59423a534a4703018"
+    }
+  ],
+  "upstream_sources": [
+    "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/tree/a09a35458c702b33eeacc393d103063234e8bc28",
+    "https://huggingface.co/andyrdt/saes-qwen2.5-7b-instruct/tree/c37e53c4bb07127ad17ab88f28b93d4e87142e59",
+    "https://github.com/andyrdt/dictionary_learning/tree/de9138b02fffdf9919c53cee828beb4e05049741"
+  ],
+  "checkpoint": {
+    "stage22a": "PASS",
+    "blocker": null,
+    "next_stage": "22B_TECHNICAL_LOAD_RECONSTRUCTION_AND_HOOK_GATE"
+  }
+}

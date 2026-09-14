@@ -1,0 +1,67 @@
+{
+  "schema_version": "phase22c_model3_b0_scan_verification_v1",
+  "verification_status": "PASS",
+  "generation_sha256": "7390fe102e391baa77af5316e8f315acef99057f2d9f8283ad85fc089731b6b0",
+  "scan_output_sha256": "ae39a69ff4d5af1e4484c5649e683bb529956498b9bde05d25b08f14d1de44bc",
+  "scan_return_manifest_sha256": "2ef96b2e106192fb5ed7ab2504a6b5f525feef5793063e111019145875cf6a2c",
+  "transfer_manifest_sha256": "8be5c24ea6e2f212d60e15f7efe4d035cd4d5c22abf01a6776c629c5b87b3912",
+  "scanner_sha256": "60cedd3d6ec2d19e5e7e5ba4d709230efdd5d9478047492fefda4dd88d9afbb7",
+  "wrapper_sha256": "7ffba4869e817b514eac296340bc9f0a16c5998a70bcc3432d09125c4fb38fdb",
+  "semgrep_version": "1.175.0",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+  "record_count": 180,
+  "eligible_count": 180,
+  "skipped_count": 0,
+  "vulnerable_count_any_derivation_cwe": 25,
+  "target_vulnerable_total": 25,
+  "target_safe_total": 155,
+  "finding_record_counts_by_cwe": {
+    "CWE-120": 14,
+    "CWE-327": 6,
+    "CWE-89": 5
+  },
+  "planned_cwe_support": [
+    {
+      "cwe_id": "CWE-120",
+      "source_prompt_count": 110,
+      "scanner_eligible_count": 110,
+      "target_vulnerable_count": 14,
+      "target_safe_count": 96,
+      "scanner_skipped_count": 0,
+      "feature_discovery_support_status": "SUPPORTED_NONZERO"
+    },
+    {
+      "cwe_id": "CWE-327",
+      "source_prompt_count": 46,
+      "scanner_eligible_count": 46,
+      "target_vulnerable_count": 6,
+      "target_safe_count": 40,
+      "scanner_skipped_count": 0,
+      "feature_discovery_support_status": "SUPPORTED_NONZERO"
+    },
+    {
+      "cwe_id": "CWE-89",
+      "source_prompt_count": 24,
+      "scanner_eligible_count": 24,
+      "target_vulnerable_count": 5,
+      "target_safe_count": 19,
+      "scanner_skipped_count": 0,
+      "feature_discovery_support_status": "SUPPORTED_NONZERO"
+    }
+  ],
+  "frozen_population_manifest_sha256": "042eda6d74db12ad2f3ccf8b6c32ff419f2e5fb41cbb841287e1d4bcf1df8c5d",
+  "support_table_sha256": "8a9e28e7347210afb05f52466d965d4bcc2bead2abeea308bd46e137df025fb6",
+  "schema_valid": true,
+  "deduplication_valid": true,
+  "skip_policy_valid": true,
+  "generation_unchanged": true,
+  "scanner_configuration_drift": false,
+  "heldout_used": false,
+  "warnings": [
+    "The frozen scanner suppresses Semgrep subprocess exceptions and lacks row-level scanner-success metadata; full row coverage, exact wrapper/scanner hashes, and the prescribed Semgrep version are verified, but silent per-record Semgrep failure cannot be independently excluded.",
+    "The p/security-audit registry snapshot is not content-pinned; the frozen runtime version is recorded as Semgrep 1.175.0."
+  ],
+  "activation_extraction_run": false,
+  "causal_intervention_run": false,
+  "model1_or_model2_modified": false
+}

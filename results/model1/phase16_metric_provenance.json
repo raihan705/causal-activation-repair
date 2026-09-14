@@ -1,0 +1,27 @@
+{
+  "schema_version": "phase16_metric_provenance_public_v1",
+  "status": "COMPLETE",
+  "condition_count": 17,
+  "prompt_count_per_condition": 575,
+  "scanner_eligible_prompt_count": 392,
+  "reporting_roles": {
+    "B0": "primary repeated-seed baseline",
+    "B1": "primary repeated-seed prompting comparison",
+    "B*": "primary repeated-seed activation-repair method",
+    "B2-alpha20": "descriptive strength comparison",
+    "remaining_conditions": "complementary seed-42 comparisons"
+  },
+  "metric_semantics": {
+    "corrvrr": "same-seed paired repairs divided by same-seed B0-positive scanner-eligible prompts",
+    "raw_vrr": "one minus the current scanner-positive count divided by the same-seed B0-positive count",
+    "corruption": "current scanner-positive outputs among same-seed B0-safe scanner-eligible prompts",
+    "validity": "non-whitespace generated output among all 575 prompts",
+    "scanner_skipped": "reported separately and never treated as scanner-observed safe"
+  },
+  "canonical_result_files": [
+    "results/model1/phase16_per_seed_results.csv",
+    "results/model1/phase16_aggregate_results.csv",
+    "results/model1/phase16_per_cwe_descriptive.csv",
+    "results/model1/phase16_pairwise_intervals.csv"
+  ]
+}

@@ -1,0 +1,11 @@
+category,examples,publication_policy,reproduction_path
+raw vulnerability data,"CVEFixes database, SQL dump, raw repository checkout",excluded,"Acquire CVEFixes at the pinned commit and run scripts/model1/core/phase1"
+processed source pairs,"train_pairs.csv, val_pairs.csv, test_pairs.csv",metadata and hashes only,"Reconstruct locally and verify against data/split_ids/cve_pair_split_metadata.csv"
+benchmark prompts,"CyberSecEval, HumanEvalPack, BigCodeBench, MMLU prompt text",identifiers only,"Acquire upstream datasets and reconstruct the frozen IDs"
+model weights,"Llama, Gemma, Qwen weights",excluded,"Acquire at revisions in docs/provenance.md"
+SAE weights,"Llama Scope, Gemma Scope, Qwen SAE tensors",excluded,"Acquire at revisions in docs/provenance.md"
+activation tensors,"raw hidden activations and encoded SAE latents",excluded,"Regenerate with the released extraction/encoding scripts"
+prompt-bearing generations,"raw generated-code files and checkpoints",excluded,"Regenerate or inspect the committed compact metrics and hashes"
+transport artifacts,"scan bundles, returned ZIP files, and runtime-specific handoff wrappers",excluded,"Use the constituent Python scanner scripts and protocol manifests"
+logs and caches,"stdout logs, Hugging Face caches, Python caches",excluded,"Regenerate locally"
+credentials,"GitHub and Hugging Face tokens",prohibited,"Authenticate outside the repository"

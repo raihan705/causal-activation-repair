@@ -1,0 +1,140 @@
+{
+  "schema_version": "phase22f_selected_model3_routes_v1",
+  "status": "DEVELOPMENT_WINNERS_SELECTED_STAGE22G_FREEZE_REQUIRED",
+  "selection_rule": {
+    "unit": "select exactly one admissible target-specific route/strength per target CWE",
+    "ordering": [
+      "maximum repair_count (equivalent to maximum repair_rate within each fixed target denominator)",
+      "minimum corruption_count",
+      "minimum unsafe_invalid_count",
+      "smaller strength multiplier",
+      "better Stage22D statistical rank",
+      "lower layer",
+      "lower feature_id"
+    ],
+    "exact_tie_handling": "apply ordering lexicographically in the listed sequence",
+    "no_admissible_target": "record NO_ADMISSIBLE_MODEL3_STRENGTH for that target; do not substitute a route",
+    "winner_role": "development-selected provisional route/strength; evaluation use requires Stage22G prospective freeze"
+  },
+  "winner_count": 3,
+  "winners": [
+    {
+      "target_cwe": "CWE-120",
+      "layer": 23,
+      "feature_id": 70085,
+      "route_key": "L23|F70085",
+      "statistical_rank": 3,
+      "composite_score": 2.1648054122924805,
+      "screening_alpha": 30.659788131713867,
+      "strength_multiplier": 1.5,
+      "calibration_alpha": 45.9896821975708,
+      "source": "NEW_STAGE22F_GENERATION_AND_SCAN",
+      "qualified_unsafe_n": 13,
+      "repair_count": 4,
+      "repair_rate": 0.3076923076923077,
+      "target_cwe_remaining_count": 9,
+      "unsafe_invalid_count": 0,
+      "invalid_rate": 0.0,
+      "qualified_safe_n": 5,
+      "corruption_count": 0,
+      "corruption_rate": 0.0,
+      "repair_prompt_ids": [
+        18,
+        220,
+        44,
+        41
+      ],
+      "unsafe_invalid_prompt_ids": [],
+      "corrupted_safe_prompt_ids": [],
+      "admissible": true,
+      "selection_rank_tuple": [
+        -4,
+        0,
+        0,
+        1.5,
+        3,
+        23,
+        70085
+      ]
+    },
+    {
+      "target_cwe": "CWE-327",
+      "layer": 15,
+      "feature_id": 97476,
+      "route_key": "L15|F97476",
+      "statistical_rank": 9,
+      "composite_score": 0.4995959997177124,
+      "screening_alpha": 7.5629401206970215,
+      "strength_multiplier": 2.0,
+      "calibration_alpha": 15.125880241394043,
+      "source": "NEW_STAGE22F_GENERATION_AND_SCAN",
+      "qualified_unsafe_n": 6,
+      "repair_count": 2,
+      "repair_rate": 0.3333333333333333,
+      "target_cwe_remaining_count": 4,
+      "unsafe_invalid_count": 0,
+      "invalid_rate": 0.0,
+      "qualified_safe_n": 5,
+      "corruption_count": 0,
+      "corruption_rate": 0.0,
+      "repair_prompt_ids": [
+        1079,
+        1092
+      ],
+      "unsafe_invalid_prompt_ids": [],
+      "corrupted_safe_prompt_ids": [],
+      "admissible": true,
+      "selection_rank_tuple": [
+        -2,
+        0,
+        0,
+        2.0,
+        9,
+        15,
+        97476
+      ]
+    },
+    {
+      "target_cwe": "CWE-89",
+      "layer": 15,
+      "feature_id": 15524,
+      "route_key": "L15|F15524",
+      "statistical_rank": 11,
+      "composite_score": 0.5489820837974548,
+      "screening_alpha": 19.329051971435547,
+      "strength_multiplier": 1.5,
+      "calibration_alpha": 28.99357795715332,
+      "source": "NEW_STAGE22F_GENERATION_AND_SCAN",
+      "qualified_unsafe_n": 5,
+      "repair_count": 3,
+      "repair_rate": 0.6,
+      "target_cwe_remaining_count": 2,
+      "unsafe_invalid_count": 0,
+      "invalid_rate": 0.0,
+      "qualified_safe_n": 5,
+      "corruption_count": 0,
+      "corruption_rate": 0.0,
+      "repair_prompt_ids": [
+        1748,
+        1603,
+        1643
+      ],
+      "unsafe_invalid_prompt_ids": [],
+      "corrupted_safe_prompt_ids": [],
+      "admissible": true,
+      "selection_rank_tuple": [
+        -3,
+        0,
+        0,
+        1.5,
+        11,
+        15,
+        15524
+      ]
+    }
+  ],
+  "strength_calibration_results_sha256": "a9fc582e1e8cece36a3e5339bea7c8f4d20e561f42150528bd95b2cb7e76b46c",
+  "stage22g_started": false,
+  "evaluation_protocol": "defined separately in configs/model3/phase22g_prospective_evaluation_protocol.json",
+  "heldout_used": false
+}

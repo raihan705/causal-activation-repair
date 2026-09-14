@@ -1,0 +1,470 @@
+{
+  "total_actions": 28,
+  "n_active": 19,
+  "n_masked": 9,
+  "bstar_alpha": 40.0,
+  "active_cwes": [
+    "CWE-120",
+    "CWE-327",
+    "CWE-89"
+  ],
+  "actions": [
+    {
+      "action_id": 0,
+      "type": "no_op",
+      "group_id": null,
+      "cwe_id": null,
+      "layer_id": null,
+      "feature_ids": null,
+      "strength_label": "none",
+      "alpha": 0.0,
+      "strength_level": 0,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 1,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9287
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 2,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9287
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 3,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9287
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 4,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_C",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9816,
+        9287
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 5,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_C",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9816,
+        9287
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 6,
+      "type": "intervention",
+      "group_id": "L16_CWE-120_C",
+      "cwe_id": "CWE-120",
+      "layer_id": 16,
+      "feature_ids": [
+        1710,
+        14376,
+        17395,
+        9816,
+        9287
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 7,
+      "type": "intervention",
+      "group_id": "L19_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 19,
+      "feature_ids": [
+        14193
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 8,
+      "type": "intervention",
+      "group_id": "L19_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 19,
+      "feature_ids": [
+        14193
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 9,
+      "type": "intervention",
+      "group_id": "L19_CWE-120_B",
+      "cwe_id": "CWE-120",
+      "layer_id": 19,
+      "feature_ids": [
+        14193
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 10,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_A",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 11,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_A",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 12,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_A",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=24.0"
+    },
+    {
+      "action_id": 13,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_B",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 14,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_B",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 15,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_B",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 16,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_C",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 17,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_C",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 18,
+      "type": "intervention",
+      "group_id": "L23_CWE-327_C",
+      "cwe_id": "CWE-327",
+      "layer_id": 23,
+      "feature_ids": [
+        14449
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 19,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_A",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        4657,
+        22548,
+        1652
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 20,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_A",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        4657,
+        22548,
+        1652
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 21,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_A",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        4657,
+        22548,
+        1652
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=24.0"
+    },
+    {
+      "action_id": 22,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_B",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 23,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_B",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 24,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_B",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    },
+    {
+      "action_id": 25,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_C",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "Low",
+      "alpha": 20.0,
+      "strength_level": 1,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 26,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_C",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "Med",
+      "alpha": 40.0,
+      "strength_level": 2,
+      "masked": false,
+      "mask_reason": null
+    },
+    {
+      "action_id": 27,
+      "type": "intervention",
+      "group_id": "L23_CWE-89_C",
+      "cwe_id": "CWE-89",
+      "layer_id": 23,
+      "feature_ids": [
+        1652,
+        4657,
+        22548
+      ],
+      "strength_label": "High",
+      "alpha": 60.0,
+      "strength_level": 3,
+      "masked": true,
+      "mask_reason": "alpha=60.0 > validated high_alpha=30.0"
+    }
+  ]
+}

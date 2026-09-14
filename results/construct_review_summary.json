@@ -1,0 +1,26 @@
+{
+  "schema_version": "construct_review_summary_v1",
+  "status": "COMPLETE",
+  "role": "secondary construct-validity evidence; automated scanner metrics remain unchanged",
+  "model1_seed42_bstar_changed_cases": {
+    "transition_count": 17,
+    "scanner_repair_transitions": {
+      "count": 15,
+      "genuine_security_improvement": 1,
+      "invalid_or_incomplete": 14
+    },
+    "scanner_corruption_transitions": {
+      "count": 2,
+      "detector_surface_change": 1,
+      "task_drift": 1,
+      "genuine_security_regression": 0
+    }
+  },
+  "model2_static_strength_repair_transitions": {
+    "transition_count": 15,
+    "true_repair": 4,
+    "partial_repair": 6,
+    "scanner_noise": 3,
+    "invalid_or_incomplete": 2
+  }
+}

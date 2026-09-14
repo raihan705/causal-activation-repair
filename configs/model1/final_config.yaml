@@ -1,0 +1,69 @@
+model:
+  name: meta-llama/Meta-Llama-3.1-8B-Instruct
+  revision: 0e9e39f249a16976918f6564b8830bc894c89659
+  tokenizer: meta-llama/Meta-Llama-3.1-8B-Instruct
+  dtype: bfloat16
+  device: cuda
+
+sae:
+  release: llama_scope_lxr_8x
+  revision: 8dbc1d85edfced43081c03c38b05514dbab1368b
+  sae_id_template: l{layer}r_8x
+  d_in: 4096
+  d_sae: 32768
+  pooling_strategy: last_token
+  reconstruction_threshold: 0.65
+
+intervention:
+  method: B2_a40
+  alpha: 40.0
+  intervention_layers: [16, 19, 23]
+  intervention_library_path: configs/model1/intervention_library.json
+  bstar_config_path: configs/model1/bstar_config.json
+  feature_map:
+    CWE-120: {layer: 19, feature: 14193}
+    CWE-787: {layer: 19, feature: 1515}
+    CWE-190: {layer: 19, feature: 16897}
+    CWE-327: {layer: 23, feature: 14449}
+    CWE-89: {layer: 23, feature: 1652}
+    CWE-338: {layer: 23, feature: 7533}
+    CWE-79: {layer: 16, feature: 9816}
+    CWE-125: {layer: 23, feature: 16655}
+    CWE-476: {layer: 23, feature: 18397}
+
+plausibility_gate:
+  enabled: false
+  metric: kl_divergence
+  kl_thresh: 0.5
+  decay: 0.5
+  syntax_checks: true
+
+generation:
+  temperature: 0.2
+  top_p: 0.95
+  max_new_tokens: 512
+  do_sample: true
+  seed: 42
+
+scanner:
+  tool: semgrep
+  ruleset: p/security-audit
+  timeout_per_file: 10
+  max_memory_mb: 1000
+  code_truncation_chars: 3000
+  platform: linux
+
+bandit_reward_coefficients:
+  repair_reward: 1.0
+  corruption_penalty: -1.5
+  invalid_output_penalty: -1.0
+  cost_per_strength_level: 0.05
+  crypto_bonus: 0.25
+
+splits:
+  seed: 42
+  cyberseceval_dev_count: 1341
+  cyberseceval_test_count: 575
+  cyberseceval_split_ratio: 70/30
+  dev_prompts_path: data/cyberseceval/dev_prompts.json
+  test_prompts_path: data/cyberseceval/test_prompts.json
