@@ -213,8 +213,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "c0c0bfa6bef18981e47ee313da18a659b59982420b2f460bd5aba9f347d3421b",
-      "size_bytes": 827
+      "sha256": "1447e418ed18e226865b7136748917f13aba010efc340de8caee57702bf65203",
+      "size_bytes": 858
     },
     {
       "path": "configs/datasets.yaml",
@@ -2058,5 +2058,5 @@
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7158631
+  "total_bytes_excluding_generated_manifests": 7158662
 }
