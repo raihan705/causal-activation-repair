@@ -2,8 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or its research artifacts, please cite the accompanying paper."
 title: "Causal Activation Repair for Reducing CWE-Level Vulnerabilities in LLM-Generated Code"
 type: software
-version: 0.1.0
-doi: "10.5281/zenodo.22755270"
+version: 0.1.1
 date-released: 2026-09-14
 repository-code: "https://github.com/raihan705/causal-activation-repair"
 license: Apache-2.0

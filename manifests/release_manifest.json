@@ -1,6 +1,11 @@
 {
-  "file_count_excluding_generated_manifests": 410,
+  "file_count_excluding_generated_manifests": 411,
   "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "5382439dcb7e30abd71758c24daa6c79b96d13e0573408771705ad2e442cbbd0",
+      "size_bytes": 100
+    },
     {
       "path": ".github/workflows/validate-release.yml",
       "sha256": "0c8df5d7dac28c250f4ce9699a11f50db9ff8226d815c27e500646c126f09344",
@@ -208,8 +213,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "fa86e16a20168a0498b38c93a699c3419771c033d60d26b578d80913b6cf53db",
-      "size_bytes": 858
+      "sha256": "c0c0bfa6bef18981e47ee313da18a659b59982420b2f460bd5aba9f347d3421b",
+      "size_bytes": 827
     },
     {
       "path": "configs/datasets.yaml",
@@ -378,7 +383,7 @@
     },
     {
       "path": "docs/data_and_code_availability_statement.md",
-      "sha256": "43b533ec513d84a948298f7f776954b4aabd4aa1dbb0a7d05eb0e0aee80ae907",
+      "sha256": "528a76c978db3e7f0f83f85ee6c0a81200c242a184f5b6cc316b5e13a7ac8b35",
       "size_bytes": 665
     },
     {
@@ -453,8 +458,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "b4eb1281f65c8b1ad1004740e26087d2764afbc52cac10593491bf4c68b4b049",
-      "size_bytes": 4529
+      "sha256": "bdc73993fb2c1462e5c0d4483fef2f639920c56c84da6337a14c919f8a5cd17a",
+      "size_bytes": 4557
     },
     {
       "path": "results/construct_review_summary.json",
@@ -2053,5 +2058,5 @@
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7158534
+  "total_bytes_excluding_generated_manifests": 7158631
 }
