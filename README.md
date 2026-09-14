@@ -2,6 +2,8 @@
 
 Research artifacts for **Causal Activation Repair for Reducing CWE-Level Vulnerabilities in LLM-Generated Code**.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22755270.svg)](https://doi.org/10.5281/zenodo.22755270)
+
 This repository contains the code, frozen intervention definitions, compact checkpoints, protocol manifests, and machine-readable results needed to inspect and reproduce the study. Large model weights, SAE weights, third-party benchmark prompts, raw vulnerability databases, activation tensors, and prompt-bearing generation files are not redistributed. Exact upstream identifiers and reconstruction instructions are provided instead.
 
 ## Study organization
@@ -76,4 +78,4 @@ Original study code in this repository is released under the Apache License 2.0.
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The archival DOI and publication metadata will be added after archival publication.
+Citation metadata are provided in [`CITATION.cff`](CITATION.cff). Release `v0.1.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22755270).

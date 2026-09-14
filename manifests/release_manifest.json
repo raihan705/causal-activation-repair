@@ -208,8 +208,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "ec635dab19eddc69b79f194496c7e60b2a1bf3b213db594df0782f6f8e00cfec",
-      "size_bytes": 801
+      "sha256": "fa86e16a20168a0498b38c93a699c3419771c033d60d26b578d80913b6cf53db",
+      "size_bytes": 858
     },
     {
       "path": "configs/datasets.yaml",
@@ -378,8 +378,8 @@
     },
     {
       "path": "docs/data_and_code_availability_statement.md",
-      "sha256": "cc701d1cb2641a26fc7eea7383eabe66394b80ae0d6cb592a6696e08b92b9c7f",
-      "size_bytes": 639
+      "sha256": "43b533ec513d84a948298f7f776954b4aabd4aa1dbb0a7d05eb0e0aee80ae907",
+      "size_bytes": 665
     },
     {
       "path": "docs/experiment_matrix.md",
@@ -453,8 +453,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "051d49896ede7bf8f1ac8e09ea67c7c2e19393525e199645fccea2ebf61ef1ec",
-      "size_bytes": 4421
+      "sha256": "b4eb1281f65c8b1ad1004740e26087d2764afbc52cac10593491bf4c68b4b049",
+      "size_bytes": 4529
     },
     {
       "path": "results/construct_review_summary.json",
@@ -2053,5 +2053,5 @@
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7158343
+  "total_bytes_excluding_generated_manifests": 7158534
 }
