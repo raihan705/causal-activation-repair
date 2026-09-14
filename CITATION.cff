@@ -3,6 +3,8 @@ message: "If you use this software or its research artifacts, please cite the ac
 title: "Causal Activation Repair for Reducing CWE-Level Vulnerabilities in LLM-Generated Code"
 type: software
 version: 0.1.0
+repository-code: "https://github.com/raihan705/causal-activation-repair"
+license: Apache-2.0
 authors:
   - family-names: Uddin
     given-names: Md Raihan

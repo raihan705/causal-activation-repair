@@ -208,8 +208,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "9192e4ac05214a53af07e04608b5cdc031b008d1b001284a0bd62864473c4050",
-      "size_bytes": 708
+      "sha256": "ec635dab19eddc69b79f194496c7e60b2a1bf3b213db594df0782f6f8e00cfec",
+      "size_bytes": 801
     },
     {
       "path": "configs/datasets.yaml",
@@ -453,8 +453,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "199208453fcb51d95964e8947013fd5e272af5ff2a5b68d4fbbab044882dd774",
-      "size_bytes": 4423
+      "sha256": "051d49896ede7bf8f1ac8e09ea67c7c2e19393525e199645fccea2ebf61ef1ec",
+      "size_bytes": 4421
     },
     {
       "path": "results/construct_review_summary.json",
@@ -2053,5 +2053,5 @@
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7158252
+  "total_bytes_excluding_generated_manifests": 7158343
 }

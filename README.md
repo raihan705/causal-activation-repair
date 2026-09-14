@@ -76,4 +76,4 @@ Original study code in this repository is released under the Apache License 2.0.
 
 ## Citation
 
-Citation metadata are provided in [`CITATION.cff`](CITATION.cff). Replace the repository URL, DOI, and publication metadata after archival publication.
+Citation metadata are provided in [`CITATION.cff`](CITATION.cff). The archival DOI and publication metadata will be added after archival publication.
