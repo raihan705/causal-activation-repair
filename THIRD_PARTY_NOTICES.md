@@ -11,4 +11,4 @@ This repository references but does not redistribute third-party datasets, model
 - CVEFixes repository: MIT; source-code records originating from underlying projects may carry separate terms and are not redistributed here.
 - CyberSecEval, HumanEvalPack, BigCodeBench, MMLU, SAE Lens, TransformerLens, Semgrep, and other dependencies: respective upstream licenses and terms.
 
-Before public release, the authors should verify these notices against the pinned upstream repositories and retain any attribution text required by the final distribution choices.
+These notices summarize the upstream dependencies used by the study. Users should consult the pinned upstream repositories for their complete license and attribution terms.

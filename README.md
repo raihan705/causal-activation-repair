@@ -70,9 +70,9 @@ The repository provides executable scripts, frozen configurations, input/output 
 
 Never commit Hugging Face tokens, GitHub tokens, cached credentials, model caches, or dataset caches. Use environment variables or the Hugging Face CLI for authentication.
 
-## License status
+## License
 
-The authors must select a license for the original study code before making this repository public. Third-party datasets, models, SAEs, scanners, and source-code records remain governed by their upstream licenses and terms.
+Original study code in this repository is released under the Apache License 2.0. Third-party datasets, models, SAEs, scanners, and source-code records remain governed by their upstream licenses and terms.
 
 ## Citation
 

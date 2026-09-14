@@ -438,8 +438,8 @@
     },
     {
       "path": "LICENSE",
-      "sha256": "641b47f9ea2d74937af08bdfc28f37396800acb5f8179693d3d6d7fab4eee667",
-      "size_bytes": 423
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_bytes": 11357
     },
     {
       "path": "manifests/excluded_materials.csv",
@@ -453,8 +453,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "02adfb27ddd4ab703a077fc68e14967975ce5f2dc13fda6a801a0ee517a72b59",
-      "size_bytes": 4449
+      "sha256": "199208453fcb51d95964e8947013fd5e272af5ff2a5b68d4fbbab044882dd774",
+      "size_bytes": 4423
     },
     {
       "path": "results/construct_review_summary.json",
@@ -2048,10 +2048,10 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "98b767a385c9ff57e9498e8698468442f943aba3889bd087a5585221cb33413d",
-      "size_bytes": 1104
+      "sha256": "f2a1f07b7c85657f19c2e0c3516b13318d62990763e2c426a95afb9d1a0f2102",
+      "size_bytes": 1097
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7147351
+  "total_bytes_excluding_generated_manifests": 7158252
 }
