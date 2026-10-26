@@ -1,5 +1,5 @@
 {
-  "file_count_excluding_generated_manifests": 411,
+  "file_count_excluding_generated_manifests": 414,
   "files": [
     {
       "path": ".gitattributes",
@@ -403,8 +403,8 @@
     },
     {
       "path": "docs/reproduction.md",
-      "sha256": "024479ddcf796d8bbbb8f2a985032aafac75e5ed40dd6ed36d24d75d367381b1",
-      "size_bytes": 4399
+      "sha256": "d9461b2a0fc9db8cb1a3d50971a92287baac0d7a0d56f2ccf6e11d5af7c7580c",
+      "size_bytes": 4873
     },
     {
       "path": "docs/scanner_protocol.md",
@@ -475,6 +475,11 @@
       "path": "results/model1/development_method_selection.csv",
       "sha256": "e005651778995e0d985a8e5539e95dacc14a0ee8d680488f4d0883da987fb8ad",
       "size_bytes": 548
+    },
+    {
+      "path": "results/model1/humaneval_interface_audit.json",
+      "sha256": "2282dc30ab0eb199e2a0f8da55c1afec091f47cf0453ba691f38b4ddb4823c7d",
+      "size_bytes": 28489
     },
     {
       "path": "results/model1/intervention_boundary_summary.json",
@@ -882,6 +887,11 @@
       "size_bytes": 172320
     },
     {
+      "path": "scripts/audit/rescore_humaneval_extraction_check.py",
+      "sha256": "c44fc9ef2a17cfedebae921e35e2f66116387264efa96cad4b8025b444c08485",
+      "size_bytes": 25993
+    },
+    {
       "path": "scripts/data/export_split_metadata.py",
       "sha256": "b39073c070f1a2c067463de3e7380969824b02de23508dc0ac73f7a6b977b8fa",
       "size_bytes": 3016
@@ -955,6 +965,11 @@
       "path": "scripts/model1/core/phase10/compute_phase10_utility_metrics.py",
       "sha256": "b44d9015904d8b32519223dd4ca62deaaf1efd3c5c3c2dab49123171da2b520f",
       "size_bytes": 10180
+    },
+    {
+      "path": "scripts/model1/core/phase10/fix_humaneval_generation.py",
+      "sha256": "4f5b0b36d44260810a0fefe47b908bd466cc753cbb7a518c3152a4331877dff4",
+      "size_bytes": 6352
     },
     {
       "path": "scripts/model1/core/phase10/run_phase10_baseline_utility.py",
@@ -2058,5 +2073,5 @@
     }
   ],
   "schema_version": "causal_activation_repair_release_manifest_v1",
-  "total_bytes_excluding_generated_manifests": 7158662
+  "total_bytes_excluding_generated_manifests": 7219970
 }

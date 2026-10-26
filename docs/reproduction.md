@@ -50,6 +50,13 @@ Utility evaluation can execute model-generated programs. Run HumanEval or BigCod
 
 The primary pipeline is preserved in `scripts/model1/core/phase0` through `phase11`. Extended evaluation scripts are preserved in `scripts/model1/revision/`, and routewise utility scripts are in `scripts/model1/utility_routes/`.
 
+For HumanEval, use `scripts/model1/core/phase10/fix_humaneval_generation.py`.
+It supersedes the HumanEval branch of `run_phase10_baseline_utility.py`, which
+used a chat-formatted prompt. The corrected script supplies the canonical raw
+function prefix, decodes only the generated suffix, limits the input and output
+to 2,048 and 256 tokens, respectively, and applies the frozen stopping policy.
+The other utility branches in `run_phase10_baseline_utility.py` are unchanged.
+
 The high-level order is:
 
 1. acquire and construct CVE pairs;
